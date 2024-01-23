@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Ma seconde page en html">
+    <!-- Cette balise meta avec la valeur description de l'attribut name fournit une courte description de la page. Cela peut-être utlilisé par les moteurs de recherhce pour afficher un extrait de description sous le lien vers la page dans les résultats de recherche (le SERP) -->
+
+    <meta name="author" content="Axel Gransart">
+    <!-- Cette balise meta avec la valeur author de l'attribut name spécifie l'auteur de la page.
+    Elle peut-être utilisée pour indiquer qui à créé le contenu de la page.-->
+    <style>
+      body {
+        background-color: lightgrey;        
+      }
+      h1, h2, h3 {
+        text-align: center;
+      }
+      h1 {
+        -webkit-text-stroke:1px navy;
+      }
+      h2 {
+        color: red;
+      }
+      h3 {
+        background-color: pink;
+      }
+      p {
+        border: 3px inset white;
+        font-size: 1.2em;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/01_balise_d_affichage.css" />
+    <!-- 
+        <link> : C'est la balise utilisée pour lier des ressources externes à un document HTML.
+        Les attributs : 
+          1- rel="stylesheet" : spécifie la relation entre le document actuel et la ressource liée
+            => indique que la ressource liée est une feuille de style utilisée pour la mise en forme de la page.
+          2- type="text/css : spécifie le type de média associé à la ressource liée.
+            => indique que la ressource est une feuille de style en langage CSS (Cascading Style Sheets).
+          3- href="assets/css/01_balise_d_affichage.css" : spécifie l'emplacement (chemin) de la ressource externe à lier -->
+    
+    <title>Balise de texte et CSS</title>
+  </head>
+  <body>
+    <section>
+    <!-- Les balises HTML peuvent être classées en deux types principaux :
+      - Les balises en ligne (inline)
+      - Les balises bloc (block)
+    Ces catégories décrivent comment les éléments HTML s'affichent et intéragissent avec les éléments qui les entourent.-->
+      
+    <!-- Un élément de type inline :
+      - n'est pas précédé ou suivi d'un saut de ligne
+      - ne peut pas avoir de taille définie
+    -->
+      
+    <!-- Un élément de type block :
+      - il est toujours précédé ou suivi d'un saut de ligne
+      - peut avoir de taille définie < il occupe toute la largeur (de la page) disponible
+    -->
+      
+      <h1>Ma première page, youpi !!!    do.ob</h1>
+      <!--La balise <h1> est une balise HTML utilisé pour définir un titre de premier niveau dans une page web. Le "h" signifie "header" et "1" indique que c'est le titre de plus haut niveau dans la hiérarchie des titres. 
+      En HTML les balises de titres vont de h1 à h6, où h1 est le titre de premier niveau (le plus important) et h6 est le titre de sixième niveau (le moins important).
+      Chaque niveau de titre représente une hiérarchie, et les titres sont utilisés pour organiser et structurer le contenu de la page.
+      Les titres sont des éléments de types bloc : suivis d'un retour à la ligne et une marge par défaut.-->
+      <article>
+        <!-- h${titre de niveau $}*6 -->
+        <h2>Titre de niveau 2</h2>
+        <h3>Titre de niveau 3</h3>
+        <h4>Titre de niveau 4</h4>
+        <h5>Titre de niveau 5</h5>
+        <h6>Titre de niveau 6</h6>     
+      </article>  
+      <article>
+        <hr>
+        <!-- "hr" horizontal ruler (règles horizontale = ligne horizontale), élément de type bloc-->
+            
+        <!--La balise <p> en HTML est utilisée pour définir un paragraphe de texte. Elle indique au navigateur web que le texte à l'intérieur de la balise doit être interprété comme un paragraphe distinct. 
+        Les paragraphes sont des éléments de type bloc
+        On ne doit pas mettre un paragraphe dans un paragraphe -->
+        <p>Ceci est un paragraphe</p>
+        <p>Et là un second paragraphe</p>
+        <hr>
+      </article>  
+    </section>    
+    <section>
+      <h2>le CSS: Le Cascading Style Sheet</h2>
+      <p>Le CSS permet de faire du style sur nos pages html</p>
+      <!-- 3 façon pour déclarer le style CSS:
+        - style en ligne (attribut style directement dans la balise html)
+        - style dans la balise <style> directement dans la partie <head>
+        - déclarer le style dans un fichier .css : feuille de style  -->
+      <article>
+        <h3>CSS dans la balise</h3>
+        <p>La première façon de faire du style dans un élément est de déclarer l'attribut style sur celui-là. Ce n'est pas la meilleure manière de le faire</p>
+            
+        <p style="color:white;background-color:blue;font-weight:bolder;">présentation 1ère façon de style</p>
+      </article>    
+      <article>
+        <h3>CSS dans l'en-tête</h3>
+        <p>Une seconde façon de faire du style sur notre page est de mettre la balise style dans la partie head. Cette methode n'est toujours pas la plus conseillée mais elle permet plus de chose que la méthode précédente. On peut desormais grâce à cette méthode viser plusieurs éléments d'un coup. Exemple, on met du gris en fond sur le corps de la page, les h2 en rouge et les h3 avec un fond rose</p>
+      </article> 
+      <article>
+        <h3>Le CSS dans une feuille de style externe</h3>
+        <p>La dernière et meilleure façon pour faire du style est la méthode suivante: on crée un dossier CSS avec un fichier style.css à l'intérieur. Il faudra alors lier nos 2 fichiers grâce à la balise link. On pourra alors faire du style sur les éléments qui se trouvent dans notre page html. exemple, on déclare que tout les articles doivent être avec une bordure violette</p>
+      </article>
+    </section>
+          
+  </body>
+</html>

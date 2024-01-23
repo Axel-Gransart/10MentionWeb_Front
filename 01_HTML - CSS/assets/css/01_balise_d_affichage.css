@@ -1,0 +1,9 @@
+section {
+  border: 2px ridge yellow;
+  border-radius: 20px;
+}
+article {
+  border: thick double purple;
+  border-radius: 20px;
+  margin: 1rem;
+}
