@@ -7,6 +7,10 @@ article {
   border-radius: 20px;
   margin: 1rem;
 }
+/* Je selectionne 2 éléments en même temps en les séparant par une virgule "," */
+p, pre {
+  color: darkblue;
+}
 
 /* 
   Les valeurs possibles pour les couleurs:
