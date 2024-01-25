@@ -11,6 +11,13 @@ article {
 p, pre {
   color: darkblue;
 }
+pre code {
+  color: white;  
+}
+span {
+  font-weight: bold;
+  color: limegreen;
+}
 
 /* 
   Les valeurs possibles pour les couleurs:

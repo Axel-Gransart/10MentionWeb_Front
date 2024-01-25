@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="Ma seconde page en html">
-    <!-- Cette balise meta avec la valeur description de l'attribut name fournit une courte description de la page. Cela peut-être utlilisé par les moteurs de recherhce pour afficher un extrait de description sous le lien vers la page dans les résultats de recherche (le SERP) -->
 
-    <meta name="author" content="Axel Gransart">
-    <!-- Cette balise meta avec la valeur author de l'attribut name spécifie l'auteur de la page.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Ma seconde page en html">
+  <!-- Cette balise meta avec la valeur description de l'attribut name fournit une courte description de la page. Cela peut-être utlilisé par les moteurs de recherhce pour afficher un extrait de description sous le lien vers la page dans les résultats de recherche (le SERP) -->
+
+  <meta name="author" content="Axel Gransart">
+  <!-- Cette balise meta avec la valeur author de l'attribut name spécifie l'auteur de la page.
     Elle peut-être utilisée pour indiquer qui à créé le contenu de la page.-->
-    <style>
-      body {
-        background-color: lightgrey;        
-      }
-      h1, h2, h3 {
-        text-align: center;
-      }
-      h1 {
-        -webkit-text-stroke:1px navy;
-      }
-      h2 {
-        color: red;
-      }
-      h3 {
-        background-color: pink;
-      }
-      p {
-        border: 3px inset white;
-        font-size: 1.2em;
-      }
-    </style>
-    <link rel="stylesheet" type="text/css" href="assets/css/01_balise_d_affichage.css" />
-    <!-- 
+  <style>
+    body {
+      background-color: lightgrey;
+    }
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    h1 {
+      -webkit-text-stroke: 1px navy;
+    }
+
+    h2 {
+      color: red;
+    }
+
+    h3 {
+      background-color: pink;
+    }
+
+    p {
+      border: 3px inset white;
+      font-size: 1.2em;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="assets/css/01_balise_d_affichage.css" />
+  <!-- 
         <link> : C'est la balise utilisée pour lier des ressources externes à un document HTML.
         Les attributs : 
           1- rel="stylesheet" : spécifie la relation entre le document actuel et la ressource liée
@@ -40,79 +48,87 @@
           2- type="text/css : spécifie le type de média associé à la ressource liée.
             => indique que la ressource est une feuille de style en langage CSS (Cascading Style Sheets).
           3- href="assets/css/01_balise_d_affichage.css" : spécifie l'emplacement (chemin) de la ressource externe à lier -->
-    
-    <title>Balise de texte et CSS</title>
-  </head>
-  <body>
-    <section>
+
+  <title>Balise de texte et CSS</title>
+</head>
+
+<body>
+  <section>
     <!-- Les balises HTML peuvent être classées en deux types principaux :
       - Les balises en ligne (inline)
       - Les balises bloc (block)
     Ces catégories décrivent comment les éléments HTML s'affichent et intéragissent avec les éléments qui les entourent.-->
-      
+
     <!-- Un élément de type inline :
       - n'est pas précédé ou suivi d'un saut de ligne
       - ne peut pas avoir de taille définie
     -->
-      
+
     <!-- Un élément de type block :
       - il est toujours précédé ou suivi d'un saut de ligne
       - peut avoir de taille définie < il occupe toute la largeur (de la page) disponible
     -->
-      
-      <h1>Ma première page, youpi !!!    do.ob</h1>
-      <!--La balise <h1> est une balise HTML utilisé pour définir un titre de premier niveau dans une page web. Le "h" signifie "header" et "1" indique que c'est le titre de plus haut niveau dans la hiérarchie des titres. 
+
+    <h1>Ma première page, youpi !!! do.ob</h1>
+    <!--La balise <h1> est une balise HTML utilisé pour définir un titre de premier niveau dans une page web. Le "h" signifie "header" et "1" indique que c'est le titre de plus haut niveau dans la hiérarchie des titres. 
       En HTML les balises de titres vont de h1 à h6, où h1 est le titre de premier niveau (le plus important) et h6 est le titre de sixième niveau (le moins important).
       Chaque niveau de titre représente une hiérarchie, et les titres sont utilisés pour organiser et structurer le contenu de la page.
       Les titres sont des éléments de types bloc : suivis d'un retour à la ligne et une marge par défaut.-->
-      <article>
-        <!-- h${titre de niveau $}*6 -->
-        <h2>Titre de niveau 2</h2>
-        <h3>Titre de niveau 3</h3>
-        <h4>Titre de niveau 4</h4>
-        <h5>Titre de niveau 5</h5>
-        <h6>Titre de niveau 6</h6>     
-      </article>  
-      <article>
-        <hr>
-        <!-- "hr" horizontal ruler (règles horizontale = ligne horizontale), élément de type bloc-->
-            
-        <!--La balise <p> en HTML est utilisée pour définir un paragraphe de texte. Elle indique au navigateur web que le texte à l'intérieur de la balise doit être interprété comme un paragraphe distinct. 
+    <article>
+      <!-- h${titre de niveau $}*6 -->
+      <h2>Titre de niveau 2</h2>
+      <h3>Titre de niveau 3</h3>
+      <h4>Titre de niveau 4</h4>
+      <h5>Titre de niveau 5</h5>
+      <h6>Titre de niveau 6</h6>
+    </article>
+    <article>
+      <hr>
+      <!-- "hr" horizontal ruler (règles horizontale = ligne horizontale), élément de type bloc-->
+
+      <!--La balise <p> en HTML est utilisée pour définir un paragraphe de texte. Elle indique au navigateur web que le texte à l'intérieur de la balise doit être interprété comme un paragraphe distinct. 
         Les paragraphes sont des éléments de type bloc
         On ne doit pas mettre un paragraphe dans un paragraphe -->
-        <p>Ceci est un paragraphe</p>
-        <p>Et là un second paragraphe</p>
-        <hr>
-      </article>  
-    </section>
-    <hr> 
-    <section>
-      <h2>le CSS: Le Cascading Style Sheet</h2>
-      <p>Le CSS permet de faire du style sur nos pages html</p>
-      <!-- 3 façon pour déclarer le style CSS:
+      <p>Ceci est un paragraphe</p>
+      <p>Et là un second paragraphe</p>
+      <hr>
+    </article>
+  </section>
+  <hr>
+  <section>
+    <h2>le CSS: Le Cascading Style Sheet</h2>
+    <p>Le CSS permet de faire du style sur nos pages html</p>
+    <!-- 3 façon pour déclarer le style CSS:
         - style en ligne (attribut style directement dans la balise html)
         - style dans la balise <style> directement dans la partie <head>
         - déclarer le style dans un fichier .css : feuille de style  -->
-      <article>
-        <h3>CSS dans la balise</h3>
-        <p>La première façon de faire du style dans un élément est de déclarer l'attribut style sur celui-là. Ce n'est pas la meilleure manière de le faire</p>
-            
-        <p style="color:white;background-color:blue;font-weight:bolder;">présentation 1ère façon de style</p>
-      </article>    
-      <article>
-        <h3>CSS dans l'en-tête</h3>
-        <p>Une seconde façon de faire du style sur notre page est de mettre la balise style dans la partie head. Cette methode n'est toujours pas la plus conseillée mais elle permet plus de chose que la méthode précédente. On peut desormais grâce à cette méthode viser plusieurs éléments d'un coup. Exemple, on met du gris en fond sur le corps de la page, les h2 en rouge et les h3 avec un fond rose</p>
-      </article> 
-      <article>
-        <h3>Le CSS dans une feuille de style externe</h3>
-        <p>La dernière et meilleure façon pour faire du style est la méthode suivante: on crée un dossier CSS avec un fichier style.css à l'intérieur. Il faudra alors lier nos 2 fichiers grâce à la balise link. On pourra alors faire du style sur les éléments qui se trouvent dans notre page html. exemple, on déclare que tout les articles doivent être avec une bordure violette</p>
-      </article>
-    </section>
-    <hr> 
-    <section>
-      <article>
-        <h2>Les paragraphes préformatés</h2>
-        <pre>
+    <article>
+      <h3>CSS dans la balise</h3>
+      <p>La première façon de faire du style dans un élément est de déclarer l'attribut style sur celui-là. Ce n'est pas
+        la meilleure manière de le faire</p>
+
+      <p style="color:white;background-color:blue;font-weight:bolder;">présentation 1ère façon de style</p>
+    </article>
+    <article>
+      <h3>CSS dans l'en-tête</h3>
+      <p>Une seconde façon de faire du style sur notre page est de mettre la balise style dans la partie head. Cette
+        methode n'est toujours pas la plus conseillée mais elle permet plus de chose que la méthode précédente. On peut
+        desormais grâce à cette méthode viser plusieurs éléments d'un coup. Exemple, on met du gris en fond sur le corps
+        de la page, les h2 en rouge et les h3 avec un fond rose</p>
+    </article>
+    <article>
+      <h3>Le CSS dans une feuille de style externe</h3>
+      <p>La dernière et meilleure façon pour faire du style est la méthode suivante: on crée un dossier CSS avec un
+        fichier style.css à l'intérieur. Il faudra alors lier nos 2 fichiers grâce à la balise link. On pourra alors
+        faire du style sur les éléments qui se trouvent dans notre page html. exemple, on déclare que tout les articles
+        doivent être avec une bordure violette</p>
+    </article>
+  </section>
+  <hr>
+  <section>
+    <article>
+      <h2>Les paragraphes préformatés</h2>
+      <pre>
         <!-- Le texte est préformaté avec une typographie à chasse fixe (toute les lettres occupent la même largeur) -->
           <p>
             Je 
@@ -122,147 +138,252 @@
                   préformaté
           </p>
         </pre>
-      </article>
-      <article>
-        <h2>Breaking row</h2>
-        <h3>Demain dès l'aube ...</h3>
-        <p>
-          Demain, dès l’aube, à l’heure où blanchit la campagne,<br>
-          Je partirai. Vois-tu, je sais que tu m’attends.<br>
-          J’irai par la forêt, j’irai par la montagne.<br>
-          Je ne puis demeurer loin de toi plus longtemps.<br>
-          <br>
-          Je marcherai les yeux fixés sur mes pensées,<br>
-          Sans rien voir au dehors, sans entendre aucun bruit,<br>
-          Seul, inconnu, le dos courbé, les mains croisées,<br>
-          Triste, et le jour pour moi sera comme la nuit.<br>
-          <br>
-          Je ne regarderai ni l’or du soir qui tombe,<br>
-          Ni les voiles au loin descendant vers Harfleur,<br>
-          Et quand j’arriverai, je mettrai sur ta tombe<br>
-          Un bouquet de houx vert et de bruyère en fleur.<br>
-          <br>
-          Victor Hugo, extrait du recueil «Les Contemplations» (1856)
-        </p>
-      </article>
-      <hr>
-      <article>
-        <h2>Des balises de citations</h2>
-        <p>Le poème <cite>Demain dès l'aube</cite> de Victor Hugo a été publié en 1856</p>
-        <!-- La balise <cite> en html est utilisé pour indiquer le titre d'une oeuvre créative, tel qu'un livre, un film, une chanson ou tout autre production similaire -->
-        <p>William Shakespeare a écrit : <q> Etre ou ne pas être, telle est la question </q></p>
-        <!-- La balise q=quote :: est utilisé pour marquer du texte comme une citation courte dans un document, le rendu est fait entre guillemets -->
-        <h4>Un extrait de Marcel Proust</h4>
-        <blockquote>
-          Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite que je n’avais pas le temps de me dire : « Je m’endors. » Et, une demi-heure après, la pensée qu’il était temps de chercher le sommeil m’éveillait ; je voulais poser le volume que je croyais avoir encore dans les mains et souffler ma lumière ; je n’avais pas cessé en dormant de faire des réflexions sur ce que je venais de lire, mais ces réflexions avaient pris un tour un peu particulier ; il me semblait que j’étais moi-même ce dont parlait l’ouvrage : une église, un quatuor, la rivalité de François Ier et de Charles Quint. Cette croyance survivait pendant quelques secondes à mon réveil ; elle ne choquait pas ma raison mais pesait comme des écailles sur mes yeux et les empêchait de se rendre compte que le bougeoir n’était plus allumé. Puis elle commençait à me devenir inintelligible, comme après la métempsycose les pensées d’une existence antérieure ; le sujet du livre se détachait de moi, j’étais libre de m’y appliquer ou non ; aussitôt je recouvrais la vue et j’étais bien étonné de trouver autour de moi une obscurité, douce et reposante pour mes yeux, mais peut-être plus encore pour mon esprit, à qui elle apparaissait comme une chose sans cause, incompréhensible, comme une chose vraiment obscure. Je me demandais quelle heure il pouvait être ; j’entendais le sifflement des trains qui, plus ou moins éloigné, comme le chant d’un oiseau dans une forêt, relevant les distances, me décrivait l’étendue de la campagne déserte où le voyageur se hâte vers la station prochaine ; et le petit chemin qu’il suit va être gravé dans son souvenir par l’excitation qu’il doit à des lieux nouveaux, à des actes inaccoutumés, à la causerie récente et aux adieux sous la lampe étrangère qui le suivent encore dans le silence de la nuit, à la douceur prochaine du retour.
-        </blockquote>
-        <!-- La balise blockquote est utilisé pour les citations longues qui peuvent necessiter une indentation ou mise en forme spéciale -->
-      </article>
-    </section>
+    </article>
+    <article>
+      <h2>Breaking row</h2>
+      <h3>Demain dès l'aube ...</h3>
+      <p>
+        Demain, dès l’aube, à l’heure où blanchit la campagne,<br>
+        Je partirai. Vois-tu, je sais que tu m’attends.<br>
+        J’irai par la forêt, j’irai par la montagne.<br>
+        Je ne puis demeurer loin de toi plus longtemps.<br>
+        <br>
+        Je marcherai les yeux fixés sur mes pensées,<br>
+        Sans rien voir au dehors, sans entendre aucun bruit,<br>
+        Seul, inconnu, le dos courbé, les mains croisées,<br>
+        Triste, et le jour pour moi sera comme la nuit.<br>
+        <br>
+        Je ne regarderai ni l’or du soir qui tombe,<br>
+        Ni les voiles au loin descendant vers Harfleur,<br>
+        Et quand j’arriverai, je mettrai sur ta tombe<br>
+        Un bouquet de houx vert et de bruyère en fleur.<br>
+        <br>
+        Victor Hugo, extrait du recueil «Les Contemplations» (1856)
+      </p>
+    </article>
     <hr>
-    <section>
-      <h2>Des balises pour les listes</h2>
-      <article>
-        <h3>La recette des crêpes</h3>  
-        <h4>Les ingrédients de la pâte à crêpe</h4>
-        <ul> <!-- ul = unordered list : liste non ordonnée -->
-          <li>Farine</li> <!-- li = list item : élément de liste -->
-          <li>Oeufs</li>
-          <li>Lait</li>
-          <li>Sucre</li>
-          <li>Une pincée de sel</li>
-        </ul>
-        <!--La balise ul permet de créer une liste non ordonnée. Il faut l'ouvrir en début de liste et le fermer après le dernier éléments de la liste.
+    <article>
+      <h2>Des balises de citations</h2>
+      <p>Le poème <cite>Demain dès l'aube</cite> de Victor Hugo a été publié en 1856</p>
+      <!-- La balise <cite> en html est utilisé pour indiquer le titre d'une oeuvre créative, tel qu'un livre, un film, une chanson ou tout autre production similaire -->
+      <p>William Shakespeare a écrit : <q> Etre ou ne pas être, telle est la question </q></p>
+      <!-- La balise q=quote :: est utilisé pour marquer du texte comme une citation courte dans un document, le rendu est fait entre guillemets -->
+      <h4>Un extrait de Marcel Proust</h4>
+      <blockquote>
+        Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie éteinte, mes yeux se fermaient si vite
+        que je n’avais pas le temps de me dire : « Je m’endors. » Et, une demi-heure après, la pensée qu’il était temps
+        de chercher le sommeil m’éveillait ; je voulais poser le volume que je croyais avoir encore dans les mains et
+        souffler ma lumière ; je n’avais pas cessé en dormant de faire des réflexions sur ce que je venais de lire, mais
+        ces réflexions avaient pris un tour un peu particulier ; il me semblait que j’étais moi-même ce dont parlait
+        l’ouvrage : une église, un quatuor, la rivalité de François Ier et de Charles Quint. Cette croyance survivait
+        pendant quelques secondes à mon réveil ; elle ne choquait pas ma raison mais pesait comme des écailles sur mes
+        yeux et les empêchait de se rendre compte que le bougeoir n’était plus allumé. Puis elle commençait à me devenir
+        inintelligible, comme après la métempsycose les pensées d’une existence antérieure ; le sujet du livre se
+        détachait de moi, j’étais libre de m’y appliquer ou non ; aussitôt je recouvrais la vue et j’étais bien étonné
+        de trouver autour de moi une obscurité, douce et reposante pour mes yeux, mais peut-être plus encore pour mon
+        esprit, à qui elle apparaissait comme une chose sans cause, incompréhensible, comme une chose vraiment obscure.
+        Je me demandais quelle heure il pouvait être ; j’entendais le sifflement des trains qui, plus ou moins éloigné,
+        comme le chant d’un oiseau dans une forêt, relevant les distances, me décrivait l’étendue de la campagne déserte
+        où le voyageur se hâte vers la station prochaine ; et le petit chemin qu’il suit va être gravé dans son souvenir
+        par l’excitation qu’il doit à des lieux nouveaux, à des actes inaccoutumés, à la causerie récente et aux adieux
+        sous la lampe étrangère qui le suivent encore dans le silence de la nuit, à la douceur prochaine du retour.
+      </blockquote>
+      <!-- La balise blockquote est utilisé pour les citations longues qui peuvent necessiter une indentation ou mise en forme spéciale -->
+    </article>
+  </section>
+  <hr>
+  <section>
+    <h2>Des balises pour les listes</h2>
+    <article>
+      <h3>La recette des crêpes</h3>
+      <h4>Les ingrédients de la pâte à crêpe</h4>
+      <ul> <!-- ul = unordered list : liste non ordonnée -->
+        <li>Farine</li> <!-- li = list item : élément de liste -->
+        <li>Oeufs</li>
+        <li>Lait</li>
+        <li>Sucre</li>
+        <li>Une pincée de sel</li>
+      </ul>
+      <!--La balise ul permet de créer une liste non ordonnée. Il faut l'ouvrir en début de liste et le fermer après le dernier éléments de la liste.
         La balise li permet de créer un élément de la liste
         Visuellement, des puces apparaissent automatiquement (modifiable en CSS)-->
-        <h4>Préparation</h4>
-        <ol> <!-- ol = ordered list : liste ordonnée -->
-          <li>Verser la farine dans le bol, avec le sucre et la pincée de sel</li>
-          <li>Incorporer les oeufs les uns après les autres</li>
-          <li>Ajouter du lait</li>
-          <li>Mélanger bien et laisser reposer la pâte pendant 15 minutes</li>
-          <li>Chauffer la crêpière avec une noisettez de beurre</li>
-          <li>Faites sauter les crêpes: hop !</li>
-        </ol>
-      </article>
-      <hr>
-      <article>
-        <h3>Liste avec attribut type="A"</h3>
-        <ol type="A">
-          <!-- li{Element numéroté de la liste $}*3 -->
-          <li>Element numéroté de la liste 1</li>
-          <li>Element numéroté de la liste 2</li>
-          <li>Element numéroté de la liste 3</li>
-        </ol>
-      </article>
-      <article>
-        <h3>Liste avec attribut type="a"</h3>
-        <ol type="a">
-          <li>Element numéroté de la liste 1</li>
-          <li>Element numéroté de la liste 2</li>
-          <li>Element numéroté de la liste 3</li>
-        </ol>
-      </article>
-      <article>
-        <h3>Liste avec attribut type="I"</h3>
-        <ol type="I">
-          <li>Element numéroté de la liste 1</li>
-          <li>Element numéroté de la liste 2</li>
-          <li>Element numéroté de la liste 3</li>
-        </ol>
-      </article>
-      <article>
-        <h3>Liste avec attribut type="i"</h3>
-        <ol type="i">
-          <li>Element numéroté de la liste 1</li>
-          <li>Element numéroté de la liste 2</li>
-          <li>Element numéroté de la liste 3</li>
-        </ol>
-        <!-- 
+      <h4>Préparation</h4>
+      <ol> <!-- ol = ordered list : liste ordonnée -->
+        <li>Verser la farine dans le bol, avec le sucre et la pincée de sel</li>
+        <li>Incorporer les oeufs les uns après les autres</li>
+        <li>Ajouter du lait</li>
+        <li>Mélanger bien et laisser reposer la pâte pendant 15 minutes</li>
+        <li>Chauffer la crêpière avec une noisettez de beurre</li>
+        <li>Faites sauter les crêpes: hop !</li>
+      </ol>
+    </article>
+    <hr>
+    <article>
+      <h3>Liste avec attribut type="A"</h3>
+      <ol type="A">
+        <!-- li{Element numéroté de la liste $}*3 -->
+        <li>Element numéroté de la liste 1</li>
+        <li>Element numéroté de la liste 2</li>
+        <li>Element numéroté de la liste 3</li>
+      </ol>
+    </article>
+    <article>
+      <h3>Liste avec attribut type="a"</h3>
+      <ol type="a">
+        <li>Element numéroté de la liste 1</li>
+        <li>Element numéroté de la liste 2</li>
+        <li>Element numéroté de la liste 3</li>
+      </ol>
+    </article>
+    <article>
+      <h3>Liste avec attribut type="I"</h3>
+      <ol type="I">
+        <li>Element numéroté de la liste 1</li>
+        <li>Element numéroté de la liste 2</li>
+        <li>Element numéroté de la liste 3</li>
+      </ol>
+    </article>
+    <article>
+      <h3>Liste avec attribut type="i"</h3>
+      <ol type="i">
+        <li>Element numéroté de la liste 1</li>
+        <li>Element numéroté de la liste 2</li>
+        <li>Element numéroté de la liste 3</li>
+      </ol>
+      <!-- 
         - Les éléments ul et ol ne peuvent contenir que des éléments li
         - Chaque li peut contenir des éléments block (p,h2, ...)
         - Les listes peuvent s'imbriquer
         - On peut mélanger ul et ol à condition de les fermer correctement
         -->
-      </article>
-      <hr>
-      <article>
-        <h3>Imbrication de liste</h3>
-        <ul>
-          <li>Elément 1 de la liste 1</li>
-          <li>Elément 2 de la liste 1
-            <ol>
-              <li>Elément 1 de la liste 2</li>
-              <li>Elément 2 de la liste 2</li>
-            </ol>
-          </li>
-          <li>Elément 3 de la liste 1</li>
-        </ul>
-      </article>
-    </section>
+    </article>
     <hr>
-    <section>
-      <h2>exercice : listes imbriquées</h2>
-      <article>
-        <ol>
-          Les Animaux
-          <li>Animaux domestiques
-            <ul>
-              <li>Chat</li>
-              <li>Chien</li>
-              <li>Oiseau</li>
-            </ul>
-          </li>
-          <li>Animaux sauvages
-            <ul>
-              <li>Panthère noire</li>
-              <li>Tigre</li>
-              <li>Lion</li>
-            </ul>
-          </li>
-        </ol>
-      </article>
-    </section>
-          
-  </body>
+    <article>
+      <h3>Imbrication de liste</h3>
+      <ul>
+        <li>Elément 1 de la liste 1</li>
+        <li>Elément 2 de la liste 1
+          <ol>
+            <li>Elément 1 de la liste 2</li>
+            <li>Elément 2 de la liste 2</li>
+          </ol>
+        </li>
+        <li>Elément 3 de la liste 1</li>
+      </ul>
+    </article>
+  </section>
+  <hr>
+  <section>
+    <h2>exercice : listes imbriquées</h2>
+    <article>
+      <ol>
+        Les Animaux
+        <li>Animaux domestiques
+          <ul>
+            <li>Chat</li>
+            <li>Chien</li>
+            <li>Oiseau</li>
+          </ul>
+        </li>
+        <li>Animaux sauvages
+          <ul>
+            <li>Panthère noire</li>
+            <li>Tigre</li>
+            <li>Lion</li>
+          </ul>
+        </li>
+      </ol>
+    </article>
+  </section>
+  <section>
+    <h2>Balise code</h2>
+    <!-- La balise code est utilisée en HTML pour définir du texte en tant que code source informatique.
+      L'utilisation de cette balise permet de conserver la mise en forme du code, telle qu'elle apparait dans un éditeur de texte, en préservant l'indentation et en utilisans une police de caractère spécifique pour le code -->
+    <p>la balise <code> &lt;!DOCTYPE&gt; </code> est la première balise d'un document HTML</p>
+    <!-- &gt; et &lt; sont des entités de caractères en HTML (ou entité HTML)  qui représentent respectivement les symboles ">" et "<"
+      Une entité HTML, est une suite ceractères débutent par une esperluette (&) et se terminent par un point-virgule (;) utilisé pour affiché un caractère spécial -->
+
+    <!-- Voici quelques autres entités HTML couramment utilisées :
+        - &amp; : Représente le symbole & (esperluette). Utilisé pour afficher le caractère "&" dans le texte sans être interprété comme le début d'une entité HTML.
+        - &quot; : Représente le symbole " (guillemet double). Utilisé pour afficher un guillemet double dan le texte.
+        - &apos; : Représente le symbole ' (apostrophe). Utilisé pour afficher une apostrophe dans le texte.
+        - &nbsp;: Représente un espace insécable (non-breaking space). Utilisé pour insérer un espace qui ne peut pas être rompu par un saut de ligne. si 2 mots sont séparés par &nbsp; lorsqu'ils sont au bout d'une ligne et qu'il ne reste plus assez de place pour qu'un seule reste sur cette ligne,alors les 2 mots passe à la ligne suivante
+        - &copy; : Représente le symbole de copyright ©.
+        - &reg; : Représente le symbole de marque déposée ®.
+        - &trade; : Représente le symbole de marue commerciale ™.
+        - &deg; : Représente le symbole degré °.
+        - &euro; : Représente le symbole de l'euro €.
+        - &yen; : Représente le symbole du yen ¥. -->
+  </section>
+  <section>
+    <h2>Exercice balise &lt;code&gt;</h2>
+    <p>Voici un exemple d'utilisation de la balise <code> &lt;html></code> </p>
+    <article>
+      <pre style="background-color: brown;">
+          <code>
+            &lt;html>
+            &lt;head>
+              &lt;title>Ma Page Web &lt;/title>
+            &lt;/head>
+            &lt;body>
+              &lt;h1><span style="color: lightgreen;">Bienvenue sur ma page web!</span>&lt;/h1>
+              &lt;p>Ceci est un exemple de code html.&lt;/p>
+            &lt;/body>
+            &lt;/html>
+          </code>
+        </pre>
+    </article>
+  </section>
+  <hr>
+  <section>
+    <h2>Balise de manipulation du style</h2>
+    <article>
+      <p>Ceci est un <span>texte en vert</span></p>
+      <!-- La balise <span> en HTML est une balise universelle de type inline. C'est une balise de conteneur générique et neutre qui ne modifie pas le style ou la mise en forme du contenu qu'elle entoure. La balise <span> est souvent utilisée en conjonction avec du CSS pour définir un style spécifique à des parties spécifiques du texte  -->
+    </article>
+  </section>
+  <hr>
+  <section>
+    <h2>Des balises pour style de texte</h2>
+    <article>
+      <ol>
+        <li>
+          <code>&lt;em> ... &lt;/em></code> : (emphase) pour mettre en évidence un mot, le texte va être rendu en italique
+        </li>
+        <p>Bonjour, ceci est mon premier fichier HTML, alors <em>soyez indulgent</em> s'il vous plait</p>
+        <li>
+          <code>&lt;strong> ... &lt;strong></code> : pour ondiquer que le texte qu'elle entoure doit être rendu en tant que texte fort ou important. Le texte va être rendu en gras
+        </li>
+        <p>Bonjour, ceci est <strong>mon premier fichier HTML</strong>, alors soyez indulgent s'il vous plait</p>
+        <li>
+          <code>&lt;s> ... &lt;/s></code> : utilisée pour indiquer que le texte doit être barré pour représenter qu'il est non valide, supprimé ou obsolète.
+        </li>
+        <p><s>Ce texte n'est plus d'actualité</s></p>
+        <li>
+          <code>&lt;mark> ... &lt;/mark></code> : pour marquer ou surligner du texte dans une zone de texte, le mot sera généralement surligné par les navigateurs pour indiquer son importance
+        </li>
+        <p>Le texte suivant contient une information <mark>importante</mark></p>
+      </ol>
+    </article>
+    <article>
+      <h2>La balise &lt;kbd></h2>
+      <!-- La balise <kbd> est une abréviation du keyboard. cette balise permettra donc de faire comprendre au navigateur que l'on parle d'une manipulation du clavier  -->
+        <p>Pour sauvegarder un document, j'utilise le raccourci <kbd>ctrl + s</kbd> </p>
+    </article>
+    <article>
+      <h2>Les balises de définition</h2>
+       <dl> <!-- dl = definition list (liste de définition) -->
+
+        <dt>Ecole Primaire :</dt> <!-- dt = definition term (terme à définir) -->
+        
+        <dd>Lieu d'apprentissage pour les personnes de 6 à 11 ans</dd> <!--  definition -->
+        
+        <dt>Lycée :</dt>
+        <dd>Lieu d'apprentissage pour les personnes de 15 à 18 ans</dd>
+      </dl>
+    </article>
+  </section>
+  <hr>
+
+</body>
 </html>
