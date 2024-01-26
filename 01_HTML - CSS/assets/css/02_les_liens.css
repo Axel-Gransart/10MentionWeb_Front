@@ -1,3 +1,35 @@
 body {
   background-color: lightgrey;
 }
+
+h1 {
+  text-align: center;
+}
+h2, h3 {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;  
+}
+h2 {
+  border: 4px ridge green;
+  border-radius: 0 20px;
+}
+
+h3:nth-last-of-type(even) {
+  border-bottom: 2px inset darkred;
+  border-left: 2px inset darkred;
+  border-radius: 20px;
+}
+h3:nth-last-of-type(odd) {
+  border-top: 2px inset darkred;
+  border-right: 2px inset darkred;
+  border-radius: 20px;
+}
+a {
+  text-decoration: none;
+  color: brown;  
+}
+/* Une pseudo classe est un mot clé préfixé par deux points, qui s'ajoute au selecteur pour appliquer un style à un éléments dans un cas particulier */
+a:hover {  /* :hover désigne un objet survolé par le curseur de la souris. Cela peut être un lien ou n'importe quel élément HTML */
+  color: chartreuse;
+}

@@ -10,20 +10,61 @@
 </head>
 <body>
   <h1>Les liens</h1>
-  <h2>Mes sites préférés</h2>
   <!--  
     - Un lien est un élément cliquable permettant de rediriger l'utilisateur vers une section de la page, une nouvelle page, ou encore de lui permettre de télécharger un fichier.
     - Pour créer un lien, nous utilisons la balise <a></a>. Cependant, il est nécessaire de lui attribuer l'attribut "href" pour indiquer vers quelle page, lien ou fichier il doit diriger.
     - Un lien peut rediriger :
-      -> Vers un autre site (lien externe) -> lien absolu -> https://www.youtube.com
-      -> Vers une autre page du site (lien interne) -> lien relatif -> mapage.html
-      -> Vers un fichier (image, PDF, ZIP...)
+    -> Vers un autre site (lien externe) -> lien absolu -> https://www.youtube.com
+    -> Vers une autre page du site (lien interne) -> lien relatif -> mapage.html
+    -> Vers un fichier (image, PDF, ZIP...)
     - Le texte à l'intérieur de la balise est appelé "ancre du lien." -->
-  <article>
-    <h3>Liens externes</h3>
-    <a href="https://www.youtube.com" target="_blank">Aller sur Youtube</a>
+  <article>    
+    <h2>Les liens externes</h2>
+    <a href="https://www.youtube.com">Aller sur Youtube</a>
     <br>
     <a href="https://www.youtube.com" target="_blank">Aller sur Youtube</a>
+    <!-- Si je veux que mon lien s'ouvre dans un autre onglet, je dois ajouter l'attribut target="_blank" -->
+    <br>    
+    <br>
+    <p>
+      Je fais une recherche sur le site <a href="https://www.750g.com/" target="_blank">750g</a> pour le repas de ce soir
+    </p>
+    <!-- lien avec infobulle au survol de la souris (hover) -->
+    <a href="https://www.750g.com/pancakes-epais-et-fluffy-r205418.htm" target=";
+    " title="fluffy pancakes">En savoir plus sur les fluffy pancakes</a>
+  </article>
+  <article>
+    <h3>Un lien vers une adresse mail</h3>
+    <p>
+      <a href="mailto:axel.gransart@colombbus.org">envoyez moi un mail</a>
+      <!-- Pour permettre à vos visiteur de vous envoyer un mail, il suffit donc de faire un lien dans l'attribut href par "mailto" et écrire l'adresse mail où on peut vous contacter -->
+    </p>
+    <br>
+    <h3>Un lien vers un numéro de téléphone</h3>
+    <p>
+      <a href="tel:0631186897">Appelez moi</a>
+      <!-- permet de définir un numéro de téléphone à appeler  -->
+    </p>
+    <br>
+    <h3>Un lien vers Skype</h3>
+    <p>
+      <a href="callto:0631186897">Skypez moi</a>
+      <!-- permet de définir un numéro de téléphone à skyper  -->
+    </p>
+    <br>
+    <h3>Lien de téléchargement de fichier</h3>
+    <p>
+      <a href="assets/pdf/Raccourcis clavier.pdf" target="_blank">Ouvrir le PDF</a>
+    </p>
+    <br>
+    <h2>Les liens internes</h2>
+    <h3>Deux pages situées dans un même dossier</h3>
+    <p>Découvrir les balises des structurations d'une page HTML sur 
+      <a href="00_structure_de_base.html">la page suivante</a>
+    </p>
+    <br>
+    <h3>Deux pages situées dans deux dossier différents</h3>
+    <p>Lien qui me ramène à <a href="sous_dossier/test.html">la page test</a> de mon sous_dossier</p>
   </article>
 
 </body>
