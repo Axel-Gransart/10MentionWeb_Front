@@ -1,0 +1,52 @@
+body {
+  background-color: black; /* La couleur de fond du corps de la page */
+  text-align: center; /* crée l'alignement des éléments enfants au centre de la page */
+}
+p, figcaption {
+  color: white;
+}
+h1 {
+color: cadetblue; /* La couleur du texte des balises <h1> */
+text-transform: capitalize;  /* Transforme la 1ère lettre des mots en majuscule dans la balise visée */
+}
+h2 {
+  color: chocolate;
+  text-transform: uppercase; /* Transforme le texte des balises en majuscule */
+  font-style: italic; /* Transforme le style de la police d'écriture en italique */
+}
+img {
+  width: 40%; /* Définit la largeur de l'élément visé. elle peut être noté en px, %, em ou rem */
+  /* height: 13rem; Définit la largeur de l'élément visé. elle peut être noté en px, %, em ou rem */
+
+  margin: 0.5rem auto; /* Ajoute une marge autour de l'élément. elle peut être noté en px, %, em ou rem. Elle peut être modifié individuellement en notant les différentes valeurs en commençant obligatoirement par le haut
+  On peut les modifier individuellement en visant margin-top, margin-right, margin-bottom, margin-left ou en prenant jusqu'a 4 valeurs: 
+    - margin: 10px;  marge de 10 pixels sur tous les côtés 
+    - margin: 10px 20px; marge de 10 pixels en haut/bas, 20 pixels à gauche/droite 
+    - margin: 10px 20px 30px; marge de 10 pixels en haut, 20 pixels à gauche/droite, 30 pixels en bas 
+    - margin: 10px 20px 30px 40px; marge de 10 pixels en haut, 20 pixels à droite, 30 pixels en bas, 40 pixels à gauche */
+
+  border-radius: 10%; /* Définit l'arrondit des angles de l'élément ciblé. Le rayon peut être noté en px ou %. Il peut être modifié individuellement en notant les différentes valeurs en commençant obligatoirement par l'angle en haut à gauche */
+
+  border-bottom: 5px solid blueviolet;
+}
+img:nth-of-type(2) {
+  /* border-style: solid;  Définit le style de la bordure */
+  /* border-width: 3px; Définit la largeur de la bordure en px */
+  /* border-color: red; Définit la couleur de la bordure */
+
+  /* Il existe une syntaxe alternative pour définir le style, la largeur et la couleur de la bordure en une seule ligne */
+  border: 3px solid red;
+}
+div {
+  height: 500px;
+  background-image: url("../img/wallpaper 2.jpg"); /* définit l'image de fond via un chemin relatif ou absolu dans l'url */
+  background-repeat: no-repeat; /* Définit la répétition ou la non répétition de l'image de fond */
+  background-size: cover; /* Permet l'ajustement de la taille de l'image de fond suivant le conteneur */
+  padding: 0.5rem 1rem; /* Ajoute une marge interne (espace intérieur au niveau des bords de l'élément) */
+  margin: 1rem;
+}
+div p {
+  background-color: rgba(5, 19, 21, 0.6);
+  padding: 2rem;
+  border-radius: 100px;
+}

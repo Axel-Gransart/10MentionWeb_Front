@@ -30,6 +30,11 @@ a {
   color: brown;  
 }
 /* Une pseudo classe est un mot clé préfixé par deux points, qui s'ajoute au selecteur pour appliquer un style à un éléments dans un cas particulier */
-a:hover {  /* :hover désigne un objet survolé par le curseur de la souris. Cela peut être un lien ou n'importe quel élément HTML */
+a:hover {  
+  /* :hover désigne un objet survolé par le curseur de la souris. Cela peut être un lien ou n'importe quel élément HTML */
   color: chartreuse;
+}
+a:visited {
+  /* La pseudo classe ":visited" désigne un lien dont la page cible a déjà été visitée */
+  color: blue;
 }

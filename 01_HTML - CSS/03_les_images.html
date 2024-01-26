@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="quatrième page en html: les images">
+  <meta name="author" content="Axel Gransart">
+  <link rel="stylesheet" type="text/css" href="assets/css/03_les_images.css">
+  <title>les images</title>
+</head>
+<body>
+  <h1>les images</h1> <!-- 
+    La balise <img> est une balise HTML utilisée pour incorporer une image dans une page web.
+    C'est une balise de la famille  "orpheline" ou "autofermante" et de type inline
+    L'attribut "src" :  cet attribut est obligatoire et spécifie le chemin ou l'URL de l'image que vous souhaitez inclure sur la page. 
+    L'attribut "alt" : « texte alternatif » cet attribut est également important. Il fournit un texte alternatif décrivant le contenu de l'image. 
+    Cela est crucial pour l'accessibilité, car le texte alternatif est affiché à la place de l'image si celle-ci ne peut pas être chargée ou pour les utilisateurs qui utilisent des lecteurs d'écran (personne non-voyantes) -->
+    <article>
+      <h2>1/ image insérée en HTML</h2>
+      <img src="https://i.notretemps.com/1400x787/smart/2021/05/03/trois-facons-de-distraire-votre-chat-a-la-maison.jpeg" alt="Un chaton avec une balle" width="500">
+      <!-- Ici, l'attribut src contient un chemin absolu d'une image -->
+      <br>
+      <br>
+      <img src="assets/img/midjourney.png" alt="image généré par Midjourney" width="600">
+       <!-- Ici, l'attribut src contient un chemin relatif d'une image -->
+      <br>
+      <br>
+      <img src="assets/img/Montagne.avif" alt="mountain" title="image d'un pic enneigé">
+    </article>
+    <article>
+      <h2>2/ les figures</h2> <!--  
+        Les figures sont des éléments qui viennent enrichir le texte pour compléter les informations sur l'image.
+        Ces balises sont utilisées pour encapsuler des éléments multimédias tels que des images, des graphiques, des vidéos, etc., dans le contenu du texte pour apporter une signification ou des explications supplémentaires.        
+        Une figure est plus souvent accompagnée d'une légende. Pour ajouter une légende, utilisez la balise <figcaption> à l'intérieur de la balise <figure>  pour décrire ou expliquer le contenu multimédia qu'elle entoure comme ceci:   -->
+      <figure> <!-- figure>img+figcaption -->
+        <img src="assets/img/unnamed.jpg" alt="chaton accroché à un arbre">
+        <figcaption>Des chercheurs américains ont réussi à démontrer dans des études que les chats faisaient baisser le niveau de stress de leurs propriotaires. Caresser un chat fait augmenter la production d'hormones du bonheur, tandis que la production d'hormones du stress diminue.</figcaption>
+      </figure>
+    </article>
+    <article>
+      <h2>3/ Les images de fonds insérées en CSS</h2> <!-- 
+        La balise div est une balise universelle, elle n'as pas de valeur sémantique, c'est une balise de division qui est utilisée pour grouper et diviser le contenu d'une page web en sections distinctes.
+        "div" est une abréviation de "division", et la balise <div> est souvent utilisée comme un conteneur générique pour d'autres éléments HTML, permettant de les regrouper et d'appliquer des styles ou des comportements spécifiques à ce groupe.-->
+      <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At accusantium, repellat ad eius quos numquam facere dicta voluptate aperiam, cumque fugiat officia explicabo, iste laudantium ea ipsum unde reiciendis quidem.
+        Dolor nulla molestias id hic animi architecto placeat similique non eligendi accusantium vel mollitia ad aspernatur quas voluptatibus illum reiciendis modi dignissimos sint fuga, dolore neque optio praesentium iusto! Placeat?
+        Eos, fuga rem incidunt adipisci ipsam nemo? Quae, possimus sit iusto voluptatem quaerat adipisci provident temporibus, quidem aperiam accusamus eos culpa quas, architecto porro. Temporibus eveniet consequatur quibusdam earum explicabo.</p>
+      </div>
+    </article>
+</body>
+</html>
