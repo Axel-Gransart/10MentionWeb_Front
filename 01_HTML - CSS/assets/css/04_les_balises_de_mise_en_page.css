@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;  
+}
+
+body {
+  background-color: #EEEDEB;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #702192;
+  font-size: 3em;
+}
+
+div.navigation {
+  text-align: center;
+  border: 2px solid #3c0753;
+  border-radius: 10px 40px;
+  padding: 1rem;
+}
+
+.navigation a {  
+  width: 33%;
+  padding: .5em 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #d9a9db;
+  border-radius: 15px;
+  transition: all 0.5s;
+  display: inline-block;
+  /* Permet de garder un élément avec ses particularités inline tout en pouvant modifier la taille */
+}
+
+.navigation a:hover {
+  background-color: #702192;
+}
+
+div p {
+  text-align: justify;
+  padding: 2em;
+}
+
+div.main {
+  border: 2px solid #3c0753;
+  padding: 20px 50px;
+  margin-top: 1rem;
+}
+
+.section1 {
+  text-align: center;
+}
+
+.section1 img {
+  border-radius: 50px;
+}
