@@ -6,20 +6,26 @@ body {
   background-color: #EEEDEB;
 }
 
+header {
+  background-color: aqua;
+  height: 50px;
+  width: 50px;
+}
+
 h1 {
   text-transform: uppercase;
   color: #702192;
   font-size: 3em;
 }
 
-div.navigation {
+nav {
   text-align: center;
   border: 2px solid #3c0753;
   border-radius: 10px 40px;
   padding: 1rem;
 }
 
-.navigation a {  
+nav a {  
   width: 33%;
   padding: .5em 0;
   text-decoration: none;
@@ -32,31 +38,31 @@ div.navigation {
   /* Permet de garder un élément avec ses particularités inline tout en pouvant modifier la taille */
 }
 
-.navigation a:hover {
+nav a:hover {
   background-color: #702192;
 }
 
-div p {
+section p {
   text-align: justify;
   padding: 1em;
 }
 
-div.main {
+main {
   border: 2px solid #3c0753;
   padding: 20px 50px;
   margin-top: 1rem;
 }
 
-div.section1, div.section2 {
+section {
   text-align: center;
 }
 
-div.section1 img {
+#html img {
   border-radius: 50px;
 }
 
-div.section2 {
-  background-image: url("../img/photo_code.jpg");
+#css {
+  background-image: url("../assets/img/photo_code.jpg");
   background-repeat: no-repeat;
   padding: 100px;
   background-size: cover;
@@ -64,7 +70,7 @@ div.section2 {
   color: white;
 }
 
-div.section2 p {
+#css p {
   display: inline-block;
   border: 2px solid white;
   width: 33%;
@@ -72,23 +78,23 @@ div.section2 p {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-div.piedDePage {
+footer {
   border: 2px solid white;
   margin-top: 20px;
   text-align: center;
 }
 
-div.piedDePage ul {
+footer ul {
   display: inline-block;
   width: 33%;
   list-style: none;
 }
 
-div.piedDePage ul li {
+footer ul li {
   margin-bottom: 20px;
 }
 
-div.piedDePage ul li a {
+footer ul li a {
   color: #3c0753;
   background-color: #d9a9db;
   padding: 8px 12px;
