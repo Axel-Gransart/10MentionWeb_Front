@@ -1,0 +1,37 @@
+*{
+	margin: 0 ; 
+	padding: 0 ; 
+	box-sizing: border-box ;
+} 
+
+h1 {
+  text-transform: capitalize;
+}
+
+section:last-of-type {
+  border: 1px solid black;
+  color: white;
+  margin-top: 1rem;
+  height: 20rem;
+}
+
+section:last-of-type article {
+  width: 15%;
+  height: 33.33%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:last-of-type article:first-child {
+  background-color: orange;
+}
+
+section:last-of-type article:nth-child(2) {
+  background-color: blue;
+}
+
+section:last-of-type article:last-child {
+  background-color: green;
+}

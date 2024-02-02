@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;  
+}
+
+body {
+  background-color: #EEEDEB;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #702192;
+  font-size: 3em;
+}
+
+nav {
+  text-align: center;
+  border: 2px solid #3c0753;
+  border-radius: 10px 40px;
+  padding: 1rem;
+}
+
+nav a {  
+  width: 33%;
+  padding: .5em 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #d9a9db;
+  border-radius: 15px;
+  transition: all 0.5s;
+  display: inline-block;
+  /* Permet de garder un élément avec ses particularités inline tout en pouvant modifier la taille */
+}
+
+nav a:hover {
+  background-color: #702192;
+}
+
+section p {
+  text-align: justify;
+  padding: 1em;
+}
+
+main {
+  border: 2px solid #3c0753;
+  padding: 20px 50px;
+  margin-top: 1rem;
+}
+
+section {
+  text-align: center;
+}
+
+#html img {
+  border-radius: 50px;
+}
+
+#css {
+  background-image: url("assets/img/photo_code.jpg");
+  background-repeat: no-repeat;
+  padding: 100px;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+#css p {
+  display: inline-block;
+  border: 2px solid white;
+  width: 33%;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer {
+  border: 2px solid white;
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer ul {
+  display: inline-block;
+  width: 33%;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 20px;
+}
+
+footer ul li a {
+  color: #3c0753;
+  background-color: #d9a9db;
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-decoration: none;
+}
