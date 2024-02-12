@@ -1,0 +1,28 @@
+*{
+	margin: 0 ; 
+	padding: 0 ; 
+	box-sizing: border-box ;
+} 
+
+header {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+nav {
+  background-color: #CBD285;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 0 1rem;
+  transition: all 1s;
+}
+
+a:hover {
+  color: white;
+  background-color: blue;
+}
