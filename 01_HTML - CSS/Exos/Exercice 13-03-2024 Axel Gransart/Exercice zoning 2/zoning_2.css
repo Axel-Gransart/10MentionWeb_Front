@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 60%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #FFD6D6;  
+  font-weight: bold;
+}
+
+h1 {
+  padding: 0.5em 0;
+}
+
+#headerZone {
+  background-color: #008080;
+  padding: 1em 0;
+}
+.displayFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#flex {
+  display: flex;
+  height: 25rem;
+  width: 100%;
+}
+
+.salmon {
+ background-color: #FF6347;
+ width: 25%;
+}
+
+#zoneMilieu {
+  background-color: #D8BFD8;
+  width: 50%;
+}

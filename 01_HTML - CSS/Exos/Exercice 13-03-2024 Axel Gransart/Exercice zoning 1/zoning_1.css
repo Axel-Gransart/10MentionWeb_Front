@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 60%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #FFD6D6;  
+  padding: 1em 0;  
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.displayFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#zone1 {
+  background-color: #F7F39A;
+  padding: 0.5em 0;
+}
+
+#flex {
+  display: flex;
+  height: 25rem;
+  width: 100%;
+}
+
+#zoneGauche {
+ background-color: #10828C;
+ width: 25%;
+}
+
+#zoneDroite {
+  background-color: #A0B08B;
+  width: 75%;
+}

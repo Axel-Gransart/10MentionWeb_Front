@@ -52,8 +52,8 @@ section {
 }
 
 .style div {
-  width: 25%;
-  height: 25%;
+  width: 30%;
+  height: 22%;
   text-align: center;
 }
 
@@ -221,3 +221,73 @@ Les élément qui sont à l'intérieur du parent ( avec un contexte flex) vont �
   align-self: flex-end;
   /*Elle permet de contrôler l'alignement vertical d'un élément spécifique à l'intérieur d'un conteneur flex. L'élément est aligné sur le bord inférieur du conteneur flex*/
 }
+
+.style2 div:nth-of-type(2n+3) {
+  background-color: orange;
+}
+.style2 div:nth-of-type(2n+4) {
+  background-color: blue;
+}
+
+#conteneurNowrap {
+  flex-wrap: nowrap;
+  /* Si flex-wrap vaut nowrap et que les flex-items sont dans leur configuration par défaut, alors les flex-items seront rétrécis */
+}
+
+#conteneurWrap {
+  flex-wrap: wrap;
+  /* Si flex-wrap vaut wrap, alors les flex-items seront répartis sur une nouvelle ligne */
+}
+
+#conteneurWrapReverse {
+  flex-wrap: wrap-reverse;
+  /* les éléments flexibles vont passer à la ligne de manière inverse par rapport à leur ordre d'origine*/
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+#Stretch div {
+  height: auto;
+}
+
+#Stretch {
+  align-content: stretch;
+  /* Les deux lignes (ou plus) de flex-items s'étirent pour occuper tout l'espace disponible du flex-container */
+}
+
+#FlexStart {
+  align-content: flex-start;
+  /* Les deux lignes (ou plus) de flex-items sont réparties, sur le haut du flex-container, suivant l'axe secondaire */
+}
+
+#FlexEnd {
+  align-content: flex-end; /*Les deux lignes (ou plus) de flex-items sont réparties, sur le bas du flex-container, suivant de l'axe secondaire.*/
+}
+#center {
+  align-content: center; /* Les deux lignes (ou plus) de flex-items sont réparties, au centre du flex-container. L'espace disponible est équitablement réparti, de part et d'autre, de ces deux lignes*/
+}
+#spaceBetween {
+  align-content: space-between; /* Les deux lignes (ou plus) de flex-items sont placées contre les bords du flex-container. L'espace restant est placé entre les deux lignes.*/
+}
+#spaceAround {
+  align-content: space-around; /*L'espace disponible est réparti entre les deux lignes de flex-items et les bords du flex-container. L'espace sur les bords vaut la moitié de l'espace entre les lignes.*/
+}
+#spaceEvenly {
+  align-content: space-evenly; /* L'espace disponible est réparti de manière équitable entre les deux lignes de flex-items et les bords du flex-container.*/
+}
+
+/**************** Order ******** **/
+
+/* Par défaut, l'ordre d'apparition des flex-items correspond à l'ordre de leur apparition dans le code HTML, cet ordre peut être géré manuellement à l'aide de la propriété order. Dans ce cas, l'ordre d'apparition des flex-items devient l'ordre des entiers, sachant qu'un flex-item reçoit la valeur order:0 par défaut*/
+
+#conteneurGOrder :nth-child(1){
+  order: 3;
+}
+#conteneurGOrder :nth-child(2){
+  order: 1;
+}
+#conteneurGOrder :nth-child(3){
+  order: 2;
+} 

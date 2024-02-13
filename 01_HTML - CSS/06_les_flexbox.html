@@ -218,8 +218,204 @@
       <div>Elément 2</div>
       <div>Elément 3</div>
     </div>
-
-
+    <br><br><br>
+  </section>
+  <section>
+    <h2>E - retour à la ligne</h2>
+    <p>Par défaut, les blocs essaient de rester sur la même ligne, même s'ils n'ont pas la place (ce qui provoque parfois des problèmes de conception). Si vous le souhaitez, vous pouvez demander au block de passer à la ligne lorsqu'ils n'ont plus de place. Pour cela, vous devez utiliser la propriété <span>Flex-wrap</span>.</p>
+    <p>Elle peut prendre les valeurs suivantes</p>
+    <ul>
+      <li>- <span>nowrap</span>: Pas de retour à la ligne (valeur par défaut) </li>
+      <li>- <span>wrap</span>: Les éléments vont à la ligne lorsqu'il n'y a plus de place </li>
+      <li>- <span>wrap-reverse</span>: Les éléments vont à la ligne lorsqu'il n'y a plus de place mais en sens inverse </li>
+    </ul>
+    <br><br><br>
+    <h3><span>nowrap</span></h3>
+    <br>
+    <div class="style style2" id="conteneurNowrap">
+      <div>Elément 1</div>
+      <div>Elément 2</div>
+      <div>Elément 3</div>
+      <div>Elément 4</div>
+      <div>Elément 5</div>
+      <div>Elément 6</div>
+      <div>Elément 7</div>
+      <div>Elément 8</div>
+      <div>Elément 9</div>
+      <div>Elément 10</div>
+      <div>Elément 11</div>
+    </div>
+    <br>
+    <h3><span>wrap</span></h3>
+    <br>
+    <div class="style style2" id="conteneurWrap">
+      <div>Elément 1</div>
+      <div>Elément 2</div>
+      <div>Elément 3</div>
+      <div>Elément 4</div>
+      <div>Elément 5</div>
+      <div>Elément 6</div>
+      <div>Elément 7</div>
+      <div>Elément 8</div>
+      <div>Elément 9</div>
+      <div>Elément 10</div>
+      <div>Elément 11</div>
+    </div>
+    <br>
+    <h3><span>wrap-reverse</span></h3>
+    <br>
+    <div class="style style2" id="conteneurWrapReverse">
+      <div>Elément 1</div>
+      <div>Elément 2</div>
+      <div>Elément 3</div>
+      <div>Elément 4</div>
+      <div>Elément 5</div>
+      <div>Elément 6</div>
+      <div>Elément 7</div>
+      <div>Elément 8</div>
+      <div>Elément 9</div>
+      <div>Elément 10</div>
+      <div>Elément 11</div>
+    </div>
+  </section>
+  <br><br><br>
+  <section>
+    <h2>F - Répartir plusieurs lignes</h2>
+    <p>Si vous avez plusieurs ligne dans votre flexbox,vous pouvez choisir comment celles-ci seront réparties avec<span>align-content</span>.
+    Cette propriété permet de gérer l'alignement des différents lignes (ou colonnes) les par rapports au autres. Cette propriété n'aura d'éffet que si le conteneur flexible posséde plusieurs lignes(si l'axe principale est horizontal) ou plusieurs colonnes ( si l'axe principle est vertical) et que si le flex-wrap est présent.
+    </p>
+    <p> Les valeurs de cette propriété :</p>
+    <br>
+    <ul>
+      <li>- <span>flex-start</span>: les éléments sont placés au début
+      </li>
+      <li>- <span>flex-end</span>: les élélements sont placés à la fin</li>
+      <li>- <span>center</span>: les éléments sont placés au centre</li>
+      <li>- <span>space-between</span>: les éléments sont séparés avec de l'éspace entre eux </li>
+      <li>- <span>space-around</span>: les éléments sont séparés avec de l'éspace entre eux, mais il y'a aussi de l'éspace au
+      début et à la fin</li>
+      <li><span>space-evenly </span>: Les éléments sont répartis uniformément dans le conteneur d'alignement le long de l'axe principal. </li>
+      <li>- <span>stretch</span>: les éléments s'étirent pour occuper tout l'éspace (valeur par défaut) </li>
+    </ul>
+    <br>
+    <h3><span>stretch</span> (valeur par défaut)</h3>
+    <br>
+    <div class="style style2 wrap" id="Stretch">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <br>
+    <h3><span>Flex-start</span></h3>
+    <br>
+    <div class="style style2 wrap" id="FlexStart">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <br>
+    <h3><span>Flex-end</span></h3>
+    <br>
+    <div class="style style2 wrap" id="FlexEnd">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <br>
+    <h3><span>center</span></h3>
+    <br>
+    <div class="style style2 wrap" id="center">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <br>
+    <h3><span>space-between</span></h3>
+    <br>
+    <div class="style style2 wrap" id="spaceBetween">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <br>
+    <h3><span>space-around</span></h3>
+    <br>
+    <div class="style style2 wrap" id="spaceAround">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <br>
+    <h3><span>space-evenly</span></h3>
+    <br>
+    <div class="style style2 wrap" id="spaceEvenly">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
   </section>
 </body>
 </html>
