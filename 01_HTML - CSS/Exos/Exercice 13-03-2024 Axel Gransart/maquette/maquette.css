@@ -22,12 +22,13 @@ ul {
 }
 
 img {
-  width: 5em;
+  width: 8em;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 1em;
 }
 
 nav a {
@@ -73,6 +74,7 @@ h2 {
   background-color: #944E63;
   color: white;
   height: 60%;
+  padding-top: 3em;
 }
 
 #section2 h3 {
@@ -109,4 +111,8 @@ h2 {
 
 footer {
   margin: 2em 0;
+}
+
+footer a:visited {
+  color: blue;
 }
