@@ -92,7 +92,7 @@ h2 {
  margin: 0.5em;
 }
 
-#aside {
+aside {
   background-color: #CAA6A6;
   width: 30%;
   display: flex;
@@ -101,7 +101,7 @@ h2 {
   align-items: center;
 }
 
-#aside a {
+aside a {
   background-color: #FFE7E7;
   width: 10em;
   padding: 0.5em 1em;

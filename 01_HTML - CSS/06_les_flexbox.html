@@ -12,18 +12,19 @@
   <header>
     <h1>flexbox</h1>
   </header>
-  <section>
+  <section id="aNormal">
     <h2>A - comportement normal</h2>
     <article>
       <p>Le principe de la mise en page avec flexbox est simple: vous définissez un conteneur, et à l'intérieur vous placez plusieurs éléments.</p>
     </article>
+    <div class="style" id="conteneurA">
+      <div>Elément1</div>
+      <div>Elément2</div>
+      <div>Elément3</div>
+    </div>
   </section>
-  <section class="style" id="conteneurA">
-    <div>Elément1</div>
-    <div>Elément2</div>
-    <div>Elément3</div>
-  </section>
-  <section>
+  <br><br><br>
+  <section id="bDisplay">
     <h2>B - ajout du flex au conteneur</h2>
     <p><span>display:flex</span> -> appliqué sur le conteneur, les blocs intérieurs se positionnent sur le côté</p>
     <div class="style" id="conteneurB">
@@ -32,7 +33,8 @@
         <div>Elément3</div>
     </div>
   </section>
-  <section>
+  <br><br><br>
+  <section id="cDirection">
     <h2>C - direction</h2>
     <p>Flexbox nous permet d'agencer ces éléments dans le sens que l'on veut. Avec <span>flex-direction</span>, on peut les positionner verticalement ou encore les inverser. Il peut prendre les valeurs suivantes: <br>
       -> row: organisés sur une ligne (par défaut)
@@ -69,7 +71,8 @@
       <div>Element 3</div>
     </div>
   </section>
-  <section>
+  <br><br><br>
+  <section id="dAlign">
     <h2>D - Alignement</h2>
     <p>Les éléments sont organisés soit horizontalement (par défaut), soit verticalement.</p>
     <ul>
@@ -218,12 +221,13 @@
       <div>Elément 2</div>
       <div>Elément 3</div>
     </div>
-    <br><br><br>
   </section>
-  <section>
+  <br><br><br>
+  <section id="eRetour">
     <h2>E - retour à la ligne</h2>
-    <p>Par défaut, les blocs essaient de rester sur la même ligne, même s'ils n'ont pas la place (ce qui provoque parfois des problèmes de conception). Si vous le souhaitez, vous pouvez demander au block de passer à la ligne lorsqu'ils n'ont plus de place. Pour cela, vous devez utiliser la propriété <span>Flex-wrap</span>.</p>
-    <p>Elle peut prendre les valeurs suivantes</p>
+    <p>Par défaut, les blocs essaient de rester sur la même ligne, même s'ils n'ont pas la place (ce qui provoque parfois des problèmes de conception). Si vous le souhaitez, vous pouvez demander au block de passer à la ligne lorsqu'ils n'ont plus de place. Pour cela, vous devez utiliser la propriété <span>flex-wrap</span>.</p>
+    <p>Elle peut prendre les valeurs suivantes:</p>
+    <br>
     <ul>
       <li>- <span>nowrap</span>: Pas de retour à la ligne (valeur par défaut) </li>
       <li>- <span>wrap</span>: Les éléments vont à la ligne lorsqu'il n'y a plus de place </li>
@@ -279,9 +283,9 @@
     </div>
   </section>
   <br><br><br>
-  <section>
+  <section id="fFlex">
     <h2>F - Répartir plusieurs lignes</h2>
-    <p>Si vous avez plusieurs ligne dans votre flexbox,vous pouvez choisir comment celles-ci seront réparties avec<span>align-content</span>.
+    <p>Si vous avez plusieurs ligne dans votre flexbox,vous pouvez choisir comment celles-ci seront réparties avec <span>align-content</span>.
     Cette propriété permet de gérer l'alignement des différents lignes (ou colonnes) les par rapports au autres. Cette propriété n'aura d'éffet que si le conteneur flexible posséde plusieurs lignes(si l'axe principale est horizontal) ou plusieurs colonnes ( si l'axe principle est vertical) et que si le flex-wrap est présent.
     </p>
     <p> Les valeurs de cette propriété :</p>
@@ -294,7 +298,7 @@
       <li>- <span>space-between</span>: les éléments sont séparés avec de l'éspace entre eux </li>
       <li>- <span>space-around</span>: les éléments sont séparés avec de l'éspace entre eux, mais il y'a aussi de l'éspace au
       début et à la fin</li>
-      <li><span>space-evenly </span>: Les éléments sont répartis uniformément dans le conteneur d'alignement le long de l'axe principal. </li>
+      <li>- <span>space-evenly </span>: Les éléments sont répartis uniformément dans le conteneur d'alignement le long de l'axe principal. </li>
       <li>- <span>stretch</span>: les éléments s'étirent pour occuper tout l'éspace (valeur par défaut) </li>
     </ul>
     <br>
@@ -415,6 +419,32 @@
       <div>10</div>
       <div>11</div>
       <div>12</div>
+    </div>
+  </section>
+  <br><br><br>
+  <section id="gOrder">
+    <h2>G - order</h2>
+    <p>Sans changer le code HTML, nous pouvons modifier l'ordre des éléments en CSS grâce à la propriété <span>order</span>. Indiquez simplement un nombre et les éléments seront triés du plus petit au plus grand nombre</p>
+    <br>
+    <h3><span>Par défaut</span></h3>
+    <br>
+    <div class="style" id="conteneurG">
+      <div>Element 1</div>
+      <div>Element 2</div>
+      <div>Element 3</div>
+    </div>
+    <br>
+    <h3><span>Avec Order</span></h3>
+    <br>
+    <div class="style" id="conteneurGOrder">
+      <!--
+        Element 1 -> order 3
+        Element 2 -> order 1
+        Element 3 -> order 2
+       -->
+      <div>Element 1</div>
+      <div>Element 2</div>
+      <div>Element 3</div>
     </div>
   </section>
 </body>

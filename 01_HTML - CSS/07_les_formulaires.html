@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Les formulaires">
+  <meta name="author" content="Axel Gransart">
+  <link rel="stylesheet" type="text/css" href="assets/css/07_les_formulaires.css">
+  <title>Les formulaires en HTML</title>
+</head>
+<body>
+  <h1>Mon premier formulaire en HTML</h1>
+  <div>
+    <p>    
+      Le formulaire sert à récupérer des données que l'utilisateur va entrer et les envoyer au serveur pour un traitement (en PHP par exemple): login, formulaire de contact et même le chat facebook.
+    </p>
+    <p>
+      Je déclare le formulaire avec la balise form: &lt;form> est une balise essentielle, elle permet d'indiquer le début d'un formulaire, dont on va se servir énormément en developpement. Cette balise fonctionne avec 2 attributs essentiels:
+      <ul>
+        <li>
+          - action: permet d'indiquer où on récupère les données envoyées par l'utilisateur, l'adresse de la page ou du fichier qui va trraiter les informations envoyées par le formulaire.
+        </li>  
+        <li>
+          - method: permet d'indiquer si on récupère les données ou si on les envoie. Exemple: lorsque l'on s'inscrit sur un site, on envoie des données vers la base de données (BDD). Lorsque l'on se connecte, on récupère et on vérifie des données qui se trouvent déjà dans une BDD. Il existe 2 méthodes:
+          <ul>
+            <li>
+              -> method="get": les informations sont passées dans la barre d'adresse
+            </li>
+            <li>
+              -> method="post": envoie les données dans le corps de la requête sans passer par la barre d'adresse, c'est la méthode la plus utilisée et la plus sécurisée.
+            </li>            
+          </ul>
+        </li>
+      </ul>
+    </p>
+  </div>
+  <section>
+    <h2>formulaire</h2>
+    <form action="#" method="post">
+      <span>Présentation des différentes balises de formulaire comprise dans un &lt;form action="#" method="post"></span>
+        <!-- Début du formulaire -->
+        <br><br>
+        <p><span>label</span> désigne l'étiquette du champs, elle permet de définir et d'informer sur l'info attendu</p>
+        <br>
+        <p><span>input</span>: élément de saisie de formulaire: son apparence repose grandement sur la valeur de l'attribut type qui l'accompagne:
+          <ul>
+            <li>
+              - input avec type text -> zone de texte monoligne
+            </li>
+          </ul>
+        </p>
+        <fieldset> 
+          <legend>Informations personnelles</legend>
+          <div>
+            <span>Nom et prénom &lt;input type="text"></span>
+            <br>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom de famille" required>
+            <br>
+            <p> name -> pour récupérer la valeur en PHP (pas d'espace, pas d'accent ni de caractères spéciaux)</p>
+            <br>
+            <p>placeholder -> garder la place = exemple de contenu valable, informer l'utilisateur sur ce qui est attendu.</p>
+            <br>
+            <p>required -> indique que le champs doit être obligatoirement renseigné. C'est un attribut particulier: il n'a pas de valeur</p>
+          </div>          
+          <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" maxlength="15" required>
+            <br>
+            <p>maxlength -> indique le nombre de caractère maximum</p>
+          </div>
+          <div>
+            <span>date de naissance &lt;input type="date"></span>
+            <br>
+            <label for="dateDeNaissance">Votre date de naissance</label>
+            <input type="date" name="dateDeNaissance" id="dateDeNaissance">
+            <br>
+            <p>type="date" -> permet d'afficher un calendrier pour choisir une date</p>
+          </div>
+          <div>
+            <span>age &lt;input type="number"></span>
+            <br>
+            <label for="age">Votre age</label>
+            <input type="number" name="age" id="age">
+            <br>
+            <p>type="number" -> permet d'entre seulement un nombre</p>
+          </div>
+          <div>
+            <span>&lt;input type="radio"></span>
+            <br>
+            <p>Lorsque l'on fait des boutons de type radio cela signifie qu'un seul peut être coché. Naturellement, celui qui a l'attribut checked sera coché d'office.</p>
+            <br>
+            <!-- div>label+input -->
+            <input type="radio" name="choixAge" id="moins15">
+            <label for="moins15">Moins de 15 ans</label>
+            <br>
+            <input type="radio" name="choixAge" id="15et25">
+            <label for="15et25">Entre 15 et 25 ans</label>
+            <br>
+            <input type="radio" name="choixAge" id="25et40">
+            <label for="25et40">Entre 25 et 40 ans</label>
+            <br>
+            <input type="radio" name="choixAge" id="plus40">
+            <label for="plus40">Plus vieux que 40 ans</label>
+          </div>
+          <div>
+            <span>telephone &lt;input type="tel" pattern="^[0-9]{10}$"></span>
+            <br>
+            <label for="telephone">Téléphone</label>
+            <input type="tel" name="telephone" id="telephone" pattern="^[0-9]{10}$">
+            <p>type="tel" -> permet d'afficher le clavier chiffré pour les smartphones</p>
+            <p>pattern est une expression rationnelle à laquelle doit correspondre le texte saiaie pour être valide</p>
+          </div>
+          <div>
+            <span>photo &lt;input type="file"></span>
+            <br>
+            <label for="photo">Photographie</label>
+            <input type="file" name="photo" id="photo">
+            type="file" -> permet l'envoi d'un fichier
+          </div>
+          <div>
+            <span>residence &lt;optgroup label=""> + &lt;option value=""></span>
+            <br>
+            <label for="pays">Vous résidez en:</label>
+            <br>
+            <p>la balise select vient toujours avec des options: elle permet de faire un menu déroulant, on la retrouve souvent pour l'année de naissance ou encore le département dans lequel on vit</p>
+            <br>
+            <select name="pays" id="pays"> <!-- Indique le début et la fin de la liste déroulante -->
+              <optgroup label="Europe">
+                <!-- grouper les options séparer les pays en fonction de leur continent -->
+                <option value="france">France</option>
+                <option value="espagne">Espagne</option>
+                <option value="italie">Italie</option>
+                <option value="royaume-uni">Royaume-uni</option>
+              </optgroup>
+              <optgroup label="Amerique">
+                <option value="canada">Canada</option>
+                <option value="etats-unis">Etats-Unis</option>
+              </optgroup>
+              <optgroup label="Asie">
+                <option value="chine">Chine</option>
+                <option value="japon">Japon</option>
+              </optgroup>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Informations de connexion</legend>
+          <div>
+            <label for="pseudo">Pseudo</label>
+            <input type="text" name="pseudo" id="pseudo" placeholder="Trouvez vous un pseudo" required>
+          </div>
+          <div>
+            <span>mot de passe &lt;input type="password"></span>
+            <br>
+            <label for="mdp">Mot de passe</label>
+            <input type="password" name="mdp" id="mdp" placeholder="Votre mot de passe ici" required>
+            <br>
+            <p>type="password" -> permet de masquer le mot de passe</p>
+          </div>
+          <!-- div>label+input:email -->
+          <div>
+            <span>email &lt;input type="email"></span>
+            <br>
+            <label for="mail">Email</label>
+            <input type="email" name="mail" id="mail">
+            <br>
+            <p>type="email" -> permet à l'utilisateur de saisir une adresse mail, la valeur va être automatiquement validée et vérifiée</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Vos prochains voyages</legend>
+          <label for="travel">Choisissez vos voyages</label>
+          <div>
+            <span>voyages &lt;input type="checkbox"></span>
+            <br>
+            <input type="checkbox" name="voyage" id="travel" value="Chine">En Chine ?
+            <br>
+            <input type="checkbox" name="voyage" id="travel" value="Autriche"> En Autriche ?
+            <br>            
+            <input type="checkbox" name="voyage" id="travel" value="Mars" checked> Sur Mars ? (retour non garanti)
+            <br>
+            <p>checkbox -> case à cocher, toutes peuvent être cochées </p>
+            <p>attribut checked pour avoir une case cochée par défaut</p>
+          </div>
+          <div>
+            <label for="commentaire">Avez-vous une précision à apporter</label>
+            <br>
+            <textarea name="commentaire" id="commentaire" cols="30" rows="10"></textarea>
+            <p>textarea -> zone de texte multiligne</p>
+            <p>rows: nombre de ligne</p>
+            <p>cols: nombre de rangées</p>
+          </div>
+        </fieldset>
+        <div class="envoi">
+          <input type="submit" value="s'inscrire">
+          <!-- Pour envoyer notre formulaire, on utilise l'input de type="submit" -->
+          <input type="reset" value="Effacer">
+          <!-- Pour vider le formulaire / remise à zéro -->
+          <input type="button" value="bouton inactif" disabled>
+        </div>
+        <!-- Il existe d'autre type d'input:
+              - type="url" => saisir une adresse absolue
+              - type="color" => saisir une couleur
+              - type="serach" => créer un champ de recherche
+              - Différents types de chaps de séléction  de date existent:
+                date: pour la date (05/08/1989 par exemple)
+                time: pour l'heure (13:37 par exemple)
+                week : pour la semaine;
+                month: pour le mois;
+                datetime : pour la date et l'heure ( avec gestion du décalage horaire)
+                datetime-local: pour la date et l'heure (sans gestion du décalage horaire) -->
+      </form>
+    </section>
+</body>
+</html>

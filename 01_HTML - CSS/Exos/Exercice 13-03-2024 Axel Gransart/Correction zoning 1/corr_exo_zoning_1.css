@@ -86,4 +86,13 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  order: 2;
 }
+
+#zoning2 aside:last-of-type {
+  order: 3;
+}
+#zoning2 aside:first-of-type {
+  order: 1;
+}
+
