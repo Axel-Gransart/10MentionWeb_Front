@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Les tableaubleaux">
+  <meta name="author" content="Axel Gransart">
+  <link rel="stylesheet" type="text/css" href="assets/css/08_les_tableaux.css">
+  <title>Les tableaux en HTML</title>
+</head>
+<body>
+  <h1>un tableau, pour les données "tabulaires"</h1>
+  <table> <!-- La balise <table> définit le début d'un tableau -->
+    <caption>Ventes de la semaine</caption> <!-- La balise <caption> définit le titre du tableau -->
+    <thead> <!-- l'entête du tableau (table head) -->
+      <tr>  <!-- rangée du tableau (table row) -->
+        <th>Jour</th> <!-- les entête des colonnes (table head) -->
+        <th>Smartphones</th>
+        <th>Tablettes</th>
+        <th>Ordinateurs</th>
+      </tr>
+    </thead>
+    <tbody> <!-- le corps du tableau (table body) -->
+      <tr>
+        <td>Lundi</td> <!-- cellule du tableau, colonne (table data) -->
+        <td>10</td>
+        <td>5</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>Mardi</td>
+        <td>32</td>
+        <td>23</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>Mercredi</td>
+        <td>20</td>
+        <td>16</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Jeudi</td>
+        <td>26</td>
+        <td>14</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>Vendredi</td>
+        <td>58</td>
+        <td>67</td>
+        <td>67</td>
+      </tr>
+    </tbody>
+    <tfoot> <!-- le pied du tableau (table foot) -->
+      <tr>
+        <td>Total</td>
+        <td>146</td>
+        <td>125</td>
+        <td>108</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

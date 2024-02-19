@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 50%;
+  margin: 0 auto;
+  background-color: lightgrey;
+}
+
+h1 {
+  text-align: center;
+}
+
+caption {
+  color: #6e2142;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table {
+  text-align: center;
+  border: 3px solid #6e2142;
+  width: 90%;
+  margin: 50px auto 10px ;
+  padding: 20px;
+  background-color: #c7c8cc;
+  border-collapse: collapse; 
+  /* permet de fusionner les bordures côte à côte.
+  Par défaut, la bordure contient 2 traits.
+  Pour que le trait soit unique, on utilise la propriété border-collapse avec une valeur collapse. */
+}
+
+th, td {
+  border: 1px solid #6e2142;
+  padding: 5px;
+}
+
+thead, tfoot {
+  background-color: #be7575;
+}
+
+thead th:first-child, tfoot td:first-child {
+  background-color: #c7c8cc;
+}
+
+

@@ -49,6 +49,7 @@ section:first-child {
   background-color: #FFE7E7;
   padding: 5em 2em 2em;  
 }
+
 h2 {
   margin-bottom: 3em;
   font-weight: bold;
@@ -95,6 +96,35 @@ section:last-child article {
   width: 32%;
 }
 
+/* *************  Page A propos ************** */
+
+.aPropos section:first-child {
+  background-color: #FFE7E7;
+  padding: 50px;
+}
+
+.aPropos section:first-child div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aPropos section:first-child div img {
+  height: 300px;
+  border-radius: 30px;
+}
+
+.aPropos section:first-child div p {
+  width: 50%;
+  padding: 110px 30px;
+  line-height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  text-align: justify;
+}
+
+/* ******************* Footer ******************* */
+
 footer {
   margin: 2em 0;
   padding: 2em;
@@ -104,3 +134,4 @@ footer {
 footer a {
   color: blue;
 }
+
