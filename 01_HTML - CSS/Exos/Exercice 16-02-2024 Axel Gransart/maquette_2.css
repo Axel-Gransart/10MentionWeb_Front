@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 0.8em;
+}
+
+body {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 8em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1em;
+}
+
+nav a {
+  color: #FF5880;
+  font-weight: bold;
+}
+
+main {
+  border-top: 5px ridge #FF2C60;
+  border-bottom: 5px ridge #FF2C60;
+}
+
+
+
+footer {
+  margin: 2em 0;
+}
+
+footer a:visited {
+  color: blue;
+}

@@ -36,10 +36,12 @@
   </div>
   <section>
     <h2>formulaire</h2>
-    <form action="#" method="post">
-      <span>Présentation des différentes balises de formulaire comprise dans un &lt;form action="#" method="post"></span>
+    <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+      <span>Présentation des différentes balises de formulaire comprise dans un &lt;form action="#" method="post" enctype="multipart/form-data" autocomplete="off"></span>
+      <p><span>enctype="multipart/form-data"</span> -> on l'utilise quand on a un champ d'envoi de fichier dans le formulaire</p>
+      <p>Lorsque la valeur de l'attribut <span>autocomplete est défini sur "off"</span> cela signifie que les navigateurs ne doivent pas suggérer ou compléter automatiquement les valeurs des champs de formulaire basées sur l'historique de saisie de l'utilisateur</p>
         <!-- Début du formulaire -->
-        <br><br>
+        <br>
         <p><span>label</span> désigne l'étiquette du champs, elle permet de définir et d'informer sur l'info attendu</p>
         <br>
         <p><span>input</span>: élément de saisie de formulaire: son apparence repose grandement sur la valeur de l'attribut type qui l'accompagne:
@@ -52,15 +54,13 @@
         <fieldset> 
           <legend>Informations personnelles</legend>
           <div>
-            <span>Nom et prénom &lt;input type="text"></span>
+            <span>Nom et prénom &lt;input type="text" id="nom" name="nom" placeholder="Votre nom de famille" maxlength="15" required></span>
             <br>
             <label for="nom">Nom</label>
             <input type="text" id="nom" name="nom" placeholder="Votre nom de famille" required>
             <br>
             <p> name -> pour récupérer la valeur en PHP (pas d'espace, pas d'accent ni de caractères spéciaux)</p>
-            <br>
             <p>placeholder -> garder la place = exemple de contenu valable, informer l'utilisateur sur ce qui est attendu.</p>
-            <br>
             <p>required -> indique que le champs doit être obligatoirement renseigné. C'est un attribut particulier: il n'a pas de valeur</p>
           </div>          
           <div>
@@ -119,11 +119,9 @@
             type="file" -> permet l'envoi d'un fichier
           </div>
           <div>
-            <span>residence &lt;optgroup label=""> + &lt;option value=""></span>
+            <span>residence &lt;select name="pays" id="pays"> + &lt;optgroup label=""> + &lt;option value=""></span>
             <br>
             <label for="pays">Vous résidez en:</label>
-            <br>
-            <p>la balise select vient toujours avec des options: elle permet de faire un menu déroulant, on la retrouve souvent pour l'année de naissance ou encore le département dans lequel on vit</p>
             <br>
             <select name="pays" id="pays"> <!-- Indique le début et la fin de la liste déroulante -->
               <optgroup label="Europe">
@@ -142,6 +140,7 @@
                 <option value="japon">Japon</option>
               </optgroup>
             </select>
+            <p>la balise select vient toujours avec des options: elle permet de faire un menu déroulant, on la retrouve souvent pour l'année de naissance ou encore le département dans lequel on vit</p>
           </div>
         </fieldset>
         <fieldset>
@@ -192,12 +191,19 @@
             <p>cols: nombre de rangées</p>
           </div>
         </fieldset>
+        
         <div class="envoi">
-          <input type="submit" value="s'inscrire">
-          <!-- Pour envoyer notre formulaire, on utilise l'input de type="submit" -->
-          <input type="reset" value="Effacer">
-          <!-- Pour vider le formulaire / remise à zéro -->
-          <input type="button" value="bouton inactif" disabled>
+          <div>
+            <input type="submit" value="s'inscrire">
+            <p>Pour envoyer notre formulaire, on utilise l'input de type="submit"</p>
+          </div>
+          <div>
+            <input type="reset" value="Effacer">
+            <p>Pour vider le formulaire / remise à zéro</p>
+          </div>
+          <div>
+            <input type="button" value="bouton inactif" disabled>
+          </div>
         </div>
         <!-- Il existe d'autre type d'input:
               - type="url" => saisir une adresse absolue
