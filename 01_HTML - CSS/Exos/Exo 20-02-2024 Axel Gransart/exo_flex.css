@@ -33,7 +33,7 @@ header {
 
 header div {
   width: 33.33%;
-  height: 5em;
+  height: 6em;
 }
 
 header div:first-child {
@@ -51,7 +51,7 @@ header div:last-child {
 nav {
   background-color: #FFEBCD;
   margin: 0 auto;
-  padding: 2em 34%;
+  padding: 1.5em 34%;
   display: flex;
   justify-content: space-between;
 }
@@ -60,7 +60,7 @@ nav {
 
 section:first-child {
   margin: 0.5em;
-  height: 10em;
+  height: 15em;
   display: flex;
 }
 
@@ -80,4 +80,45 @@ section:first-child article:last-child {
 section:nth-child(2) div:first-child {
   background-color: #B0E0E6;
   padding: 1em 3em;
+  font-size: 1.4em;
+}
+
+section:nth-child(2) div:nth-child(2) {
+  display: flex;  
+}
+
+section:nth-child(2) article {
+  width: 25%;
+  height: 15em;
+}
+
+section:nth-child(2) article:nth-child(1) {
+  background-color: #87CEEB;
+}
+section:nth-child(2) article:nth-child(2) {
+  background-color: #40E0D0;
+}
+section:nth-child(2) article:nth-child(3) {
+  background-color: #2E8B57;
+}
+section:nth-child(2) article:nth-child(4) {
+  background-color: #98FB98;
+}
+
+/************* footer *************/
+
+footer {
+  display: flex;
+}
+
+footer div {
+  width: 50%;
+  height: 5em;
+}
+
+footer div:first-child {
+  background-color: #DB7093;
+}
+footer div:last-child {
+  background-color: #AFEEEE;
 }
