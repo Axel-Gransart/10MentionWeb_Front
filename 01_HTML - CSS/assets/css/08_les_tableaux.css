@@ -5,14 +5,20 @@
 }
 
 body {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
+  padding-bottom: 5em;
   background-color: lightgrey;
+  line-height: 20px;
+  text-align: justify;
 }
 
 h1 {
   text-align: center;
+  padding: 1em 0;
 }
+
+/* ************ tableau 1 ************ */
 
 caption {
   color: #6e2142;
@@ -47,4 +53,54 @@ thead th:first-child, tfoot td:first-child {
   background-color: #c7c8cc;
 }
 
+h2 {
+  color: blue;
+  font-size: 2em;
+  text-align: center;
+}
 
+#rowspan tr :first-child:not(:last-child) {
+  background-color: #be7575;
+  color: white;
+}
+
+#colspan tr:first-child {
+  background-color: #be7575;
+  color: white;
+}
+
+/********* Exo colspan / rowspan *********/
+
+#exoColspan, #exoRowspan, #exoColspan2 {
+  height: 15em;
+  width: 100%;
+  background-color: white;
+}
+
+#exoColspan td {
+  width: 14.28%;
+  height: 14.28%;
+}
+
+#exoRowspan th, #exoRowspan td, #exoColspan th, #exoColspan td, #exoColspan2 th, #exoColspan2 td  {
+  border: none;  
+}
+
+.black {
+  background-color: black;
+}
+.red {
+  background-color: red;
+}
+
+.borderRadius {
+  border-radius: 10px 10px 0 0;
+}
+
+.borderLeft {
+  border-radius: 10px 0 0 0;
+}
+
+.borderRight {
+  border-radius: 0 10px 0 0;
+}

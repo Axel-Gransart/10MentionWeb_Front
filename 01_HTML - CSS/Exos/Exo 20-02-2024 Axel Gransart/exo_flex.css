@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 90%;
+  margin: 1em auto;
+  border: 2px solid lightgrey;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***************** header ******************/
+
+header {
+  display: flex;
+}
+
+header div {
+  width: 33.33%;
+  height: 5em;
+}
+
+header div:first-child {
+  background-color: #5F9EA0;
+}
+header div:nth-child(2) {
+  background-color: #008B8B;
+}
+header div:last-child {
+  background-color: #00CED1;
+}
+
+/****************** nav ******************/
+
+nav {
+  background-color: #FFEBCD;
+  margin: 0 auto;
+  padding: 2em 34%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/************ Première section ************/
+
+section:first-child {
+  margin: 0.5em;
+  height: 10em;
+  display: flex;
+}
+
+section:first-child article {
+  width: 50%;
+}
+
+section:first-child article:first-child {
+  background-color: #A9A9A9;
+}
+section:first-child article:last-child {
+  background-color: #708090;
+}
+
+/************* deuxième section *************/
+
+section:nth-child(2) div:first-child {
+  background-color: #B0E0E6;
+  padding: 1em 3em;
+}
