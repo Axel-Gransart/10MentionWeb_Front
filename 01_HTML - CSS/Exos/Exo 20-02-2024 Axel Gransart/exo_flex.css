@@ -122,3 +122,92 @@ footer div:first-child {
 footer div:last-child {
   background-color: #AFEEEE;
 }
+/*********************************************************/
+/********************* Media Queries *********************/
+/*********************************************************/
+
+@media screen and (min-width:480px) {
+  
+  body {
+    margin-bottom: 2em;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  header div {
+    width: 50%;
+  }
+  header div:last-child {
+    width: 100%;
+  }
+  nav {
+    display: none;    
+  }
+
+  section:first-child {
+    display: block;
+  }
+
+  section:first-child article {
+    width: 100%;
+    height: 50%;
+  }
+
+  section:nth-child(2) div:nth-child(2) {
+    flex-wrap: wrap;
+  }
+
+  section:nth-child(2) article {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:768px) {
+ 
+  header div,  header div:last-child {
+    width: 33.33%;
+  }
+  nav {
+    display: none;    
+  }
+  section:first-child {
+    display: flex;
+  }
+
+  section:first-child article {
+    width: 50%;
+    height: 100%;
+  }
+  section:nth-child(2) div:first-child {
+    text-align: center;
+  }
+
+}
+
+@media screen and (min-width:901px) {
+
+  nav {
+    display: flex;    
+  }
+
+  section:nth-child(2) article {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  html {
+    background-color: black;
+  }
+  body {
+    border: 2px solid black;
+    background-color: white;
+    margin: 0 0.5em 1em;
+  }
+}
+
+@media screen and (min-width:1200px) {
+
+}
