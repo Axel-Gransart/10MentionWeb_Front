@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>px - % - em - rem</title>
+</head>
+<style lang="css">
+  /* 1 - Pixels (px) :
+    - Les pixels sont des unités de mesure fixes et absolues.
+    - Un pixel représente un point sur l'écran d'un appareil.
+    - Les valeurs en pixels ne changent pas en fonction de la taille de l'écran ou des paramètres du navigateur.
+    - Par exemple, font-size: 16px; définit la taille de la police à 16 pixels. */
+
+  /* 2 - Pourcentage (%) :
+    - Les pourcentages sont des unités relatives par rapport à un élément parent.
+    - Ils expriment une proportion de la taille de l'élément parent.
+    - Par exemple, width: 50%; définit la largeur d'un élément à 50% de la largeur de son conteneur parent. */
+
+  /* 3 - Em (em) :
+    - L'unité "em" est également une unité relative.
+    - Elle est basée sur la taille de la police de l'élément parent.
+    - Un em équivaut à la taille de la police actuelle de l'élément.
+    - Par exemple, si la taille de police de l'élément parent est de 16px, font-size: 2em pour un élément enfant signifie que la taille de police sera de 32px (2 * 16px). */
+
+  /* 4 - Rem (rem) :
+    - L'unité "rem" est similaire à "em", mais elle est basée sur la taille de police de l'élément racine (root).
+    - Cela signifie que la taille de police définie sur l'élément racine (généralement <html>) est utilisée comme référence pour tous les éléments de la page.
+    - Par exemple, si la taille de police de l'élément racine est de 16px, font-size: 2rem; pour un élément enfant signifie que la taille de police sera de 32px (2 * 16px), peu importe la taille de police des éléments parents. */
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    /* font-size: 16px; */
+    /* En définissant la taille de notre document en pixels, on constate qu'elle reste fixe lorsque nous modifions les paramètres de la taille de la police au niveau du navigateur */
+  }
+
+  body div:first-child {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  /* Utilisation px */
+
+  h1 {
+    font-size: 35px;
+  }
+
+  /* Utilisation % */
+
+  p {
+    /* font-size: 200%; 2 fois la taille du parent */
+    font-size: 1.375rem;
+  }
+
+  /* Utilisation em */
+
+  ul {
+    font-size: 1.5rem;
+  }
+   /* le em est intéréssant pour les padding et les marges */
+  a {
+    background-color: pink;
+    border-radius: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 0.5s;
+    font-size: 20px;
+  }
+
+  a:hover {
+    color: pink;
+    background-color: black;
+  }
+
+  /* Utilisation de rem */
+
+  :root {
+    /* valeur par défaut : 16px = 1rem = 100% */
+    font-size: 1rem;
+  }
+  
+
+</style>
+<body>
+  <div>
+    <h1>Démonstration pour les unités px, %, em et rem</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quas doloremque, quibusdam placeat, temporibus similique minus architecto ullam accusamus dicta incidunt provident perspiciatis, quaerat fugit eligendi! Autem amet consequuntur odio.
+    Quam quis incidunt omnis harum temporibus aliquid perspiciatis at. Commodi voluptatem accusantium exercitationem hic, deserunt eveniet nemo maiores aut corrupti quisquam ea saepe deleniti totam aliquam eius, soluta, voluptas incidunt.
+    </p>
+    <p class="rem"></p>
+    <ul>
+      <li>Liste 1</li>
+      <li>Liste 2</li>
+      <li>
+        <ul>
+          <li>Liste 1</li>
+          <li>Liste 2</li>
+          <li>Liste 3</li>
+        </ul>
+      </li>
+    </ul>
+    <a href="#" class="btn">Envoyer</a>
+  </div>
+  <br><br><br><br>
+  <div>
+    <h3>1 - Pixels (px) :</h3>
+    <ul>
+      <li>- Les pixels sont des unités de mesure fixes et absolues.</li>
+      <li>- Un pixel représente un point sur l'écran d'un appareil.</li>
+      <li>- Les valeurs en pixels ne changent pas en fonction de la taille de l'écran ou des paramètres du navigateur.</li>
+      <li>- Par exemple, font-size: 16px; définit la taille de la police à 16 pixels.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>2 - Pourcentage (%) :</h3>
+    <ul>
+      <li>- Les pourcentages sont des unités relatives par rapport à un élément parent.</li>
+      <li>- Ils expriment une proportion de la taille de l'élément parent.</li>
+      <li>- Par exemple, width: 50%; définit la largeur d'un élément à 50% de la largeur de son conteneur parent.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>3 - Em (em) :</h3>
+    <ul>
+      <li>- L'unité "em" est également une unité relative.</li>
+      <li>- Elle est basée sur la taille de la police de l'élément parent.</li>
+      <li>- Un em équivaut à la taille de la police actuelle de l'élément.</li>
+      <li>- Par exemple, si la taille de police de l'élément parent est de 16px, font-size: 2em pour un élément enfant signifie que la taille de police sera de 32px (2 * 16px).</li>
+    </ul>    
+  </div>
+  <div>
+    <h3>4 - Rem (rem) :</h3>
+    <ul>
+      <li>- L'unité "rem" est similaire à "em", mais elle est basée sur la taille de police de l'élément racine (root).</li>
+      <li>- Cela signifie que la taille de police définie sur l'élément racine (généralement <html>) est utilisée comme référence pour tous les éléments de la page.</li>
+      <li>- Par exemple, si la taille de police de l'élément racine est de 16px, font-size: 2rem; pour un élément enfant signifie que la taille de police sera de 32px (2 * 16px), peu importe la taille de police des éléments parents.</li>
+    </ul>         
+  </div>
+  
+</body>
+</html>
