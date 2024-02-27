@@ -1,6 +1,94 @@
+
 /* Une page HTML standard sans style déclaré bénéficiera néanmoins d'un ensemble de styles automatiquement appliqués par le navigateur, permettant ainsi de distinguer les différents éléments. 
 Afin d'initialiser ces valeurs, on a la possibilité de les annuler dans le CSS en sélectionnant chaque élément et en modifiant ses propriétés.
 - Une autre approche consiste à utiliser le reset CSS : https://meyerweb.com/eric/tools/css/reset/
 - ou le mini reset : https://jgthms.com/minireset.css/  */
 
 /* @import url(reset.css); */
+
+/* Le problème de cette technique, c'est qu'elle annule certains styles par défaut des navigateurs qui sont réellement utiles et cela nécessite plus de travail pour rétablir certains styles de base qui ont été écrasés par le reset. */
+
+
+
+/* Normalize.css est une bibliothèque CSS qui vise à rendre les styles des navigateurs plus cohérents et prévisibles en normalisant les styles par défaut des éléments HTML il conserve certains styles par défaut qui sont considérés comme bénéfiques et utiles, tout en corrigeant et en uniformisant d'autres styles pour assurer une cohérence entre les navigateurs.
+    https://necolas.github.io/normalize.css/
+ */
+
+/* @import url(normalize.css); */
+
+
+
+/* *******  Responsive Web Design  ************** */
+  /* Le Responsive Web Design englobe les techniques de conception de contenus internet qui permettent de proposer des contenus auto-adaptables en fonction des interfaces de consultation utilisées par le visiteur.
+
+  Dans le cadre du Responsive Web Design, on parle de deux caractéristiques importantes: 
+    - L'ajustement automatique de la taille des éléments:
+      une page web, un élément HTML ou une image peut ainsi se redimensionner en fonction de la taille d'écran du terminal utilisé (ordinateur, tablette, smartphone, etc...)
+    -L'adaptation de l'agencement des  éléments:
+      l'organisation du contenu peut être également automatiquement adapté
+    
+  Le Responsive Web Design est aujourd'hui un incontournable dans le monde du développement web.
+*/
+
+:root {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#cours {
+  font-size: 1.5rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 3rem;
+  color: #d04848;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.responsive :nth-child(2) {
+  background-color: #ffc0d9;
+}
+
+.responsive :nth-child(3) {
+  background-color: #d63484;
+}
+
+.responsive :nth-child(4) {
+  background-color: #ff90bc;
+}
+
+.responsive {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.responsive h2 {
+  width: 100%;
+}
+
+.responsive div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+@media screen and (min-width:768px) and (max-width: 1199px) {
+  
+  .responsive div:nth-child(2), .responsive div:nth-child(3) {
+    width: 50%;
+  }
+}
