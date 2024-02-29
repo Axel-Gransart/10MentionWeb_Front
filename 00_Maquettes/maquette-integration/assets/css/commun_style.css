@@ -1,0 +1,61 @@
+
+@import url(reset.css);
+
+@font-face {
+  font-family: "lora";
+  src: url(../fonts/Lora/static/Lora-Regular.ttf);
+}
+
+:root {
+  font-size: 62.5%;
+  --font_lora: "lora";
+}
+
+body {
+  background-color: #191919;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a, h1 {
+  font-family: var(--font_lora);
+}
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    /* Dans le header, j'applique le display avec la valeur flex afin de gérer l'emplacement de mes éléments sur l'axe principale (horizontal) et sur l'axe secondaire (vertical) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #101010;
+  border-bottom: .1rem solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+}
+
+header img {
+  width: 60px;
+}
+
+header > a {
+    /* J'applique le flex afin de centrer l'image dans l'élément */
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  font-size: 1.6rem;
+  color:grey;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 4rem;
+  transition: all 0.5s;
+}
+
+header nav a:hover {
+  color: white;
+  scale: 1.7;
+}
