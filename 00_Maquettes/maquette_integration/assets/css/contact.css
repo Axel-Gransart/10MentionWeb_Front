@@ -1,0 +1,89 @@
+main section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section:nth-child(1) {
+    background-image: url(../img/s1b3.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding: 10rem 0;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+main section:nth-child(1) h1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 5rem;
+    margin-bottom: 4rem;
+}
+main section:first-child  p {
+    padding: 0 10rem;
+    font-size: 1.4rem !important;
+    line-height: 2em;    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+/* 2éme section */
+
+section:last-child {
+    background-color: #141414;
+    justify-content: center;
+}
+
+section:last-child form {
+
+    padding: 3rem;
+    background-color: #010101;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label, input, textarea {
+    margin-bottom: 2rem;
+    resize: none; /*spécifie si un utilisateur peut redimensionner un élément tel qu'un élément <textarea>*/
+    background-color: transparent; /* l'arrière-plan est rendu transparent*/
+    border: unset; /* Unset réinitialise la propriété à sa valeur par défaut, dans ce cas, aucune bordure*/
+    font-size: 1.6rem;
+    outline: none; /*  supprime l'effet d'outline ->  une bordure qui entoure un élément lorsqu'il est sélectionné */
+    padding:.5rem;
+}
+
+input, textarea {
+    border-bottom: 3px solid #191919;
+}
+textarea {
+    height:200px;
+}
+
+section:last-child form div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+button {
+    background-color: #3C3C3C;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 2rem;
+    line-height: 1em;
+    transition: all linear 0.2s;
+    margin-bottom: 1.2rem;
+}
+button:hover {
+    background-color: #191919;
+}
+
+@media screen and (min-width: 991.99px) {
+    h1 {
+        font-size: 8rem !important;
+    }
+    
+}
