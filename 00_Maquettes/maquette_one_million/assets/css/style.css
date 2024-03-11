@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-title: "Roboto Slab", serif !important;
+  --orange: #e74c3c;
+  --white: #fff;
+  --hover-btn: #b83e30;
+  --hover-btn-white: rgb(144,144,144);
+  --bg-icon: rgb(71,71,71);
+}
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+
+h1, h3, h4 {
+  font-family: var(--font-title);
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  color: var(--orange);
+}
+
+nav {
+  padding: 1rem 8rem !important;
+}
+
+#entete {
+  background-image: url(../images/hero-image.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  background-color: var(--hover-btn);
+}
+
+hr {
+  width: 11rem !important;
+  color: var(--orange);
+  margin: 0 auto 2.5rem;
+  height: .15rem;
+}
+
+span {
+  color: var(--orange);
+}
+
+i {
+  background-color: var(--bg-icon);
+  width: 3rem;
+  height: 3rem;
+}
+
+h4 {
+  color: var(--orange);
+  margin: 4rem 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.btn-outline-secondary {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--bg-icon);
+  color: var(--white);
+}
+
+footer {
+  background-color: var(--orange);
+  padding: 15rem 5rem 2rem;
+}
+
+.team {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main a {
+  color: var(--orange);
+}
+
+main a:hover {
+  color: var(--hover-btn);
+}
