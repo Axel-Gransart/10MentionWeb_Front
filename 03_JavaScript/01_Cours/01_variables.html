@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les variables en JavaScript</title>
+</head>
+<body>
+
+  <!-- La balise script directmeent dans le document HTML -->
+  <!-- Il faut mettre les balises ouvrantes et fermantes <script> à la fin du document avant la fermeture de la blaise body -->
+  <script>
+    // Commentaire en JS sur une seule ligne
+    /* Commentaire pour un bloc
+    de texte 
+    en JS 
+    sur plusieurs lignes */
+
+    /******************************************/
+    /******         LES VARIABLES        ******/
+    /******************************************/
+
+    /* Les variables sont comme des boites.
+    Vous pouvez y stocker ce que vous souhaitez.
+    On initialise une variable avec son nom (de votre choix)
+    puis on lui attribue une valeur.
+    Pour déclarer une variable en JS, on utilise un préfixe: const, let ou var.
+    ATTENTION: on utilise les préfixes seulement lors de l'initialisation. */
+
+    const TEST = "Hello World";
+      // La déclaration const permet de créer une constante accessible uniquement en lecture. Sa valeur ne pourra pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
+      // Dans la convention, on écrit les constantes en majuscules pour les reconnaître.
+
+    console.log(TEST); 
+      /* console.log permet d'afficher une information que je viens de saisir ou une erreur produite lors de la programmation */
+
+    TEST = "Hello Everybody";
+    console.log(TEST);
+    
+  </script>
+</body>
+</html>
