@@ -7,13 +7,32 @@
 </head>
 <body>
 
-  <!-- La balise script directmeent dans le document HTML -->
-  <!-- Il faut mettre les balises ouvrantes et fermantes <script> à la fin du document avant la fermeture de la blaise body -->
+  <!-- JavaScript a été créé en 1995 par Brendan Eich chez Netscape sous le nom de Mocha, puis renommé LiveScript, pour finalement devenir JavaScript.
+
+    Son adoption rapide en tant que langage de programmation côté client a été facilitée par sa prise en charge par Netscape Navigator.
+    En 1997, JavaScript est standardisé sous le nom d'ECMAScript par Ecma International.
+    ECMAScript est le langage de script sur lequel JavaScript est basé. Ecma International a pour tâche la standardisation d'ECMAScript.
+
+    https://ecma-international.org/publications-and-standards/standards/?order=last-change
+    https://www.w3schools.com/js/js_versions.asp
+
+    Il permet de rendre les pages web dynamiques et interactives en ajoutant des fonctionnalités telles que des animations, des formulaires dynamiques, des mises à jour de contenu sans rechargement de page, etc.
+
+    Contrairement aux langages de programmation côté serveur comme Python ou Java, JavaScript est interprété côté client par le navigateur web.
+    JavaScript est un langage de script, ce qui signifie qu'il est exécuté ligne par ligne et qu'il est particulièrement adapté aux applications web interactives
+
+    Les instructions JavaScript sont généralement écrites ligne par ligne et séparées par des points-virgules.
+    Un programme JavaScript peut être inclus dans une balise <script> dans le code HTML ou peut être stocké dans des fichiers externes avec l'extension ".js" -->
+
+  <!-- Script directe dans le document html:
+          * Dans la balise <head>: pratique déconseillée;
+          * Avant la fermeture de la balise <body>: pratique recommandée permet de charger le contenu HTML avant de commencer à exécuter les scripts donc permet d'optimiser la vitesse de chargement de la page et garantir un accès rapide aux éléments DOM. -->
+
   <script>
     // Commentaire en JS sur une seule ligne
     /* Commentaire pour un bloc
-    de texte 
-    en JS 
+        de texte 
+        en JS 
     sur plusieurs lignes */
 
     /******************************************/
@@ -28,15 +47,36 @@
     ATTENTION: on utilise les préfixes seulement lors de l'initialisation. */
 
     const TEST = "Hello World";
-      // La déclaration const permet de créer une constante accessible uniquement en lecture. Sa valeur ne pourra pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
-      // Dans la convention, on écrit les constantes en majuscules pour les reconnaître.
+      /* La déclaration const permet de créer une constante accessible uniquement en lecture. Sa valeur ne pourra pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
+      Dans la convention, on écrit les constantes en majuscules pour les reconnaître. */
 
     console.log(TEST); 
-      /* console.log permet d'afficher une information que je viens de saisir ou une erreur produite lors de la programmation */
+      // console.log permet d'afficher une information que je viens de saisir ou une erreur produite lors de la programmation
 
-    TEST = "Hello Everybody";
-    console.log(TEST);
-    
+    // TEST = "Hello Everybody";
+    // console.log(TEST);
+    // Provoque une erreur, une constante ne peut pas être modifiée.
+
+    var test1 = 10;
+
+    var test2 = "10";
+
+    console.log(test1);
+
+    console.log(test2);
+
+    // var est globale, ce qui signifie qu'elle est accessible dans toute la fonction ou le script où elle est déclarée.
+
+    // Vous pouvez redéclarer une variable avec var dans le même contexte sans erreur. Cependant, cela peut conduire à des erreurs difficiles à détecter dans votre code en raison de la portée de var.
+
+    let test3 = "Colombbus";
+    console.log(test3);
+    test3 = "10MentionWeb"
+    console.log(test3);
+
+    // let est locale au bloc dans lequel elle est déclarée, ce qui signifie qu'elle n'est accessible qu'à l'intérieur du bloc (par exemple, une boucle for ou un bloc if).
+    // Vous ne pouvez pas redéclarer une variable avec let dans le même contexte (fonction ou bloc). Vous obtiendrez une erreur  ReferenceError.
+
   </script>
 </body>
 </html>
