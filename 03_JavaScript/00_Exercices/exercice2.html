@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 2 en JavaScript</title>
+</head>
+<body>
+  <script>
+    // Exercice 2
+        // Ecrivez un programme js qui fait saisir un prix hors taxes à l'utilisateur, puis qui affiche le prix TTC correspondant en se basant sur un taux de TVA à 20%
+        // Vous pouvez effectuer l'affichage dans la console, dans un pop-up ou sur la page directement.
+        //INDICE :multiplier le prix HT par 1,20 pour obtenir le prix TTC.
+
+    let prixHt = prompt("Quel prix ht voulez vous calculer ?");
+    const TVA = 1.2;
+
+    let prixTTC = prixHt * TVA;
+
+    document.write("Le prix TTC est de " + prixTTC + " €");
+  </script>
+</body>
+</html>

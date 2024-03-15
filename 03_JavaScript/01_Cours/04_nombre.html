@@ -4,9 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;      
+    }
+    
+    body {
+      background-color: lightgrey;
+    }
+
     h1, h2 {
       text-align: center;
       color: brown;
+    }
+
+    h3 {
+      margin-top: 4rem;
+    }
+
+    pre {
+      font-size: 1rem;
+      
+    }
+
+    article {
+      margin: 4rem 0;
+      padding: 0 7rem;
+    }
+
+    p {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;      
+    }
+
+    .bleuFonce {
+      color: #1F38A1;
+    }
+    
+    .bleuClair {
+      color: #4FA3A8;
+    }
+
+    .vertClair {
+      color: #2EA043;
+    }
+    
+    .jaune {
+      color: yellow;
+    }
+    
+    .orange {
+      color: #FFB418;
+    }
+    
+    .brique {
+      color: #C3602D;
     }
   </style>
   <title>Les nombres en JavaScript</title>
@@ -20,60 +73,126 @@
       <article>
         <pre>
 Pour initialiser un nombre, il suffit de l'écrire sans guillemets
-const A = 5 * 10;
-const B = 10 / 2;
-const C = 15 - 5;
-const D = 20 + 10;  
+<span class="bleuFonce">const</span> <span class="bleuClair">A</span> = <span class="vertClair">5</span> * <span class="vertClair">10</span>;
+<span class="bleuFonce">const</span> <span class="bleuClair">B</span> = <span class="vertClair">10</span> / <span class="vertClair">2</span>;
+<span class="bleuFonce">const</span> <span class="bleuClair">C</span> = <span class="vertClair">15</span> - <span class="vertClair">5</span>;
+<span class="bleuFonce">const</span> <span class="bleuClair">D</span> = <span class="vertClair">20</span> + <span class="vertClair">10</span>;  
 Nous pouvons effectuer tout type de calcul
         </pre>
       </article>
       <article>
         <h2>Addition</h2>
         <pre>
-const ADDITION = A + B;  // 50 + 5
-console.log(ADDITION);
-document.write("Le résultat de l'addition de A + B est égale à: " + ADDITION);
-On concatène avec une chaine de caractère en utilisant le signe "+"
-        </pre>
+<span class="bleuFonce">const</span> <span class="bleuClair">ADDITION</span> = <span class="bleuClair">A</span> + <span class="bleuClair">B</span>;  // 50 + 5
+<span class="bleuClair">console</span>.log(<span class="bleuClair">ADDITION</span>);
+<p>On concatène avec une chaine de caractère en utilisant le signe "+"</p>
+<span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Le résultat de l'addition de A + B est égale à: "</span> + <span class="bleuClair">ADDITION</span><span class="orange">)</span>;
+        </pre>        
         <p id="addition"></p>
+      </article>
+      <article>
         <h2>Soustraction</h2>
         <pre>
-const SOUSTRACTION = C - 4;
-document.write("Le résultat de la soustraction de C - 4 est égale à: " + SOUSTRACTION);
+<span class="bleuFonce">const</span> <span class="bleuClair">SOUSTRACTION</span> = <span class="bleuClair">C</span> - <span class="vertClair">4</span>;
+<span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Le résultat de la soustraction de C - 4 est égale à: "</span> + <span class="bleuClair">SOUSTRACTION</span><span class="orange">)</span>;
         </pre>
+        <p id="soustraction"></p>
+      </article>
+      <article>
         <h2>Multiplication</h2>
         <pre>
-const MULTIPLICATION = D * 5;
-document.write("Le résultat de la multiplication de D * 5 est égale à: " + MULTIPLICATION);
+<span class="bleuFonce">const</span> <span class="bleuClair">MULTIPLICATION</span> = <span class="bleuClair">D</span> * <span class="vertClair">5</span>;
+<span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Le résultat de la multiplication de D * 5 est égale à: "</span> + <span class="bleuClair">MULTIPLICATION</span><span class="orange">)</span>;
         </pre>
+        <p id="multiplication"></p>
+      </article>
+      <article>
         <h2>Division</h2>
         <pre>
-const DIVISION = D / 10;
-document.write("Le résultat de la division de D / 10 est égale à: " + DIVISION);
+<span class="bleuFonce">const</span> <span class="bleuClair">DIVISION</span> = <span class="bleuClair">D</span> / <span class="vertClair">10</span>;
+<span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Le résultat de la division de D / 10 est égale à: "</span> + <span class="bleuClair">DIVISION</span><span class="orange">)</span>;
         </pre>
+        <p id="division"></p>
+      </article>
+      <article>
         <h2>Modulo</h2>
         <pre>
-const MODULO = B % 10;
-document.write("Le résultat du modulo de B divisé par 10 est égale à: " + MODULO);
+<span class="bleuFonce">const</span> <span class="bleuClair">MODULO</span> = <span class="bleuClair">B</span> % <span class="vertClair">10</span>;
+<span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Le résultat du modulo de B divisé par 10 est égale à: "</span> + <span class="bleuClair">MODULO</span><span class="orange">)</span>;
         </pre>
+        <p id="modulo"></p>
       </article>
     </section>
     <section>
       <article>
         <h2>Raccourcis</h2>
         <pre>
-let g = 10;
+<span class="bleuFonce">let</span> <span class="bleuClair">g</span> = <span class="vertClair">10</span>;
         </pre>
+        <p id="writeG"></p>
         <h3>1ère façon</h3>
         <pre>
-g = g + 5;
-document.write(g);
+<span class="bleuClair">g</span> = <span class="bleuClair">g</span> +<span class="vertClair"> 5</span>;
+<span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"g est égale à: "</span> + <span class="bleuClair">g</span><span class="orange">)</span>;
         </pre>
+        <p id="writeG1"></p>
         <h3>2ème façon de faire</h3>
         <pre>
-g += 5;
-document.write(g);
+<span class="bleuClair">g</span> += <span class="vertClair">5</span>;
+<span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"g est égale à: "</span> + <span class="bleuClair">g</span><span class="orange">)</span>;
         </pre>
+        <p id="writeG2"></p>
+      </article>
+    </section>
+    <section>
+      <h2>Incrémentation et décrémentation</h2>
+      <article>
+        <h3>Nous pouvons ajouter 1 ou enlever 1 avec ++ ou --</h3>
+        <pre>
+  <span class="bleuFonce">let</span> <span class="bleuClair">h</span> = <span class="vertClair">50</span>;
+ <span class="bleuClair"> h</span> ++;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"h est égale à: "</span> + <span class="bleuClair">h</span><span class="orange">)</span>;
+        </pre>
+        <p id="writeH1"></p>
+      </article>
+      <article>
+        <pre>
+  <span class="bleuClair">h</span>--;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"h est égale à: "</span> + <span class="bleuClair">h</span><span class="orange">)</span>;
+        </pre>
+        <p id="writeH2"></p>
+      </article>
+      <article>
+        <p>i++ affecte puis incrémente la valeur. Dans l'exemple ci dessous, i++ incrémentera la valeur de i, mais retournera la valeur d'origine avant d'être incrémenté.</p>
+        <pre>
+  <span class="bleuFonce">let</span> <span class="bleuClair">i</span> = <span class="vertClair">1</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"i est égale à: "</span> + <span class="bleuClair">i</span><span class="orange">)</span>;
+        </pre>
+        <p id="writeI1"></p>
+        <br>
+        <pre>
+  <span class="bleuFonce">let</span> <span class="bleuClair">j</span> = <span class="bleuClair">i</span> ++;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"i est égale à: "</span> + <span class="bleuClair">i</span><span class="orange">)</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"j est égale à: "</span> + <span class="bleuClair">j</span><span class="orange">)</span>;
+        </pre>
+        <p id="writeI2"></p>
+        <p id="writeJ"></p>
+      </article>
+      <article>
+        <p>++k incrémente puis affecte la valeur. Dans l'exemple ci dessous, ++k incrémentera la valeur de K, puis retournera la valeur incrémenté</p>
+        <pre>
+  <span class="bleuFonce">let</span> <span class="bleuClair">k</span> = <span class="vertClair">1</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"k est égale à: "</span> + <span class="bleuClair">k</span><span class="orange">)</span>;
+        </pre>
+        <p id="writeK1"></p>
+        <br>
+        <pre>
+  <span class="bleuFonce">let</span> <span class="bleuClair">l</span> = ++ <span class="bleuClair">k</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"k est égale à: "</span> + <span class="bleuClair">k</span><span class="orange">)</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"l est égale à: "</span> + <span class="bleuClair">l</span><span class="orange">)</span>;
+        </pre>
+        <p id="writeK2"></p>
+        <p id="writeL"></p>
       </article>
     </section>
   </main>
@@ -83,9 +202,30 @@ document.write(g);
   <script>
 
     let resultAddition = document.querySelector("#addition");
-    //************************************
-    //   LES NOMBRES ET LES CALCULS
-    //************************************
+    let resultSoustraction = document.querySelector("#soustraction");
+    let resultMultiplication = document.querySelector("#multiplication");
+    let resultDivision = document.querySelector("#division");
+    let resultModulo = document.querySelector("#modulo");
+    
+    let resultwriteG = document.querySelector("#writeG");
+    let resultwriteG1 = document.querySelector("#writeG1");
+    let resultwriteG2 = document.querySelector("#writeG2");
+
+    let resultwriteH1 = document.querySelector("#writeH1");
+    let resultwriteH2 = document.querySelector("#writeH2");
+
+    let resultwriteI1 = document.querySelector("#writeI1");
+    let resultwriteI2 = document.querySelector("#writeI2");
+    let resultwriteJ = document.querySelector("#writeJ");
+
+    let resultwriteK1 = document.querySelector("#writeK1");
+    let resultwriteK2 = document.querySelector("#writeK2");
+    let resultwriteL = document.querySelector("#writeL");
+   
+    /*
+    ╔═════════════════════════════════════════════╗
+    ║        LES NOMBRES ET LES CALCULS           ║
+    ╚═════════════════════════════════════════════╝ */
 
     // Pour initialiser un nombre, il suffit de l'écrire sans guillemets
 
@@ -96,74 +236,90 @@ document.write(g);
 
     // Nous pouvons effectuer tout type de calcul
 
-
+    
     // Addition
     const ADDITION = A + B;  // 50 + 5
     console.log(ADDITION);
     // Le résultat de l'addition de A + B est égale à:
-    document.write("Le résultat de l'addition de A + B est égale à: " + ADDITION + "<br>");
+    // document.write("Le résultat de l'addition de A + B est égale à: " + ADDITION + "<br>");
+    resultAddition.innerHTML = "Le résultat de l'addition de A + B est égale à: " + ADDITION;
     // On concatène avec une chaine de caractère en utilisant le signe "+"
 
     // Soustraction
     const SOUSTRACTION = C - 4;
-    document.write("Le résultat de la soustraction de C - 4 est égale à: " + SOUSTRACTION + "<br>");
+    // document.write("Le résultat de la soustraction de C - 4 est égale à: " + SOUSTRACTION + "<br>");
+    resultSoustraction.innerHTML = "Le résultat de la soustraction de C - 4 est égale à: " + SOUSTRACTION;
 
     // Multiplication
     const MULTIPLICATION = D * 5;
-    document.write("Le résultat de la multiplication de D * 5 est égale à: " + MULTIPLICATION + "<br>");
+    // document.write("Le résultat de la multiplication de D * 5 est égale à: " + MULTIPLICATION + "<br>");
+    resultMultiplication.innerHTML = "Le résultat de la multiplication de D * 5 est égale à: " + MULTIPLICATION;
 
     // Division
     const DIVISION = D / 10;
-    document.write("Le résultat de la division de D / 10 est égale à: " + DIVISION + "<br>");
+    // document.write("Le résultat de la division de D / 10 est égale à: " + DIVISION + "<br>");
+    resultDivision.innerHTML = "Le résultat de la division de D / 10 est égale à: " + DIVISION;
 
     // Modulo
     const MODULO = B % 10;
-    document.write("Le résultat du modulo de B divisé par 10 est égale à: " + MODULO + "<br>");
+    // document.write("Le résultat du modulo de B divisé par 10 est égale à: " + MODULO + "<br>");
+    resultModulo.innerHTML = "Le résultat du modulo de B divisé par 10 est égale à: " + MODULO;
 
-    document.write("<br> <br> <br> <br>");
+    // document.write("<br> <br> <br> <br>");
     //***************************************************************************************
     // Raccourcis
     let g = 10;
+    resultwriteG.innerHTML = "g est égale à: " + g;
     // 1ère façon
     g = g + 5;
-    document.write(g + "<br>");
+    // document.write(g + "<br>");
+    resultwriteG1.innerHTML = "g est égale à: " + g;
 
     // 2ème façon de faire
     g += 5;
-    document.write(g + "<br>");
+    // document.write(g + "<br>");
+    resultwriteG2.innerHTML = "g est égale à: " + g;
 
-    document.write("<br> <br>");
+    // document.write("<br> <br>");
     //***************************************************************************************
     // Incrémentation et décrémentation
 
     // Nous pouvons ajouter 1 ou enlever 1 avec ++ ou --
     let h = 50;
     h ++;
-    document.write(h + "<br>");
+    // document.write(h + "<br>");
+    resultwriteH1.innerHTML = "h est égale à: " + h;
 
     h--;
-    document.write(h + "<br>");
+    // document.write(h + "<br>");
+    resultwriteH2.innerHTML = "h est égale à: " + h;
 
-    document.write("<br> <br>");
+    // document.write("<br> <br>");
 
     // i++ affecte puis incrémente la valeur. Dans l'exemple ci dessous, i++ incrémentera la valeur de i, mais retournera la valeur d'origine avant d'être incrémenté.
     let i = 1;
-    document.write(i + "<br>");
+    // document.write(i + "<br>");
+    resultwriteI1.innerHTML = "i est égale à: " + i;
     let j = i ++;
-    document.write(i + "<br>");
-    document.write(j + "<br>");
+    // document.write(i + "<br>");
+    resultwriteI2.innerHTML = "i est égale à: " + i;
+    // document.write(j + "<br>");
+    resultwriteJ.innerHTML = "j est égale à: " + j;
 
-    document.write("<br> <br>");
+    // document.write("<br> <br>");
 
     // ++k incrémente puis affecte la valeur. Dans l'exemple ci dessous, ++k incrémentera la valeur de K, puis retournera la valeur incrémenté
     let k = 1;
-    document.write(k + "<br>");
+    // document.write(k + "<br>");
+    resultwriteK1.innerHTML = "k est égale à: " + k;
     let l = ++ k;
-    document.write(k + "<br>");
-    document.write(l + "<br>");
+    // document.write(k + "<br>");
+    resultwriteK2.innerHTML = "k est égale à: " + k;
+    // document.write(l + "<br>");
+    resultwriteL.innerHTML = "l est égale à: " + l;
 
 
-    document.write("<br> <br> <br> <br>")
+    // document.write("<br> <br> <br> <br>")
     /*
     //Exercice : 
         // recuperez dans un prompt la valeur souhaité par l'utilisateur

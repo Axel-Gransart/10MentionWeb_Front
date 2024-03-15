@@ -7,17 +7,21 @@
 </head>
 <body>
 
+  
+
   <script>
-    //*****************************************
-    //              Les Tableaux
-    //*****************************************
+    /*
+    ╔═════════════════════════════════════════════╗
+    ║                Les Tableaux                 ║
+    ╚═════════════════════════════════════════════╝ */
 
     // Les arrays sont extrêmement utilisés en langage de programmation, et sont très puissants
     // Comme une variable, ils servent à stocker n'importe quel type de données mais en quantité illimité
-
-    //*****************************************
-    //          Les Tableaux indexés
-    //*****************************************
+    
+    /*
+    ╔═════════════════════════════════════════════╗
+    ║            Les Tableaux indéxés             ║
+    ╚═════════════════════════════════════════════╝ */
     // Déclarer un tableau indéxé
     let monTableau = [];   // 1ère façon de déclarer un tableau
     console.log(monTableau);
@@ -28,8 +32,205 @@
 
     // myArray et monTableau sont des tableaux qui peuvent contenir plusieurs informations.
 
+    // Affecter des valeurs au tableau, plusieurs méthodes:
 
+      // A-
+      monTableau = ["Paul", "Adama", "Semir"];  // Chaque élément dans un tableau est séparé par une virgule 
+      console.log(monTableau);
+      document.write(monTableau);
+      console.table(monTableau);
 
+      document.write("<br> <br>")
+
+      // B-
+      // ATTENTION: un tableau commence TOUJOURS à l'index 0 !!!!!!!
+      myArray[0] = "Cleid";
+      myArray[1] = "Imane";
+      myArray[2] = "Maureene";
+      myArray[3] = "Gary";
+
+      console.log(myArray);
+      console.table(myArray);
+
+      // Pour sélectionner un élément de notre tableau, il suffit d'appeler: nomDuTableau[indexDésiré]
+      console.log(myArray[2]); // affichage de: Maureene
+
+      // REMARQUE
+      const PRENOM = "Axel";
+      console.log(PRENOM[2]);  // Une string est considéré comme un array, dans ce cas, le console.log affichera la lettre "e"
+
+    let myArray2 = ["Najjahi", "Manigat", "Monteiro", "Marolany"];
+    
+    document.write(myArray[0] + " " + myArray2[1] + "<br>" + myArray[1] + " " + myArray2[0] + "<br>" + myArray[2] + " " + myArray2[3] + "<br>" + myArray[3] + " " + myArray2[2] + "<br>");
+
+    document.write("<br> <br>");
+    // Création d'un tableau avec 2 tableaux indéxés
+    let groupe1 = [myArray, myArray2];
+    document.write(groupe1);
+
+    document.write("<br> <br>")
+
+    console.table(groupe1[0][0]);
+
+    document.write(groupe1[1][1] + " " + groupe1[0][0] + "<br>");
+    document.write(groupe1[0][1] + " " + groupe1[1][0] + "<br>");
+    document.write(groupe1[0][2] + " " + groupe1[1][3] + "<br>");
+    document.write(groupe1[1][2] + " " + groupe1[0][3] + "<br>");
+
+    document.write("<br> <br> <br>");
+    // Créer un tableau multidimensionnel avec 2 dimensions qui permet d'afficher cette ligne:
+      // nom: Gransart, prenom: Axel, téléphone: 01 23 45 67 89
+
+      // sachant que:
+        // -> nom, prénom et téléphone sont les éléments du 1er tableau avec l'index 0
+        // -> Les valeurs Gransart, Axel et 01 23 45 67 89 sont les éléments du 2ème tableau avec l'index 1
+
+    
+    let coordonnees = [
+      ["nom", "prénom", "téléphone"],
+      ["Axel", "Gransart", "01 23 45 67 89"],
+    ];
+
+    document.write(coordonnees[0][0] + ": " + coordonnees[1][1] + ", " + coordonnees[0][1] + ": " + coordonnees[1][0] + ", " + coordonnees[0][2] + ": " + coordonnees[1][2])
+    document.write("<br> <br>")
+    // Autre possibilité d'écriture
+    document.write(`${coordonnees[0][0]}: ${coordonnees[1][1]}, ${coordonnees[0][1]}: ${coordonnees[1][0]}, ${coordonnees[0][2]}: ${coordonnees[1][2]}.`)
+
+    /*
+    ╔═════════════════════════════════════════════╗
+    ║          Les Tableaux associatifs           ║
+    ╚═════════════════════════════════════════════╝ */
+  
+    let informations = {
+      prénom : "Axel",
+      nom : "Gransart",
+      age : 34,
+      téléphone : 1234567890,
+    };
+
+    console.table(informations);
+    console.log(informations["age"]);
+    console.log(informations.age);
+
+    document.write("<br> <br> <br>")
+   /*
+    ╔═════════════════════════════════════════════╗
+    ║ Les Tableaux associatifs multidimensionnel  ║
+    ╚═════════════════════════════════════════════╝ */
+
+    let contact = {
+      contact1 : {
+        prénom : "Semir",
+        nom : "Sarajlic",
+        tel : "1212121212"
+      },
+      contact2 : {
+        prénom : "Adama",
+        nom : "Cissoko",
+        tel : "2323232323"
+      },
+      contact3 : {
+        prénom : "Paul",
+        nom : "Pierrard",
+        tel : "5656565656"
+      },
+    };
+
+    console.table(contact);
+    document.write(`${contact.contact1.prénom}, ${contact.contact1.nom} , ${contact.contact1.tel} <br>`);
+    document.write(`${contact.contact2.prénom}, ${contact.contact2.nom} , ${contact.contact2.tel} <br>`);
+    document.write(`${contact.contact3.prénom}, ${contact.contact3.nom} , ${contact.contact3.tel} <br>`);
+
+    document.write("<br> <br>")
+    // Exercice 2 
+
+    let contact1 = [
+    {
+      prenom: "Semir",
+      nom: "Sarajlic",
+      tel: "1564852255",
+
+    },
+    {
+      prenom: "Adama",
+      nom: "Cissoko",
+      tel: "12455255525"
+    },
+      {
+      prenom: "Paul",
+      nom: "Pierrard",
+      tel: "555255555"
+    },
+      {
+      prenom: "Cleid",
+      nom: "Manigat",
+      tel: "555655485"
+    }
+  ];
+
+  document.write(contact1[0].prenom + ", " + contact1[1].prenom);
+
+  document.write("<br> <br> <br>");
+  /*
+    ╔═════════════════════════════════════════════╗
+    ║       Les Tableaux avec 4 dimensions        ║
+    ╚═════════════════════════════════════════════╝ */
+
+    let array4Dimensions = [
+      { // 0
+        prenom : "Axel",
+        nom : "Gransart",
+
+        coordonnees : { // 1
+          email : "gransart.axel@gmail.com" ,
+
+          tel : { // 2
+            fixe : "0123456789",
+            fax : "0987654321",
+
+            port : { // 3
+              pro : "0736198353",
+              prive : "0682674391"
+            },            
+          },
+
+          adresse : { // 2
+            ville : "Evry",
+            cp : 91000,
+
+            pays : { // 3
+              code : "FR",
+              nom : "France"
+            } 
+          },
+          mdp : [
+            14946194,
+            25416441
+          ]
+        }
+      }
+    ];
+
+    // afficher adresse mail, tel prive, fax et le code pays
+    console.table(array4Dimensions)
+    console.log(array4Dimensions)
+    document.write(array4Dimensions[0].coordonnees.email + ", " + array4Dimensions[0].coordonnees.tel.port.prive + ", " + array4Dimensions[0].coordonnees.tel.fax + ", " + array4Dimensions[0].coordonnees.adresse.pays.code );
+    document.write("<br> <br>");
+    
+    // email 
+        document.write(` ${array4Dimensions[0]["coordonnees"]["email"]} <br>`);
+        document.write(` ${array4Dimensions[0].coordonnees.email} <br> `);
+    // fax
+        document.write(` ${array4Dimensions[0]["coordonnees"]["tel"]["fax"]} <br> `);
+        document.write(` ${array4Dimensions[0].coordonnees.tel.fax} <br> `);
+    // prive
+        document.write(` ${array4Dimensions[0]["coordonnees"]["tel"]["port"]["prive"]} <br> `);
+        document.write(` ${array4Dimensions[0].coordonnees.tel.port.prive} <br> `);
+    // code
+        document.write(` ${array4Dimensions[0]["coordonnees"]["adresse"]["pays"]["code"]} <br> `);
+        document.write(` ${array4Dimensions[0].coordonnees.adresse.pays.code} <br> `);
+    // 2ème mdp
+        document.write(`${array4Dimensions[0].coordonnees.mdp[1]} <br>`);
   </script>
 </body>
-</html>
+</html>  
