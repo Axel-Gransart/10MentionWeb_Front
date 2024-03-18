@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les conditions en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    document.write('<h2>Les opérateurs de comparaisons pour les structures conditionnelles</h2>');
+
+    
+    // Les opérateurs de comparaisons pour les structures conditionnelles
+
+    /*
+      - > strictement supérieur
+      - < strictement inférieur
+      - >= supérieur ou égal
+      - <= inférieur ou égal
+      - == pour faire une comparaison de valeur -> il permet de vérifier que les valeurs de 2 variables sont identiques. Résultat boolean
+      - === pour faire une comparaison de valeur ET de type -> signifie "strictement égal à" (valeur ET type). Résultat boolean
+      - != différent de (en valeur)
+      - !== STRICTEMENT différent de (en valeur et en type)
+    */
+
+    let nbr1 = 1, nbr2 = 3;
+    let br = '<br>';
+
+    document.write(nbr1 > nbr2);
+    document.write(br);
+    document.write(nbr1 <= nbr2);
+
+    document.write(br + br);    
+    let nbr3 = 2, nbr4 = "2";
+
+    document.write(nbr3 > nbr4);
+    document.write(br);
+    document.write(nbr3 == nbr4);
+    document.write(br);
+    document.write(nbr3 === nbr4);
+    
+    document.write(br + br);
+
+    document.write('<h2>Les opérateurs logiques</h2>');
+
+    // opérateurs logiques
+    /*
+      AND -> &&
+      OR  -> || (altgr + 6)
+      NOT -> !
+    */
+    document.write('<h3>Opérateur AND</h3>');
+
+    // Opérateur AND: il évalue le résultat en True si les expressions sont toutes True. Si l'une des expressions testés est False, alors le résultat sera False
+
+    document.write(true && true);
+    document.write(br);
+    document.write(true && false);
+    document.write(br);
+    document.write(false && false);
+
+    document.write('<h3>Opérateur OR</h3>');
+
+    // Opérateur OR : il évalue le résultat en True si une ou deux expressions sont True. Si les deux expressions sont False, alors le résultat sera False
+
+    document.write(true || true);
+    document.write(br);
+    document.write(true || false);
+    document.write(br);
+    document.write(false || false);
+
+    document.write('<h3>Opérateur NOT</h3>');
+
+    // Opérateur NOT : il transforme ce qui est True en False et ce qui est False en True
+
+    document.write(!true);
+    document.write(br);
+    document.write(!false);
+
+    document.write('<h2>Structures conditionnelles if, else if, else</h2>');
+
+     /*
+    ╔═════════════════════════════════════════════╗
+    ║                   SYNTAXE                   ║
+    ╚═════════════════════════════════════════════╝ */
+
+    // if
+    if (condition) {
+      /* Le code si la condition est VRAIE */
+    }
+
+    //════════════════════════════════════════════    
+
+    // if - else
+    if (condition) {
+      /* Le code si la condition est VRAIE */
+    }
+    else {
+      /* Le code si la condition est FAUSSE */
+    }
+
+    //════════════════════════════════════════════
+
+    // if - else if - else
+    if (condition) {
+      /* Le code si la condition est VRAIE */
+    }
+    else if (condition) {
+      /* Le code si la condition est VRAIE */
+    }
+    else {
+      /* Le code si toute les conditions sont FAUSSES */
+    }
+
+    //════════════════════════════════════════════
+
+
+    // essai
+
+    let age = "test";
+
+    if (age > 18) {
+        // document.write("Vous êtes majeur <br>");
+    }
+    if (age >= 20) {
+        // document.write("Vous êtes majeur et plus vieux");
+    }
+    if (age < 18) { 
+        // document.write("Vous êtes mineur");
+    }
+
+    //════════════════════════════════════════════
+
+    if (age >= 20 ) { 
+
+        document.write("Vous êtes majeur et plus vieux");
+
+    } else if (age > 18) { 
+        document.write("Vous êtes majeur <br>");
+
+    } else if (age < 18) { 
+        document.write("Vous êtes mineur");
+
+    }
+    else {
+        document.write("Vous êtes QUI ?");
+    }
+
+    
+  </script>
+</body>
+</html>

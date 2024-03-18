@@ -3,9 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;     
+      list-style: none;
+    }
+    
+    body {
+      background-color: lightgrey;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: brown;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-top: 4rem;
+    }
+
+    pre {
+      font-size: 1rem;
+      padding: 1rem 0;
+    }
+
+    article {
+      margin: 4rem 0;
+      padding: 0 7rem;
+    }
+
+    p, li {
+      font-family: Verdana, Geneva, Tahoma, sans-serif; 
+      padding: .4rem 0;
+      text-align: justify;  
+    }
+
+    .bleuFonce {
+      color: #1F38A1;
+    }
+    
+    .bleuClair {
+      color: #4FA3A8;
+    }
+
+    .vertClair {
+      color: #2EA043;
+    }
+    
+    .jaune {
+      color: yellow;
+    }
+    
+    .orange {
+      color: #FFB418;
+    }
+
+    .violet {
+      color: #6147CB;
+    }
+    
+    .brique {
+      color: #C3602D;
+    }
+  </style>
   <title>Les types de variables en JavaScript</title>
 </head>
 <body>
+  <header>
+    <h1>Les types de variables en JavaScript</h1>
+  </header>
+  <main>
+    <h2>Les différents types de valeurs</h2>
+    <article>
+      <p>
+        Il existe plusieurs types de valeurs que l'on peut assigner à nos variables:
+        <ul>
+          <li>-> Les chaines de caractères (string) => phrase ou mot entre guillemets simple ou double</li>
+          <li>-> Les nombres (number) => 5, 10, 18.5</li>
+          <li>-> booléen (boolean) => 2 valeurs seulement True ou False</li>
+          <li>-> tableau (array) => ['Paul', 10]</li>
+          <li>-> null</li>
+          <li>-> classes (class)</li>
+          <li>-> objets (object)</li>
+          <li>-> fonction (function)</li>
+        </ul>
+      </p>
+    </article>
+    <article>
+      <h3>string</h3>
+      <pre>
+<span class="bleuFonce">let</span><span class="bleuClair"> variable1</span> = <span class="brique">"test"</span>;
+<span class="bleuFonce">let</span> <span class="bleuClair">monTexte</span> = <span class="brique">"Voici une phrase écrite et stockée dans une variable"</span>;
+      </pre>
+    </article>
+    <article>
+      <h3>number</h3>
+      <pre>
+<span class="bleuFonce">let</span> <span class="bleuClair">chiffre</span> = <span class="vertClair">55</span>;
+<span class="bleuFonce">let</span> <span class="bleuClair">negatif</span> = -<span class="vertClair">55</span>;
+<span class="bleuFonce">let</span> <span class="bleuClair">decimal</span> = <span class="vertClair">5</span>.<span class="vertClair">5</span>;
+      </pre>
+    </article>
+    <article>
+      <h3>boolean</h3>
+      <pre>
+<span class="bleuFonce">let</span> <span class="bleuClair">choix</span> = <span class="bleuFonce">true</span>;
+<span class="bleuFonce">let</span> <span class="bleuClair">choix1</span> = <span class="bleuFonce">false</span>;
+<span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">choix</span><span class="orange">)</span>;
+<span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">choix1</span><span class="orange">)</span>;
+      </pre>
+    </article>
+    <article>
+      <h3>Afin de vérifier le type d'une variable, on utilise typeOf()</h3>
+      <pre>
+<span class="bleuFonce">let</span> <span class="bleuClair">nbr1</span> = <span class="vertClair">10</span>;
+<span class="bleuFonce">let</span> <span class="bleuClair">nbr2</span> = <span class="brique">"10"</span>;
+<span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">nbr1</span><span class="violet">)</span><span class="orange">)</span>;
+<span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">nbr2</span><span class="violet">)</span><span class="orange">)</span>;
+      </pre>
+    </article>
+  </main>
 
 
   <script>

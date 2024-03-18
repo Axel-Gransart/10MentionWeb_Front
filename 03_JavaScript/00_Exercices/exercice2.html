@@ -12,10 +12,7 @@
         // Vous pouvez effectuer l'affichage dans la console, dans un pop-up ou sur la page directement.
         //INDICE :multiplier le prix HT par 1,20 pour obtenir le prix TTC.
 
-    let prixHt = prompt("Quel prix ht voulez vous calculer ?");
-    const TVA = 1.2;
-
-    let prixTTC = prixHt * TVA;
+    let prixHt = prompt("Quel prix ht voulez vous calculer ?"), prixTTC = prixHt * 1.2;
 
     document.write("Le prix TTC est de " + prixTTC + " €");
   </script>
