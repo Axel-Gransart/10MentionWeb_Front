@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 4 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    // Exercice Condition
+
+        // J'arrive sur un Espace sécurisé au moyen du prénom et de l'âge.
+        // Je dois saisir mon prénom et mon age pour être authentifié sur le site (ces informations seront au préalable stocké dans des variables prenom et age).
+        //  En cas d'echec, une alerte m'informe du problème.
+        //  Si tout se passe bien, un message de bienvenue m'accueille.
+
+      let prenom = "axel", age = 34;
+      let demandePrenom = prompt("Quel est votre prénom ?").toLowerCase(); // Je récupère le nom de l'utilisateur
+      let demandeAge = parseInt(prompt("Quel est votre âge ?")); // Je récupère l'âge de l'utilisateur
+
+      if (demandePrenom == prenom && demandeAge == age) {
+        // si le nom de l'utilisateur est identique à la variable prenom ET que l'âge de l'utilisateur est égale à la variable age
+        alert(`Bienvenue ${prenom.toUpperCase()}, vous avez ${age} ans et vous avez été authentifié`); // alors j'affiche le message suivant
+      }
+      else { // sinon
+        alert(`Bonjour ${demandePrenom.toUpperCase()}, vous avez ${demandeAge} ans mais vous n'êtes pas la personne que l'on attendait`);
+        // j'affiche le message suivant
+      }
+
+      let affichageCondition = (demandePrenom == prenom && demandeAge == age) ? `Bienvenue ${prenom.toUpperCase()}, vous avez ${age} ans et vous avez été authentifié` : `Bonjour ${demandePrenom.toUpperCase()}, vous avez ${demandeAge} ans mais vous n'êtes pas la personne que l'on attendait`;
+
+      document.write(affichageCondition);
+
+  </script>
+</body>
+</html>

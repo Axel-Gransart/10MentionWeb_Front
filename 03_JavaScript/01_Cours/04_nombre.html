@@ -193,7 +193,7 @@
         </pre>
         <p id="writeK2"></p>
         <p id="writeL"></p>
-      </article>
+      </article>      
     </section>
   </main>
 
@@ -221,6 +221,8 @@
     let resultwriteK1 = document.querySelector("#writeK1");
     let resultwriteK2 = document.querySelector("#writeK2");
     let resultwriteL = document.querySelector("#writeL");
+
+    let typeofChiffre = document.querySelector("#typeofChiffre");
    
     /*
     ╔═════════════════════════════════════════════╗
@@ -318,6 +320,9 @@
     // document.write(l + "<br>");
     resultwriteL.innerHTML = "l est égale à: " + l;
 
+    
+
+     
 
     // document.write("<br> <br> <br> <br>")
     /*
@@ -336,6 +341,20 @@
     document.write("La valeur au carré est égale à: " + valeurAuCarré + "<br>");
     document.write("La valeur au cube est égale à: " + valeurAuCube + "<br>");
     */
+
+    let chiffre = "12.5";
+    console.log(typeof chiffre);
+    console.log(chiffre);
+
+    let chiffreDecimal = parseFloat(chiffre);
+    console.log(typeof chiffreDecimal);
+    console.log(chiffreDecimal);
+
+    let chiffreEntier = parseInt(chiffre);
+    console.log(typeof chiffreEntier);
+    console.log(chiffreEntier);
+
+
 
 
   </script>

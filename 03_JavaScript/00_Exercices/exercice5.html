@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 4 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+  /*
+  Declarer trois tableaux :
+    tab1 contient 5 noms
+    tab2 contient 5 prénoms
+    tab3 contient 5 âges
+  Afficher en utilisant une boucle les noms et prénoms associés dans un document.write
+  */
+
+  let i = 0;
+  let tab1 = ["Pierrard", "Cissoko", "Morelany", "Gransart", "Isaac"];
+  let tab2 = ["Paul", "Adama", "Maureene", "Axel", "Marc"];
+  let tab3 = [21, 28, 24, 34, 32];
+
+  while (i <= tab1.length) {
+    if (i == tab1.length) {
+        document.write(` -- fin`);
+      }
+      else {
+        document.write(`prénom : <strong>${tab2[i]}</strong>, nom : <strong>${tab1[i]}</strong>, âge : <strong>${tab3[i]}</strong> ans; <br>`);
+      }
+      i++
+    };
+
+
+
+  </script>
+</body>
+</html>

@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Les nombres en JavaScript</title>
+  <title>Les string en JavaScript</title>
 </head>
 <body>
+  <header>
+    <h1>Les string en JavaScript</h1>
+  </header>
+  <main>
+    <article>
+      <h2>Modification d'un type -> string en type -> number</h2>
+      <pre>
+<span class="bleuFonce">let</span> chiffre = "12.5";
+  console.log(typeof chiffre);
+  console.log(chiffre);
+      </pre>
+      <pre>
+  let chiffreDecimal = parseFloat(chiffre);
+  console.log(typeof chiffreDecimal);
+  console.log(chiffreDecimal);
+      </pre>
+      <pre>
+  let chiffreEntier = parseInt(chiffre);
+  console.log(typeof chiffreEntier);
+  console.log(chiffreEntier);
+      </pre>
+    </article>
+  </main>
+
+
 
 <script>
 
@@ -61,6 +86,38 @@
   // Convertir un number en string
   unNombre = unNombre.toString();
   document.write(typeof(unNombre) + "<br>");
+
+  /*
+    ╔═════════════════════════════════════════════╗
+    ║        Modification string en number        ║
+    ╚═════════════════════════════════════════════╝ */
+
+    let chiffre = "12.5";
+    console.log(typeof chiffre);
+    console.log(chiffre);
+
+    let chiffreDecimal = parseFloat(chiffre);
+    console.log(typeof chiffreDecimal);
+    console.log(chiffreDecimal);
+
+    let chiffreEntier = parseInt(chiffre);
+    console.log(typeof chiffreEntier);
+    console.log(chiffreEntier);
+
+    // let a = "12.5";
+        // console.log(typeof a);
+        // console.log(a);
+        
+        // let b = parseFloat(a);
+        // console.log(b);
+        // console.log(typeof b);
+
+        // let c = parseInt(a);
+        // console.log(c);
+        // console.log(typeof c);
+
+
+
 </script>
 </body>
 </html>

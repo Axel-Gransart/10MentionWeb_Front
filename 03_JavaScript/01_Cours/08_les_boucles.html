@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les boucles en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+    // Les boucles nous permettent d'exécuter une ou plusieurs instructions un certain nombre de fois
+        // Une boucle respecte une condition
+        // Tant que cette condition est respectée, nous allons exécuter des instructions en boucle.
+        // La plupart du temps, nous utilisons les boucles pour parcourir chaque élément d'un tableau
+        // Il y a différents types de boucles, les plus utilisées sont la boucle "FOR" et la boucle "WHILE"
+
+
+    /*
+    ╔═════════════════════════════════════════════╗
+    ║                Boucle FOR                   ║
+    ╚═════════════════════════════════════════════╝ */
+
+    /* SYNTAXE
+      for( 3 arguments : initialisation; condition de la continuité; ensuite l'incrémentation) {
+        
+        code à executer
+      }          
+    */
+
+    // i = 0  j'initialise le départ de la boucle à 0
+    // i <    tant que la valeur de i est inférieure à 10
+    // i++    j'incrémente un tour de boucle
+    // En gros je donne l'instruction de faire un tour de boucle supplémentaire tant que la valeur de i n'est pas égale ou supérieure à 10
+
+    for (let i = 0; i < 10; i++ ) {
+      document.write(`<p>Il est 14h5${i}</p>`);      
+    }
+
+    // Je boucle 2 par 2
+    for (let i = 0; i < 10; i+=2 ) {
+      document.write(`<p>Il est 15h0${i}</p>`);      
+    }
+
+    document.write("<br> <br>");
+    // Je boucle sur un tableau
+    let jours = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+
+    document.write(jours);
+    document.write("<br>");
+
+    for (let i = 0; i < jours.length; i++ ) {
+      if (i == jours.length-1) {
+        document.write(` ${jours[i]}.`);
+      }
+      else {
+        document.write(` ${jours[i]},`);
+      }
+    };
+
+    document.write("<br> <br>");
+     /*
+    ╔═════════════════════════════════════════════╗
+    ║         Boucle WHILE (tant que)             ║
+    ╚═════════════════════════════════════════════╝ */
+
+    /* SYNTAXE
+
+      initialisation de la variable
+      while(expression qui vaut True ou False) {        
+        code à executer tant que l'expression vaut True
+        Incrémentation de la variable
+      } */
+
+    let j = 0;  // J'initialise une variable j égale à 0
+
+    while (j <= 5) {  // Tant que j est inférieur ou égale à 5
+      document.write(`j est égale à ${j} / `);   //  J'exécute l'instruction
+      j++   // A chaque tour de boucle, j'incrémente la variable
+    };
+
+    document.write("<br>");
+    
+
+    let k = 0;
+
+    while (k <= 5) { 
+      if (k == 5) {
+        document.write(`k est égale à ${k} <- `);
+      }
+      else {
+        document.write(`k est égale à ${k} / `);
+      }
+      k++   
+    };
+
+
+
+
+
+
+  </script>
+</body>
+</html>

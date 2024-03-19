@@ -88,32 +88,32 @@
     ╚═════════════════════════════════════════════╝ */
 
     // if
-    if (condition) {
-      /* Le code si la condition est VRAIE */
-    }
+    // if (condition) {
+    //   /* Le code si la condition est VRAIE */
+    // }
 
     //════════════════════════════════════════════    
 
     // if - else
-    if (condition) {
-      /* Le code si la condition est VRAIE */
-    }
-    else {
-      /* Le code si la condition est FAUSSE */
-    }
+    // if (condition) {
+    //   /* Le code si la condition est VRAIE */
+    // }
+    // else {
+    //   /* Le code si la condition est FAUSSE */
+    // }
 
     //════════════════════════════════════════════
 
     // if - else if - else
-    if (condition) {
-      /* Le code si la condition est VRAIE */
-    }
-    else if (condition) {
-      /* Le code si la condition est VRAIE */
-    }
-    else {
-      /* Le code si toute les conditions sont FAUSSES */
-    }
+    // if (condition) {
+    //   /* Le code si la condition est VRAIE */
+    // }
+    // else if (condition) {
+    //   /* Le code si la condition est VRAIE */
+    // }
+    // else {
+    //   /* Le code si toute les conditions sont FAUSSES */
+    // }
 
     //════════════════════════════════════════════
 
@@ -149,7 +149,202 @@
         document.write("Vous êtes QUI ?");
     }
 
+    document.write(br + br);
+    //════════════════════════════════════════════
     
+    let a = 10, b = 5, c = 2;
+
+    // a = 10 //b = 5 //c = 2 // COMPARER a egale à 9 ou (a = 9 ou b < 9) ok pour l'une au moins de ces deux conditions // comparer a et be a>b a est bien supperieur à b sinon a < b // si a > b et b > c ok pour les deux conditions sinon une de ces deux conditions est fausse // si a > b et b > c ok pour les deux conditions sinon une de ces deux conditions est fausse
+
+    // Exercice 1
+    // comparer a et be a>b a est bien supperieur à b sinon a < b 
+
+    if (a > b) {
+      document.write("a est bien supérieur à b");
+    }
+    else {
+      document.write("a est inférieur à b");
+    } 
+
+
+    document.write(br);
+    // Exercice 2
+    // si a > b et b > c -> ok pour les deux conditions sinon une de ces deux conditions est fausse 
+
+    if (a > b && b > c) {
+      document.write("OK pour les deux conditions");
+    }
+    else {
+      document.write("Une des deux conditions est fausses");
+    }
+
+
+    document.write(br);
+    // Exercice 3
+    // COMPARER a egale à 9 ou (a = 9 ou b < 9) ok pour l'une au moins de ces deux conditions
+
+
+    if (a == 9 || b < 9) {
+      document.write("OK pour au moins une des deux conditions");
+    }
+    else {
+      document.write("Les deux conditions sont fausses");
+    }
+
+
+    document.write(br);
+    // Exercice 4
+    
+    if (a == 8) {
+      document.write("a est égale à 8");
+    }
+    else if (a != 10) {
+      document.write("a est différent de 10");
+    }
+    else {
+      document.write("toutes les conditions sont fausses");
+    }
+
+
+    document.write(br);
+    // Avec que des if, les conditions sont toutes éxécutés, et dès que l'une des conditions est vrai, le résultat est affiché
+    
+    if ( a == 10 ) { // true
+      document.write(" a est égale à 10, ");
+    }
+    if ( a < b ) { // false
+      document.write(" a est inférieur à b, ");
+    }
+    if ( a > b ) { // true
+      document.write(" a est supérieur à b, ");
+    }
+
+    document.write(br + br);
+    /*
+    ╔═════════════════════════════════════════════╗
+    ║           La condition ternaire             ║
+    ╚═════════════════════════════════════════════╝ */
+
+    // La condition ternaire nous permet de faire une vérification mais sur une seule ligne
+
+    let meteo = "pluie";
+
+    if (meteo == "pluie") {
+      document.write("Tu vas être mouillé !");
+    }
+    else {
+      document.write("Sors la moto !!");
+    }
+
+    document.write(br + br);
+    meteo = "soleil";
+
+    let ternaire = (meteo == "pluie") ? "prends un parapluie" : "Sors la moto !!";
+    document.write(ternaire);
+    /* écriture ternaire: 
+        ->  () = condition -> ici, est-ce que la variable meteo est égale à pluie 
+        ->  ?  = if -> si oui, affiche "prends un parapluie"
+        ->  :  = else -> si non, affiche "Sors la moto !!"
+    */
+
+    document.write(br + br);
+
+    // Exercice ternaire
+    //monAge = prompt("Quel est votre âge ?");
+
+    //let monAgeTernaire = (monAge < 18) ? "Tu es mineur, rentre chez tes parents !!" : "Vous êtes majeur, faites ce que vous voulez, enfin presque.";
+   //document.write(monAgeTernaire);
+
+
+    document.write(br + br);
+    /*
+    ╔═════════════════════════════════════════════╗
+    ║            La condition switch              ║
+    ╚═════════════════════════════════════════════╝ */
+
+    let valeur = 5 + 10;
+
+    switch (valeur) {
+      case 5:
+        document.write("La valeur est égale à 5 ");
+        
+        break;
+      case 10:
+        document.write("La valeur est égale à 10 ");
+        
+        break;
+      case 15:
+        document.write("La valeur est égale à 15 ");
+        
+        break;
+      default:
+        document.write("La valeur est indéterminée ");
+        break;
+    }
+
+
+
+    document.write(br + br);
+
+    let jour = prompt("Entrez un jour de la semaine").toLowerCase(); // .toLowerCase() permet de transformer l'insertion de l'utilisateur en minuscule -> Dans ce cas, le contrôle (dans notre code) doit être noté en minuscule
+
+    switch (jour) {
+      case 'lundi':
+        document.write("Demain c'est mardi");
+        
+        break;
+      case "mardi":
+        document.write("Demain c'est mercredi");
+        
+        break;
+      case "mercredi":
+        document.write("Demain c'est jeudi");
+        
+        break;
+      case "jeudi":
+        document.write("Demain c'est vendredi");
+        
+        break;
+      case "vendredi":
+        document.write("Demain c'est samedi");
+                        
+        break;
+      case "samedi":
+        document.write("Demain c'est dimanche");
+                        
+        break;
+      default:
+        document.write("demain c'est lundi");
+        break;
+    }
+
+    document.write(br);
+    // conversion en condition if / else if
+
+    
+      if (jour == 'lundi') {
+        document.write("Demain on est que mardi");       
+      } 
+      else if (jour == "mardi") {
+        document.write("Demain c'est mercrediiiiiiii");       
+      } 
+      else if (jour == "mercredi") {
+        document.write("Demain c'est jeudi, on tient le bon bout");       
+      } 
+      else if (jour == "jeudi") {
+        document.write("Demain c'est vendredi, dernier jour de boulot");       
+      } 
+      else if (jour == "vendredi") {
+        document.write("Demain c'est le week-end !!!!!");       
+      }
+      else if (jour == "samedi") {
+        document.write("Demain c'est dimanche, dernière chance pour se reposer");       
+      }
+      else {
+        document.write("Demain c'est lundi HAHAHAHA ! t'es encore plus fatigué que la semaine dernière !!");
+      }      
+
+
   </script>
 </body>
 </html>
