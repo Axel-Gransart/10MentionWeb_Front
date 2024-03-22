@@ -24,25 +24,64 @@
                     =>afficher  "Vous n\avez pas saisi de nombre !"   
         */
 
-    let moyenneBac = prompt("Quel est votre moyenne au BAC ?");
-    console.log(typeof moyenneBac);
+    // let moyenneBac = prompt("Quel est votre moyenne au BAC ?");
+    // console.log(typeof moyenneBac);
     
-      if (moyenneBac >= 0 && moyenneBac < 10) {
-        document.write(`Tu es recalé !!`);        
+    //   if (moyenneBac >= 0 && moyenneBac < 10) {
+    //     document.write(`Tu es recalé !!`);        
+    //   }
+    //   else if (moyenneBac >= 10 && moyenneBac <= 11) {
+    //     document.write(`Tu passes, sans mention !!`);
+    //   }
+    //   else if (moyenneBac >= 12 && moyenneBac <= 20) {
+    //     document.write(`Reçu avec mention !!`);
+    //   }
+    //   else if (moyenneBac < 0 || moyenneBac > 20) {
+    //     document.write(`La moyenne doit être comprise entre 0 et 20 ! :)`);
+    //   }     
+    //   else {
+    //     document.write("Ce n'est pas une note ça !!");
+    //   }
+
+      // Correction
+
+      let moyenne = prompt("Quel est votre moyenne ?");
+
+      // if (moyenne >= 0 && moyenne <= 10) {
+      //   document.write("Tu est recalé !!");
+      // }
+      // else if (moyenne >= 10 && moyenne <= 11) {
+      //   document.write("Tu passes, sans mention !!");
+      // }
+      // else if (moyenne >= 12 && moyenne <= 20) {
+      //   document.write("Tu passes, avec mention !!");
+      // }
+      // else if (moyenne < 0 || moyenne > 20) {
+      //   document.write("La moyenne doit être comprise entre 0 et 20");
+      // }
+      // else {
+      //   document.write("Vous n'avez pas saisie de note");
+      // }
+
+
+    // Correction 2
+
+    if (isNaN(moyenne)) { // Si un nombre 
+      document.write("Vous n'avez pas saisie de note");
+    } else {
+      if (moyenne >= 0 && moyenne <= 10) {
+        document.write("Tu est recalé !!");
       }
-      else if (moyenneBac >= 10 && moyenneBac <= 11) {
-        document.write(`Tu passes, sans mention !!`);
+      else if (moyenne >= 10 && moyenne <= 11) {
+        document.write("Tu passes, sans mention !!");
       }
-      else if (moyenneBac >= 12 && moyenneBac <= 20) {
-        document.write(`Reçu avec mention !!`);
+      else if (moyenne >= 12 && moyenne <= 20) {
+        document.write("Tu passes, avec mention !!");
       }
-      else if (moyenneBac < 0 || moyenneBac > 20) {
-        document.write(`La moyenne doit être comprise entre 0 et 20 ! :)`);
-      }     
-      else {
-        document.write("Ce n'est pas une note ça !!");
+      else if (moyenne < 0 || moyenne > 20) {
+        document.write("La moyenne doit être comprise entre 0 et 20");
       }
-    
+    }
     
   </script>
 </body>

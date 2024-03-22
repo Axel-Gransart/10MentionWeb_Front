@@ -29,6 +29,8 @@
     let nombreUtilisateur = prompt("Quel est le nombre choisi ?");
     console.log(nombreUtilisateur);
 
+    Math.sign()
+
     if (nombreUtilisateur < 1 || nombreUtilisateur > 10) {
       document.write("Il faut choisir un nombre entre 1 et 10");      
     }
@@ -46,6 +48,19 @@
       document.write(` Vous n'avez pas saisi de nombre !`);
     }      
     
+
+    // correction
+
+    let nbr = prompt('Entrez un nombre');
+
+    if (isNaN(nbr)) {        
+      document.write("Vous n'avez pas saisi de nombre !");
+    }
+    else {
+      if (nbr) {
+        document.write('c\'est un nombre');
+      }
+    }
     
   </script>
 </body>
