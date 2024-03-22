@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 10 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    //Exercice 10
+
+        /* 
+            Écrivez un programme qui affiche tous les nombres entre 1 et 20 avec les exceptions suivantes :
+            il affiche "Grala" à la place du nombre si celui-ci est divisible par 3.
+            Il affiche "Bu" à la place du nombre si celui-ci est divisible par 5 et non par 3.
+            il affiche "Gralabu" à la place des nombres divisibles à la fois par 3 et par 5.
+        */
+
+    for (let i = 1; i <= 20; i++) {
+      if (i % 3 == 0 && i % 5 !== 0 ) {
+        document.write("Grala <br>");
+      }
+      else if (i % 5 == 0 && i % 3 !== 0) {
+        document.write("Bu <br>");
+      }
+      else if (i % 3 == 0 && i % 5 == 0) {
+        document.write("GralaBu <br>");
+      }
+      else {
+        document.write(`${i} <br>`);
+      }
+    }
+    
+  </script>
+</body>
+</html>

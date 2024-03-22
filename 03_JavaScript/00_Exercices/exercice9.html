@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 9 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    //Exercice 9
+
+        // Ecrivez un programme qui fait jouer l'utilisateur au "ni oui, ni non" : il entre un texte jusqu'à saisir "oui" ou "non", ce qui déclenche la fin du jeu. ( Utilisez la boucle while)
+
+    let listePhrase = ['Tu vas bien ?', 'Es-tu français(e) ?', 'Aimes-tu les pizzas ?', 'Joues-tu au tennis ?', 'As-tu des animaux ?', '2+2 est-il égal à 4 ?', "Ouah mais tu es trop fort, tu t'es beaucoup entraîner à ce jeu ?", "Ah tu as perdu !", "Tu ne veux pas te mêler de tes affaires ?", "Sais-tu ce qu'il y a juste derrière toi ?", "J'ai un trou de mémoire, on joue à quel jeu déjà ?", "Quel est le but de ce jeu ?", "Tu mens !", "Je fais du koupsing en sport, et toi tu pratiques un sport ?", "Est-ce que tu sais faire du vélo en pédalant avec les mains ?"];
+    let ouiOuNon = prompt("Voulez-vous jouer à ni oui ni non ?");
+    let i = 0;
+
+    while ((ouiOuNon !== "oui") && (ouiOuNon !== "non")) {
+      ouiOuNon = prompt(listePhrase[i]);
+      if (i > listePhrase.length-2) {
+        i = 0;
+      }               
+      i++
+    }
+
+    document.write("Perdu, t'es mauvais !!");
+
+
+    // let question = prompt("Voulez-vous jouer à ni oui ni non ?");
+    // while ((question !== "oui") && (question !== "non")) {
+    //   question = prompt("Voulez-vous jouer à ni oui ni non ?");
+    // }
+    // document.write("Perdu, t'es mauvais !!");
+
+
+			
+	
+   
+  </script>
+</body>
+</html>

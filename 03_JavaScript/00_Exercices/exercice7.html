@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 7 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    // Exercice 7
+        /* 
+            Créer un script qui permet de :
+                - récupérer la moyenne de BAC à votre utilisateur
+                - vérifier si l'utilisateur a bien renseigner un nombre, 
+                si un nombre :
+                    => si la moyenne est supérieur ou égale à 0 et strictement inférieure à 10  -> afficher "tu es recalé !"
+                    => si la moyenne est entre 10 et 11 -> afficher "Tu passes, sans mention !"
+                    => si la moyenne et entre 12 et 20 -> afficher Reçu avec mention ! :) 
+                    => si la moyenne est inférieur à 0 ou supérieur à 20  -> afficher "La moyenne doit être comprise entre 0 et 20 ! :)"
+                Si ce n'est pas un nombre :
+                    =>afficher  "Vous n\avez pas saisi de nombre !"   
+        */
+
+    let moyenneBac = prompt("Quel est votre moyenne au BAC ?");
+    console.log(typeof moyenneBac);
+    
+      if (moyenneBac >= 0 && moyenneBac < 10) {
+        document.write(`Tu es recalé !!`);        
+      }
+      else if (moyenneBac >= 10 && moyenneBac <= 11) {
+        document.write(`Tu passes, sans mention !!`);
+      }
+      else if (moyenneBac >= 12 && moyenneBac <= 20) {
+        document.write(`Reçu avec mention !!`);
+      }
+      else if (moyenneBac < 0 || moyenneBac > 20) {
+        document.write(`La moyenne doit être comprise entre 0 et 20 ! :)`);
+      }     
+      else {
+        document.write("Ce n'est pas une note ça !!");
+      }
+    
+    
+  </script>
+</body>
+</html>

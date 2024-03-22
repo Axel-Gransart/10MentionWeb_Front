@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercice 4 en JavaScript</title>
+  <title>Exercice 5 en JavaScript</title>
 </head>
 <body>
 
@@ -17,19 +17,40 @@
   Afficher en utilisant une boucle les noms et prénoms associés dans un document.write
   */
 
-  let i = 0;
-  let tab1 = ["Pierrard", "Cissoko", "Morelany", "Gransart", "Isaac"];
+  let tab1 = ["Pierrard", "Cissoko", "Marolany", "Gransart", "Isaac"];
   let tab2 = ["Paul", "Adama", "Maureene", "Axel", "Marc"];
   let tab3 = [21, 28, 24, 34, 32];
+ 
+  let i = 0;
+
+  document.write("<br> <h3>1ère façon (boucle while) :</h3>");
 
   while (i <= tab1.length) {
     if (i == tab1.length) {
         document.write(` -- fin`);
       }
       else {
-        document.write(`prénom : <strong>${tab2[i]}</strong>, nom : <strong>${tab1[i]}</strong>, âge : <strong>${tab3[i]}</strong> ans; <br>`);
+        document.write(`âge : <strong>${tab3[i]}</strong> ans, prénom : <strong>${tab2[i]}</strong>, nom : <strong>${tab1[i]}</strong>; <br>`);
       }
       i++
+    };
+
+    document.write("<br> <br> <h3>2ème façon (boucle for) :</h3>");
+
+    for (let i = 0; i < tab1.length; i++) {
+      document.write(`prénom : <strong>${tab2[i]}</strong>, nom : <strong>${tab1[i]}</strong>, âge : <strong>${tab3[i]}</strong> ans; <br>`);
+    };
+
+    document.write("<br> <br> <h3>Autre façon (boucle for) :</h3>");
+
+    let tab11 = ["Pierrard", "Cissoko", "Marolany", "Gransart", "Isaac"];
+    let tab21 = ["Paul", "Adama", "Maureene", "Axel", "Marc"];
+    let tab31 = [21, 28, 24, 34, 32];
+    
+    let tab4 = [tab11, tab21, tab31];
+
+    for (let i = 0; i < tab4[0].length; i++) {
+      document.write(`nom : <strong>${tab4[0][i]}</strong>, prénom : <strong>${tab4[1][i]}</strong>, âge : <strong>${tab4[2][i]}</strong> ans; <br>`);
     };
 
 

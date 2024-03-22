@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercice 4 en JavaScript</title>
+  <title>Exercice 6 en JavaScript</title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 
       /*
           Ecrivez un programme pour qu'il fasse 10 tours de manège en affichant le numéro du tour à chaque tour dans la console :
-          En utilisant le boucle for
+          En utilisant la boucle for avec la condition if
 
           Le manège démarre
           C'est le tour numéro 1
@@ -22,6 +22,8 @@
           C'est le tour numéro 10
           Le manège s'arrête
       */
+
+      document.write("<br> <h3>1ère façon (boucle for) :</h3>");
 
       for ( let i = 0; i <= 11; i++ ) {
         if (i === 11) {
@@ -32,6 +34,20 @@
         }
         else {
           document.write(`C'est le tour de manège numéro <strong>${i}</strong> <br>`); 
+        }        
+      };
+
+      document.write("<br>");
+
+      for ( let i = 1; i <= 10; i++ ) {
+        if (i < 2) {
+          document.write(`Le manège <strong>démarre</strong> <br>`);
+        }
+        if (i <= 10) {
+          document.write(`C'est le tour de manège numéro <strong>${i}</strong> <br>`);
+        }
+        if (i > 9) {           
+          document.write(`C'est fini, le tour de manège est <strong>terminé</strong> <br>`);
         }        
       }
 

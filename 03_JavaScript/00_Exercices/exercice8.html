@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 8 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    // Exercice 8
+        /* 
+            Créer un script qui permet de :
+                récuperer un nombre de l'utilsateur, 
+                le nombre doit être différent de 0 et positif
+                vérifier et afficher sur la page si ce nombre ainsi que ceux qui le suivent jusqu'au 10.
+                Si ce n'est pas un nombre :
+                    => afficher  "Vous n'avez pas saisi de nombre !"  
+                si un nombre :
+                    => si un nombre pair -> affiche " le nombre est pair"
+                    => si un nombre impair -> affiche " le nombre est impair"
+
+
+            créer un script JavaScript qui demande à l'utilisateur de saisir un nombre. Le script vérifiera d'abord si le nombre est différent de zéro et s'il est positif. Ensuite, il affichera sur la page web si ce nombre est pair ou impair, ainsi que pour les neuf nombres suivants jusqu'à 10.           
+        */
+
+    let nombreUtilisateur = prompt("Quel est le nombre choisi ?");
+    console.log(nombreUtilisateur);
+
+    if (nombreUtilisateur < 1 || nombreUtilisateur > 10) {
+      document.write("Il faut choisir un nombre entre 1 et 10");      
+    }
+    else if (nombreUtilisateur >= 1 || nombreUtilisateur <= 10) {
+      for (let i = nombreUtilisateur; i < 11 ; i++) {
+        if (i % 2 == 0 ) {
+          document.write(` ${i} est pair <br>`);
+        }
+        else {
+          document.write(` ${i} est impair <br>`);
+        }
+      }      
+    }
+    else {
+      document.write(` Vous n'avez pas saisi de nombre !`);
+    }      
+    
+    
+  </script>
+</body>
+</html>
