@@ -26,27 +26,27 @@
             créer un script JavaScript qui demande à l'utilisateur de saisir un nombre. Le script vérifiera d'abord si le nombre est différent de zéro et s'il est positif. Ensuite, il affichera sur la page web si ce nombre est pair ou impair, ainsi que pour les neuf nombres suivants jusqu'à 10.           
         */
 
-    let nombreUtilisateur = prompt("Quel est le nombre choisi ?");
-    console.log(nombreUtilisateur);
+    // let nombreUtilisateur = prompt("Quel est le nombre choisi ?");
+    // console.log(nombreUtilisateur);
 
-    Math.sign()
+    // Math.sign()
 
-    if (nombreUtilisateur < 1 || nombreUtilisateur > 10) {
-      document.write("Il faut choisir un nombre entre 1 et 10");      
-    }
-    else if (nombreUtilisateur >= 1 || nombreUtilisateur <= 10) {
-      for (let i = nombreUtilisateur; i < 11 ; i++) {
-        if (i % 2 == 0 ) {
-          document.write(` ${i} est pair <br>`);
-        }
-        else {
-          document.write(` ${i} est impair <br>`);
-        }
-      }      
-    }
-    else {
-      document.write(` Vous n'avez pas saisi de nombre !`);
-    }      
+    // if (nombreUtilisateur < 1 || nombreUtilisateur > 10) {
+    //   document.write("Il faut choisir un nombre entre 1 et 10");      
+    // }
+    // else if (nombreUtilisateur >= 1 || nombreUtilisateur <= 10) {
+    //   for (let i = nombreUtilisateur; i < 11 ; i++) {
+    //     if (i % 2 == 0 ) {
+    //       document.write(` ${i} est pair <br>`);
+    //     }
+    //     else {
+    //       document.write(` ${i} est impair <br>`);
+    //     }
+    //   }      
+    // }
+    // else {
+    //   document.write(` Vous n'avez pas saisi de nombre !`);
+    // }      
     
 
     // correction
@@ -57,8 +57,43 @@
       document.write("Vous n'avez pas saisi de nombre !");
     }
     else {
-      if (nbr) {
-        document.write('c\'est un nombre');
+      if (nbr <= 0) {
+        document.write("Le nombre doit être différent de 0 et positif");
+      }
+      else {
+        while (nbr <= 10) {
+          if (nbr % 2 == 0) {
+            document.write(`Le nombre ${nbr} est pair <br>`);
+          }
+          else {
+            document.write(`Le nombre ${nbr} est impair <br>`);
+          }
+          nbr++
+        }
+      }
+    }
+
+    document.write("<br> <br>")
+
+    // Correction 2
+
+    if (isNaN(nbr)) {        
+      document.write("Vous n'avez pas saisi de nombre !");
+    }
+    else {
+      if (Math.sign(nbr) == -1 || Math.sign(nbr) == 0 ) {
+        document.write("Le nombre doit être différent de 0 et positif");
+      }
+      else {
+        while (nbr <= 10) {
+          if (nbr % 2 == 0) {
+            document.write(`Le nombre ${nbr} est pair <br>`);
+          }
+          else {
+            document.write(`Le nombre ${nbr} est impair <br>`);
+          }
+          nbr++
+        }
       }
     }
     
