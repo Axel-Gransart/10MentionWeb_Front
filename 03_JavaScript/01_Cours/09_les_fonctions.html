@@ -180,11 +180,11 @@
     function Hello() {
       let firstName = prompt("Quel est votre prénom ? ");
 
-      if (isNaN(firstName) && firstName != null && firstName != " ") {
+      if (isNaN(firstName)) {
 
         let birth = prompt(`Bonjour ${firstName}, quel âge as-tu ?`);
 
-        if (birth != null && !isNaN(parseInt(birth)) ) {
+        if (!isNaN(parseInt(birth)) ) {
 
           let date = new Date()   // Date() permet de créer une instance qui représente un moment précis dans le temps.
           let anneeDeNaissance = date.getFullYear() - birth;     // getFullYear = retourne l'année entière (méthode js)

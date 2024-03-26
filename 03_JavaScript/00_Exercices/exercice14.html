@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 14 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    // Exercice 14
+
+    /* 
+      Créer une fonction qui doit déterminer si un utilisateur à insérer correctement un @ dans son adresse email.
+      Puis afficher le résultat: true ou false
+      ex: testEmail('julien@gmail.com') => true
+      ex: testEmail('julien.gmail.com') => false
+    */
+
+    let testEmail
+
+    function reponseMail() {
+      testEmail = prompt("Quel est votre mail ?");
+      while (!testEmail.includes("@")) {
+        alert("Veuillez renseigner une adresse mail valide");      
+        reponseMail();
+      }
+      alert("Votre mail est correct");
+    };
+
+    reponseMail();
+
+
+
+   
+  </script>
+</body>
+</html>

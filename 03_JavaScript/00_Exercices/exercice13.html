@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 13 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    //Exercice 13
+    /*
+        A l'aide de ce tableau et d'une boucle:
+    */
+
+    // const clients = [
+    //     {
+    //         firstname: "Claire",
+    //         age: 28,
+    //     },
+    //     {
+    //         firstname: "Max",
+    //         age: 32,
+    //     },
+    //     {
+    //         firstname: "Léo",
+    //         age: 23,
+    //     },
+    // ];
+
+    // Calculez et affichez dans le terminal la somme des âges.
+
+    const clients = [
+      {
+        firstname: "Claire",
+        age: 28,
+      },
+      {
+        firstname: "Max",
+        age: 32,
+      },
+      {
+        firstname: "Léo",
+        age: 23,
+      },
+    ];
+    let result
+
+    for (let i = 0; i < clients.length; i++) {
+        result = clients[i].age.reduce((sum, current) => sum + current);  
+        console.log(clients[i].age);
+    };
+
+    document.write(result);
+       
+   
+  </script>
+</body>
+</html>

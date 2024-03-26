@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 11 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    //Exercice 11
+    /*
+      Créez un array vide = []
+      Puis créez une fonction qui prendra 2 paramètres: 2 nombres
+      Le seul but de la fonction sera de pousser le premier nombre à la suite de l'array
+      x fois, par rapport au 2eme nombre
+      Exemple: pousser(8, 5) => [8, 8, 8, 8, 8]
+    */
+
+    let myArray = [];
+
+    function pushNumber(nb1, nb2, nb3, nb4) {
+      while (myArray.length < nb2) {
+        myArray.push(nb1);        
+      }
+      for (let i = 0; i < nb4; i++) {
+        myArray.push(nb3);      
+      }
+    };
+
+
+    pushNumber(8, 5, 2, 4);
+
+    document.write(myArray);   
+   
+  </script>
+</body>
+</html>

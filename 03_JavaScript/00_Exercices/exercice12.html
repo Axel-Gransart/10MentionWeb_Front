@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 12 en JavaScript</title>
+</head>
+<body>
+
+
+  <script>
+
+    //Exercice 12
+
+    /*
+      Créez un array avec plusieurs nombres à l'intérieur
+
+      Créez une fonction qui permet de calculer la somme des nombres, de manière automatique
+    */
+
+    let arrayNumber = [3, 8, 12, 27, 44];
+    let result
+    let arrayVisu = arrayNumber.join(" + ");
+    
+    function claculate() {
+      for (let i = 0; i < arrayNumber.length; i++) {
+        result = arrayNumber.reduce((sum, current) => sum + current, 0);      
+      }
+    }
+    
+    claculate();
+    
+    document.write(arrayVisu);
+    document.write("<br>");
+    document.write(result);
+
+
+   
+  </script>
+</body>
+</html>
