@@ -33,7 +33,40 @@
     document.write(arrayVisu);
     document.write("<br>");
     document.write(result);
+    document.write("<br> <br>");
 
+
+    //    Correction
+    document.write("<h4> CORRECTION </h4>");
+    // 1ère façon de faire
+    document.write("<h5> 1ère façon de faire </h5>");
+
+    let tab = [50, 7, 20, 60, 10];
+
+    let sommeTableau = ()=> {
+      let somme = 0;
+      for (let i = 0; i < tab.length; i++) {
+        somme += tab[i];        
+      }
+      document.write(somme + "<br>");
+    };
+
+    sommeTableau();
+
+
+    // 2ème façon de faire
+    document.write("<h5> 2ème façon de faire </h5>");
+
+    let monArray = function (nombre) {
+      let somme = 0;
+      for (let i = 0; i < nombre.length; i++) {
+        somme += nombre[i];
+      }
+      return somme;
+    };
+
+    document.write(monArray([5, 40, 15, 60]));
+    document.write("<br>");
 
    
   </script>

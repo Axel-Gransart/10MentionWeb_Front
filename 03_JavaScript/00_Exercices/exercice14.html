@@ -19,21 +19,53 @@
       ex: testEmail('julien.gmail.com') => false
     */
 
-    let testEmail
+
 
     function reponseMail() {
-      testEmail = prompt("Quel est votre mail ?");
+      let testEmail = prompt("Quel est votre mail ?");
       while (!testEmail.includes("@")) {
         alert("Veuillez renseigner une adresse mail valide");      
         reponseMail();
       }
-      alert("Votre mail est correct");
+      alert("Votre mail est correct");      
     };
 
-    reponseMail();
+    // reponseMail();
 
+    //    Correction
 
+    let email = prompt("Entrez votre adresse email");
+    
+    function verifEmail(email) {
+      let i = 0;
+      let j
+      while (i < email.length) {
+        if (email[i] == "@") {
+          j = email[i];
+        }
+        i++
+      }
+      if (j  == "@") {
+        document.write("true")
+      }
+      else {
+        document.write("false");        
+      }
+    }
 
+    //verifEmail(email);
+
+    //    Avec la fonction indexOF()
+
+    function verif(email) {
+      let result = email.indexOf("@",1);
+      if (result == -1) {
+        document.write("false"); 
+      } else {
+        document.write("true")
+      }
+    }
+    verif(email);
    
   </script>
 </body>

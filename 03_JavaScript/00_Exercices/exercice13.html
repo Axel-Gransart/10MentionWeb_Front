@@ -32,7 +32,7 @@
 
     // Calculez et affichez dans le terminal la somme des âges.
 
-    const clients = [
+    let clients = [
       {
         firstname: "Claire",
         age: 28,
@@ -46,15 +46,44 @@
         age: 23,
       },
     ];
-    let result
 
+    let result = 0;
+    
     for (let i = 0; i < clients.length; i++) {
-        result = clients[i].age.reduce((sum, current) => sum + current);  
-        console.log(clients[i].age);
-    };
+      result += clients[i].age;
+    }
+    document.write(`Le résultat de la somme des âges est de : ${result} <br>`);
 
-    document.write(result);
+    //    Correction
+
+    //    1ère façon de faire (boucle for of)
+
+    let totalAge = 0;
+
+    for (let client of clients) {
+      totalAge += client.age
+    }
+    document.write(`La somme des âges est de : ${totalAge} ans en tout avec la boucle for of <br>`);
        
+    //    2ème façon de faire (boucle for)
+
+    totalAge = 0;
+    for (let i = 0; i < clients.length; i++) {
+      totalAge += clients[i].age;      
+    }
+    document.write(`La somme des âges est de : ${totalAge} ans en tout avec la boucle for <br>`);
+
+
+    //    3ème façon de faire (boucle while)
+
+    totalAge = 0;
+    let index = 0;
+
+    while (index < clients.length) {
+      totalAge += clients[index].age;
+      index ++   
+    }
+    document.write(`La somme des âges est de : ${totalAge} ans en tout avec la boucle while <br>`);
    
   </script>
 </body>

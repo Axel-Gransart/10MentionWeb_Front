@@ -19,21 +19,61 @@
       Exemple: pousser(8, 5) => [8, 8, 8, 8, 8]
     */
 
-    let myArray = [];
+    let myArray = []; //    Si je mets la variable à l'extérieur de ma fonction, il faut vider le taleau avant de sortir de la fonction.
 
-    function pushNumber(nb1, nb2, nb3, nb4) {
-      while (myArray.length < nb2) {
-        myArray.push(nb1);        
+    function pushNumber(nb1, nb2) {
+      while (myArray.length < nb2) { //     Tant que la longueur de 'myArray' est inférieure à mon 2ème paramètre
+      myArray.push(nb1);             //     Alors on ajoute mon 1er paramètre à la fin de 'myArray'
       }
-      for (let i = 0; i < nb4; i++) {
-        myArray.push(nb3);      
-      }
+      document.write(myArray + "<br>"); 
+      myArray = [];
     };
 
 
-    pushNumber(8, 5, 2, 4);
+    pushNumber(8, 5);
+    pushNumber(4, 9);
+    document.write("<br>"); 
 
-    document.write(myArray);   
+    // 2ème façon de faire
+
+    let maFonction = (nbr1, nbr2)=>{
+      let table = [];
+      for (let i = 0; i < nbr2; i++) {
+        table.push(nbr1);        
+      }
+      document.write(table + "<br>");
+    }
+
+    maFonction(8, 5);
+    maFonction(4, 9);
+    document.write("<br>");
+
+
+
+    // avec boucle for / boucle while
+    
+    let myArray1 = [];
+    let myArray2 = [];
+
+    function pushNumber1(nb1, nb2) {
+      while (myArray1.length < nb2) {
+        myArray1.push(nb1);        
+      }      
+    };
+    
+    function pushNumber2(nb3, nb4) {
+      for (let i = 0; i < nb4; i++) {
+        myArray2.push(nb3);      
+      }
+    };
+    
+    
+    pushNumber1(8, 5);
+    pushNumber2(2, 4);
+    
+    document.write(myArray1);   
+    document.write("<br>");
+    document.write(myArray2);   
    
   </script>
 </body>
