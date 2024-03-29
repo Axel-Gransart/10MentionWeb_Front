@@ -69,6 +69,23 @@
     .brique {
       color: #C3602D;
     }
+    
+    footer {
+      padding: 4rem;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    footer button {
+      padding: .5rem;
+      border-radius: 30px;
+    }
+
+    footer button a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
   </style>
   <title>Affichage en JavaScript</title>
 </head>
@@ -81,17 +98,17 @@
       <article>
         <p>Pour afficher le contenu d'une variable sur la page, on utilise: document.write()</p>
         <pre>
-let text = "Je suis visible sur la page web !";
-document.write(text);
+<span class="bleuFonce">let</span><span class="bleuClair"> text</span> = <span class="brique">"Je suis visible sur la page web !"</span>;
+<span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">text</span><span class="orange">)</span>;
         </pre>
         <p id="text"></p>
       </article>
       <article>
         <h2>boite de dialogue</h2>
         <pre>
-alert("Ceci est une alerte"); // Afficher une alerte
-confirm("Vous confirmer ?");  // Confirmer une action
-prompt("Voici un prompt");    // Récupérer une donnée de l'utilisateur
+alert(<span class="brique">"Ceci est une alerte"</span>); // Afficher une alerte
+confirm(<span class="brique">"Vous confirmer ?"</span>);  // Confirmer une action
+prompt(<span class="brique">"Voici un prompt"</span>);    // Récupérer une donnée de l'utilisateur
         </pre>        
         <pre>
 let nom = prompt("Quel est mon prénom ?");
@@ -102,6 +119,10 @@ document.write("Je m'appelle " + nom);
       </article>
     </section>
   </main>
+  <footer>
+    <button><a href="02_types.html">Aller à la page 2</a></button>
+    <button><a href="04_nombre.html">Aller à la page 4</a></button>
+  </footer>
 
   <script>
 

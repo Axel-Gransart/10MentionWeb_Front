@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/lux/bootstrap.min.css" integrity="sha512-RI2S7J+KOTIVVh6JxrBRNIxJjIioHORVNow+SSz2OMKsDLG5y/YT6iXEK+R0LlKBo/Uwr1O063yT198V6AZh4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/03_evenements.css">
+  <title>Les évènements en JavaScript</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <header>
+      <div class="bg-light rounded-3 p-5">
+        <div class="py-5">
+          <h1 id="titre" class="fw-bold">Cours JavaScript</h1>
+          <p class="fs-4 p-2">Les évènements en JavaScript</p>
+        </div>
+      </div>
+    </header>
+    <main class="mb-5">
+      <section class="row border border-danger rounded p-4 mt-3">
+        <div class="col-8">
+          <h2 class="text-danger">addEventListener(), exemple</h2>
+          <p>Un simple clic sur la div <span id="appelDiv">#rouge</span></p>
+          <p class="rounded-pill text-white bg-danger px-3" onclick="fP1()">Cliquez sur ce paragraphe</p>
+          <!-- L'attribut onclick est purement JavaScript : Gestionnaire d'évènement dans la balise p -->
+        </div>
+        <div class="col-4 ">
+          <div id="rouge" class="carre">
+            #rouge
+          </div>
+        </div>
+      </section>
+      <section class="row border border-warning rounded p-4 mt-3">
+        <div class="col-8">
+          <h2 class="text-danger" ondblclick="dbl()">Autre exemple, avec dblclick</h2>
+          <p>Double click sur la div <span id="appelDiv2">#orange</span></p>          
+        </div>
+        <div class="col-4 ">
+          <div id="orange" class="carre">
+            #orange
+          </div>
+        </div>
+      </section>
+      <section class="row border border-info  rounded p-4 mt-3">
+        <div class="col-8" onmouseover="hover()" onmouseout="out()">
+          <h2 id="h2Hover" class="text-danger">Autre exemple, avec mouseover</h2>
+          <p>Survol sur la div <span id="appelDiv3">#bleue</span></p>          
+        </div>
+        <div class="col-4 ">
+          <div id="bleue" class="carre">
+            #bleue
+          </div>
+        </div>
+      </section>
+      <section class="row border border-primary rounded p-4 mt-3">
+        <div class="col-8" onmouseout="out2()">
+          <h2 id="h2Out" class="text-danger">Autre exemple, avec le survol puis quitte</h2>
+          <p>Survol puis vas t'en de la div <span id="appelDiv4">#primary</span></p>          
+        </div>
+        <div class="col-4 ">
+          <div id="primary" class="carre">
+            #primary
+          </div>
+        </div>
+      </section>
+      <section class="row border border-success rounded p-4 mt-3">
+        <div class="col-8">
+          <h2 class="text-danger">Autre exemple, avec le click puis re-click</h2>
+          <p>click puis vas t'en de la div <span id="appelDiv5">#vert</span>! Je reclique et tu reviens</p>          
+        </div>
+        <div class="col-4 ">
+          <div id="success" class="carre vert">
+            #vert
+          </div>
+        </div>
+      </section>
+      <section id="cacheCache" class="row border border-dark p-4 rounded my-4 flex-column justify-content-center align-items-center">
+        <h3>Cache-cache</h3>
+        <div class="col-6 d-flex flex-column justify-content-center align-items-center mb-5">
+          <p>Ajouter une classe</p>
+          <p>Enlever une classe</p>
+          <p>Toggle une classe</p>
+        </div>
+        <img src="assets/img/chat caché.jpg" alt="image d'un chat" class="col-6">
+      </section>
+    </main>
+    <footer>
+
+    </footer>  
+  </div>
+  <script src="assets/js/03_evenements.js"></script>
+</body>
+</html>

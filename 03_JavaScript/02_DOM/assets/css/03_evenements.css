@@ -1,0 +1,39 @@
+
+
+.carre {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  margin: auto;
+}
+
+#rouge {
+  background-color: red;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#bleue {
+  background-color: rgb(77, 181, 205);
+}
+
+#primary {
+  background-color: #333;
+}
+
+.vert {
+  background-color: rgb(25, 135, 84);
+}
+
+.brown {
+  background-color: brown;
+}
+
+.hide {
+  display: none;
+}

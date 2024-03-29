@@ -188,18 +188,43 @@ for ( let p of lesP ) {
 
 
 
+
 //    MINI EXO 3 : Grâce à votre script, créez une balise a dans la balise h1 avec le lien vers la documentation JS () qui s'affiche sur un nouvel onglet.
 // Ce lien sera de couleur blanche et non souligné.
 
 let baliseADocJS = document.querySelector("a");
 
-baliseADocJS.innerText = 'Lien doc JS';
-titre.append(baliseADocJS);
+baliseADocJS.innerText = 'Cours JavaScript';
+titre.innerText = "";
 baliseADocJS.style.color = "white";
-baliseADocJS.style.textTransform = "lowercase";
 baliseADocJS.style.textDecoration = "none";
 baliseADocJS.setAttribute("href", "https://developer.mozilla.org/fr/docs/Web/JavaScript");
 baliseADocJS.setAttribute("target", "_blank");
+titre.append(baliseADocJS);
 
 
 
+
+
+// 2ème façon de faire
+
+let facon2 = document.querySelector("#facon2");
+
+facon2.innerHTML = "<a> Cours JavaScript 2ème essai </a>";
+let element2 = document.querySelector("#facon2 a");
+element2.setAttribute("href", "https://developer.mozilla.org/fr/docs/Web/JavaScript");
+element2.setAttribute("target", "_blank");
+element2.style.color = "blue";
+element2.style.textDecoration = "none";
+
+
+
+
+// 3ème façon de faire
+
+let facon3 = document.querySelector("#facon3");
+
+facon3.innerHTML = `<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"> Paragraphe 1 + lien doc JS </a>`
+let element3 = document.querySelector("#facon3 a");
+element3.style.color = "pink";
+element3.style.textDecoration = "none";
