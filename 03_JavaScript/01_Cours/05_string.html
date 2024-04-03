@@ -3,111 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;      
-    }
-    
-    body {
-      background-color: lightgrey;
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: brown;
-    }
-
-    h3 {
-      margin-top: 4rem;
-    }
-
-    pre {
-      font-size: 1rem;
-      
-    }
-
-    article {
-      margin: 4rem 0;
-      padding: 0 7rem;
-    }
-
-    p, li {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;      
-    }
-
-    .bleuFonce {
-      color: #1F38A1;
-    }
-    
-    .bleuClair {
-      color: #4FA3A8;
-    }
-
-    .vertClair {
-      color: #2EA043;
-    }
-    
-    .jaune {
-      color: yellow;
-    }
-    
-    .orange {
-      color: #FFB418;
-    }
-    
-    .brique {
-      color: #C3602D;
-    }
-    
-    footer {
-      padding: 4rem;
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    footer button {
-      padding: .5rem;
-      border-radius: 30px;
-    }
-
-    footer button a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
-  </style> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/lux/bootstrap.min.css" integrity="sha512-RI2S7J+KOTIVVh6JxrBRNIxJjIioHORVNow+SSz2OMKsDLG5y/YT6iXEK+R0LlKBo/Uwr1O063yT198V6AZh4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Les string en JavaScript</title>
 </head>
-<body>
-  <header>
+<body class="container">
+  <header class="border border-danger rounded-3 p-3">
     <h1>Les string en JavaScript</h1>
   </header>
   <main>
     <article>
+      <p>Nous pouvons initialiser une chaine de caratère de plusieurs façon</p>
+      <p>Avec des guillemets simples (simple quotes) :</p>
+      <pre  class="border border-info rounded">
+  <span class="bleuFonce">const</span> <span class="bleuClair">PRENOM</span> = <span class="brique">'John'</span>;
+      </pre>    
+      <p>Avec des guillemets doubles (double quotes) :</p>
+      <pre  class="border border-info rounded">
+  <span class="bleuFonce">const</span> <span class="bleuClair">NOM</span> = <span class="brique">"DOE"</span>;
+      </pre>    
+      <p>Avec les simples quotes et un backslash (ou antislash) : Permet d'échapper un caractère dans la string</p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">const</span> <span class="bleuClair">ADRESSE</span> = <span class="brique">'J<span class="jaune">\'</span>habite à NewYork'</span>;
+  <span class="vertComm">// On peut aussi noter "J'habite à NewYork"</span>
+  document.write(<span class="brique">"Je m'appelle "</span> + <span class="bleuClair">PRENOM</span> + <span class="brique">" "</span> + <span class="bleuClair">NOM</span> + <span class="brique">", "</span> + <span class="bleuClair">ADRESSE</span>);
+      </pre>
+
+  const PRENOM2 = "Jane", NOM2 = "Doe", LIEN = "sa femme";
+  document.write(<span class="brique">"Je m'appelle "</span> + PRENOM2 + " " + NOM2 + ", je suis " + LIEN + ", " + ADRESSE + "<br>");
+
+  // Avec les backquotes (``) (altGr + 7)
+  // Les backquotes vous permettent d'inserer du JS dans une string
+  let bienvenue = `Bonjour, vous êtes les bienvenue: ${PRENOM2} et ${PRENOM}`;
+  // Bonjour, vous êtes les bienvenue: Eleanor et Axel
+    </article>
+
+
+
+
+    <article>
       <h2>Modification d'un type -> string en type -> number</h2>
-      <pre>
-<span class="bleuFonce">let</span> chiffre = "12.5";
-  console.log(typeof chiffre);
-  console.log(chiffre);
+      <pre  class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">chiffre</span> <span class="brique">= "12.5"</span>;
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span> <span class="bleuClair">chiffre</span><span class="orange">)</span>;
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">chiffre</span><span class="orange">)</span>;
       </pre>
-      <pre>
-  let chiffreDecimal = parseFloat(chiffre);
-  console.log(typeof chiffreDecimal);
-  console.log(chiffreDecimal);
+      <pre  class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">chiffreDecimal</span> = <span class="jaune">parseFloat</span><span class="orange">(</span><span class="bleuClair">chiffre</span><span class="orange">)</span>;
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span> <span class="bleuClair">chiffreDecimal</span><span class="orange">)</span>;
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">chiffreDecimal</span><span class="orange">)</span>;
       </pre>
-      <pre>
-  let chiffreEntier = parseInt(chiffre);
-  console.log(typeof chiffreEntier);
-  console.log(chiffreEntier);
+      <pre  class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">chiffreEntier</span> = <span class="jaune">parseInt</span><span class="orange">(</span><span class="bleuClair">chiffre</span><span class="orange">)</span>;
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span> <span class="bleuClair">chiffreEntier</span><span class="orange">)</span>;
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">chiffreEntier</span><span class="orange">)</span>;
       </pre>
     </article>
   </main>
   <footer>
-    <button><a href="04_nombre.html">Aller à la page 4</a></button>
-    <button><a href="06_tableaux.html">Aller à la page 6</a></button>
+    <button><a href="04_nombre.html">&lt;&lt; 4</a></button>
+    <button><a href="06_tableaux.html">>> 6</a></button>
   </footer>
 
 
@@ -121,13 +76,13 @@
   // Avec des guillemets doubles (double quotes):
   const NOM = "GRANSART";
 
-  const AGE = 33;
+  const AGE = 34;
 
   // Avec simple quotes et backslash (ou antislash): Permet d'échapper un caractère dans la string
   const ADRESSE = 'J\'habite à Tigery';
   // On peut aussi noter "J'habite à Tigery"
 
-  document.write("Je m'appelle " + PRENOM + " " + NOM + ", j'ai " + AGE + " ans, " + ADRESSE + "<br>");
+  document.write("Je m'appelle " + PRENOM + " " + NOM + ADRESSE + "<br>");
 
   const PRENOM2 = "Eleanor", NOM2 = "Gransart", LIEN = "sa fille";
   document.write("Je m'appelle " + PRENOM2 + " " + NOM2 + ", je suis " + LIEN + ", " + ADRESSE + "<br>");

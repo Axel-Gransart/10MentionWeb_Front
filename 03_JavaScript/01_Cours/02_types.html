@@ -3,94 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;     
-      list-style: none;
-    }
-    
-    body {
-      background-color: lightgrey;
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: brown;
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      margin-top: 4rem;
-    }
-
-    pre {
-      font-size: 1rem;
-      padding: 1rem 0;
-    }
-
-    article {
-      margin: 4rem 0;
-      padding: 0 7rem;
-    }
-
-    p, li {
-      font-family: Verdana, Geneva, Tahoma, sans-serif; 
-      padding: .4rem 0;
-      text-align: justify;  
-    }
-
-    .bleuFonce {
-      color: #1F38A1;
-    }
-    
-    .bleuClair {
-      color: #4FA3A8;
-    }
-
-    .vertClair {
-      color: #2EA043;
-    }
-    
-    .jaune {
-      color: yellow;
-    }
-    
-    .orange {
-      color: #FFB418;
-    }
-
-    .violet {
-      color: #6147CB;
-    }
-    
-    .brique {
-      color: #C3602D;
-    }
-    
-    footer {
-      padding: 4rem;
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    footer button {
-      padding: .5rem;
-      border-radius: 30px;
-    }
-
-    footer button a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/lux/bootstrap.min.css" integrity="sha512-RI2S7J+KOTIVVh6JxrBRNIxJjIioHORVNow+SSz2OMKsDLG5y/YT6iXEK+R0LlKBo/Uwr1O063yT198V6AZh4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Les types de variables en JavaScript</title>
 </head>
-<body>
-  <header>
+<body class="container">
+  <header class="border border-danger rounded-3 p-3">
     <h1>Les types de variables en JavaScript</h1>
   </header>
   <main>
@@ -112,41 +30,60 @@
     </article>
     <article>
       <h3>string</h3>
-      <pre>
-<span class="bleuFonce">let</span><span class="bleuClair"> variable1</span> = <span class="brique">"test"</span>;
-<span class="bleuFonce">let</span> <span class="bleuClair">monTexte</span> = <span class="brique">"Voici une phrase écrite et stockée dans une variable"</span>;
+      <pre  class="border border-info rounded">
+  <span class="bleuFonce">let</span><span class="bleuClair"> variable1</span> = <span class="brique">"test"</span>;
+  <span class="bleuFonce">let</span> <span class="bleuClair">monTexte</span> = <span class="brique">"Voici une phrase écrite et stockée dans une variable"</span>;
       </pre>
     </article>
     <article>
       <h3>number</h3>
-      <pre>
-<span class="bleuFonce">let</span> <span class="bleuClair">chiffre</span> = <span class="vertClair">55</span>;
-<span class="bleuFonce">let</span> <span class="bleuClair">negatif</span> = -<span class="vertClair">55</span>;
-<span class="bleuFonce">let</span> <span class="bleuClair">decimal</span> = <span class="vertClair">5</span>.<span class="vertClair">5</span>;
+      <pre  class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">chiffre</span> = <span class="vertClair">55</span>;
+  <span class="bleuFonce">let</span> <span class="bleuClair">negatif</span> = -<span class="vertClair">55</span>;
+  <span class="bleuFonce">let</span> <span class="bleuClair">decimal</span> = <span class="vertClair">5</span>.<span class="vertClair">5</span>;
       </pre>
     </article>
     <article>
       <h3>boolean</h3>
-      <pre>
-<span class="bleuFonce">let</span> <span class="bleuClair">choix</span> = <span class="bleuFonce">true</span>;
-<span class="bleuFonce">let</span> <span class="bleuClair">choix1</span> = <span class="bleuFonce">false</span>;
-<span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">choix</span><span class="orange">)</span>;
-<span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">choix1</span><span class="orange">)</span>;
+      <pre  class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">choix</span> = <span class="bleuFonce">true</span>;
+  <span class="bleuFonce">let</span> <span class="bleuClair">choix1</span> = <span class="bleuFonce">false</span>;
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">choix</span><span class="orange">)</span>;
+
+  Visible dans la console de l'inspecteur du navigateur :
+
+  true
+
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">choix1</span><span class="orange">)</span>;
+
+  Visible dans la console de l'inspecteur du navigateur :
+
+  false
       </pre>
     </article>
     <article>
       <h3>Afin de vérifier le type d'une variable, on utilise typeOf()</h3>
-      <pre>
-<span class="bleuFonce">let</span> <span class="bleuClair">nbr1</span> = <span class="vertClair">10</span>;
-<span class="bleuFonce">let</span> <span class="bleuClair">nbr2</span> = <span class="brique">"10"</span>;
-<span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">nbr1</span><span class="violet">)</span><span class="orange">)</span>;
-<span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">nbr2</span><span class="violet">)</span><span class="orange">)</span>;
+      <pre  class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">nbr1</span> = <span class="vertClair">10</span>;
+  <span class="bleuFonce">let</span> <span class="bleuClair">nbr2</span> = <span class="brique">"10"</span>;
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">nbr1</span><span class="violet">)</span><span class="orange">)</span>;
+
+  Visible dans la console de l'inspecteur du navigateur :
+
+  number
+
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">nbr2</span><span class="violet">)</span><span class="orange">)</span>;
+
+  Visible dans la console de l'inspecteur du navigateur :
+
+  string
+
       </pre>
     </article>
   </main>
   <footer>
-    <button><a href="01_variables.html">Aller à la page 1</a></button>
-    <button><a href="03_affichage.html">Aller à la page 3</a></button>
+    <button><a href="01_variables.html">&lt;&lt; 1</a></button>
+    <button><a href="03_affichage.html">>> 3</a></button>
   </footer>
 
   <script>
