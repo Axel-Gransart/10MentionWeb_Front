@@ -14,30 +14,73 @@
   <main>
     <article>
       <p>Nous pouvons initialiser une chaine de caratère de plusieurs façon</p>
-      <p>Avec des guillemets simples (simple quotes) :</p>
+      <h4>Avec des guillemets simples (simple quotes) :</h4>
       <pre  class="border border-info rounded">
   <span class="bleuFonce">const</span> <span class="bleuClair">PRENOM</span> = <span class="brique">'John'</span>;
       </pre>    
-      <p>Avec des guillemets doubles (double quotes) :</p>
+      <h4>Avec des guillemets doubles (double quotes) :</h4>
       <pre  class="border border-info rounded">
   <span class="bleuFonce">const</span> <span class="bleuClair">NOM</span> = <span class="brique">"DOE"</span>;
       </pre>    
-      <p>Avec les simples quotes et un backslash (ou antislash) : Permet d'échapper un caractère dans la string</p>
+      <h4>Avec les simples quotes et un backslash (ou antislash) : Permet d'échapper un caractère dans la string</h4>
       <pre class="border border-info rounded">
   <span class="bleuFonce">const</span> <span class="bleuClair">ADRESSE</span> = <span class="brique">'J<span class="jaune">\'</span>habite à NewYork'</span>;
   <span class="vertComm">// On peut aussi noter "J'habite à NewYork"</span>
-  <span class="bleuClair">document</span>.write(<span class="brique">"Je m'appelle "</span> + <span class="bleuClair">PRENOM</span> + <span class="brique">" "</span> + <span class="bleuClair">NOM</span> + <span class="brique">", "</span> + <span class="bleuClair">ADRESSE</span>);
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Je m'appelle "</span> + <span class="bleuClair">PRENOM</span> + <span class="brique">" "</span> + <span class="bleuClair">NOM</span> + <span class="brique">", "</span> + <span class="bleuClair">ADRESSE</span><span class="orange">)</span>;
       </pre>
-      <p id=""></p>
-
-  const PRENOM2 = "Jane", NOM2 = "Doe", LIEN = "sa femme";
-  document.write(<span class="brique">"Je m'appelle "</span> + PRENOM2 + " " + NOM2 + ", je suis " + LIEN + ", " + ADRESSE + "<br>");
-
-  // Avec les backquotes (``) (altGr + 7)
-  // Les backquotes vous permettent d'inserer du JS dans une string
-  let bienvenue = `Bonjour, vous êtes les bienvenue: ${PRENOM2} et ${PRENOM}`;
-  // Bonjour, vous êtes les bienvenue: Eleanor et Axel
+      <p id="nom1"></p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">const</span> <span class="bleuClair">PRENOM2</span> = <span class="brique">'Jane'</span>, <span class="bleuClair">NOM2</span> = <span class="brique">"Doe"</span>, <span class="bleuClair">LIEN</span> = <span class="brique">"sa femme"</span>; 
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Je m'appelle "</span> + <span class="bleuClair">PRENOM2</span> + <span class="brique">" "</span> + <span class="bleuClair">NOM2</span> + <span class="brique">", je suis "</span> + <span class="bleuClair">LIEN</span><span class="orange">)</span>; 
+      </pre>
+      <p id="nom2"></p>
+      <h4>Avec les backquotes (``) (altGr + 7)</h4>
+      <p>Les backquotes vous permettent d'inserer du JS dans une string</p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">bienvenue</span> = <span class="brique">`Bonjour, vous êtes les bienvenue: <span class="bleuFonce">${</span><span class="bleuClair">PRENOM2</span><span class="bleuFonce">}</span> et <span class="bleuFonce">${</span><span class="bleuClair">PRENOM</span><span class="bleuFonce">}`</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">bienvenue</span><span class="orange">)</span>; 
+      </pre>
+      <p id="nom1Nom2"></p>  
     </article>
+    <article>
+      <h2>Le " = " au niveau des strings</h2>
+      <p>Contrairement au " = " d'affectation qui remplace la valeur de la variable, j'utilise ici += qui va ajouter la nouvelle valeur à la valeur déjà existante de la variable</p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">fruits</span> = <span class="brique">"Pommes"</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">fruits</span><span class="orange">)</span>;
+      </pre>
+      <p id="fruits1"></p>
+      <pre class="border border-info rounded">
+  <span class="bleuClair">fruits</span> += <span class="brique">"Fraises"</span>;
+  <span class="bleuClair">fruits</span> += <span class="brique">"Mangues"</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">fruits</span><span class="orange">)</span>;
+      </pre>
+      <p id="fruits2"></p>
+    </article>
+    <article>
+      <h2> convertir une string vers number et inversement</h2>
+      <p>
+        Nous allons déclarer une variable avec une valeur en chaine de caractère "24"
+      </p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">unNombre</span> = <span class="brique">"24"</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">unNombre</span><span class="violet">)</span><span class="orange">)</span>;
+      </pre>
+      <p id="nombre24"></p>
+      <h4>Pour convertir le string "24" en nombre 24</h4>
+      <pre class="border border-info rounded">
+  <span class="bleuClair">unNombre</span> = <span class="jaune">parseFloat</span><span class="orange">(</span><span class="bleuClair">unNombre</span><span class="orange">)</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">unNombre</span><span class="violet">)</span><span class="orange">)</span>;
+      </pre>
+      <p id="parseFloat24"></p>
+      <h4>Convertir un number en string</h4>
+      <pre class="border border-info rounded">
+  <span class="bleuClair">unNombre</span> = <span class="bleuClair">unNombre</span>.<span class="jaune">toString</span><span class="orange">()</span>;
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">unNombre</span><span class="violet">)</span><span class="orange">)</span>;
+      </pre>
+      <p id="toString24"></p>
+    </article>
+
 
 
 
@@ -69,30 +112,42 @@
 
 <script>
 
+  let nom1 = document.querySelector("#nom1");
+  let nom2 = document.querySelector("#nom2");
+  let nom1Nom2 = document.querySelector("#nom1Nom2");
+  let fruits1 = document.querySelector("#fruits1");
+  let fruits2 = document.querySelector("#fruits2");
+  let nombre24 = document.querySelector("#nombre24");
+  let parseFloat24 = document.querySelector("#parseFloat24");
+  let toString24 = document.querySelector("#toString24");
+
+
+  
   // Nous pouvons initialiser une chaine de caratère de plusieurs façon
 
   // Avec des guillemets simples (simple quotes):
-  const PRENOM = 'Axel';
+  const PRENOM = 'John';
 
   // Avec des guillemets doubles (double quotes):
-  const NOM = "GRANSART";
-
-  const AGE = 34;
+  const NOM = "DOE";
 
   // Avec simple quotes et backslash (ou antislash): Permet d'échapper un caractère dans la string
-  const ADRESSE = 'J\'habite à Tigery';
-  // On peut aussi noter "J'habite à Tigery"
+  const ADRESSE = 'J\'habite à NewYork';
+  // On peut aussi noter "J'habite à NewYork"
 
-  document.write("Je m'appelle " + PRENOM + " " + NOM + ADRESSE + "<br>");
+  //document.write("Je m'appelle " + PRENOM + " " + NOM + ADRESSE + "<br>");
+  nom1.innerHTML = "Je m'appelle " + PRENOM + " " + NOM + ", " + ADRESSE;
 
-  const PRENOM2 = "Eleanor", NOM2 = "Gransart", LIEN = "sa fille";
-  document.write("Je m'appelle " + PRENOM2 + " " + NOM2 + ", je suis " + LIEN + ", " + ADRESSE + "<br>");
+  const PRENOM2 = "Jane", NOM2 = "Doe", LIEN = "sa femme";
+  //document.write("Je m'appelle " + PRENOM2 + " " + NOM2 + ", je suis " + LIEN + ", " + ADRESSE + "<br>");
+  nom2.innerHTML = "Je m'appelle " + PRENOM2 + " " + NOM2 + ", je suis " + LIEN;
 
   // Avec les backquotes (``) (altGr + 7)
   // Les backquotes vous permettent d'inserer du JS dans une string
   let bienvenue = `Bonjour, vous êtes les bienvenue: ${PRENOM2} et ${PRENOM}`;
   // Bonjour, vous êtes les bienvenue: Eleanor et Axel
-  document.write(bienvenue + "<br> <br> <br>");
+  //document.write(bienvenue + "<br> <br> <br>");
+  nom1Nom2.innerHTML = bienvenue;
 
   //Exercice 
     // realiser un prompt demandant son âge à son utilisateur, récupérer cette donnée et l'utiliser pour afficher ce message:
@@ -104,23 +159,28 @@
   // Le " = " au niveau des strings
 
   let fruits = "Pommes";
-  document.write(fruits + "<br>");
+  //document.write(fruits + "<br>");
+  fruits1.innerHTML = fruits;
   fruits += "Fraises";
   fruits += "Mangues";
-  document.write(fruits + "<br> <br>");
+  //document.write(fruits + "<br> <br>");
+  fruits2.innerHTML = fruits;
   // Contrairement au " = " d'affectation qui remplace la valeur de la variable, j'utilise ici += qui va ajouter la nouvelle valeur à la valeur déjà existante de la variable
   
   // convertir une string vers number
   let unNombre = "24";
-  document.write(typeof(unNombre) + "<br>");
+  // document.write(typeof(unNombre) + "<br>");
+  nombre24.innerHTML = typeof(unNombre);
   
   // Pour convertir le string "24" en nombre 24
   unNombre = parseFloat(unNombre)
-  document.write(typeof(unNombre) + "<br> <br>");
+  // document.write(typeof(unNombre) + "<br> <br>");
+  parseFloat24.innerHTML = typeof(unNombre);
 
   // Convertir un number en string
   unNombre = unNombre.toString();
-  document.write(typeof(unNombre) + "<br>");
+  // document.write(typeof(unNombre) + "<br>");
+  toString24.innerHTML = typeof(unNombre);
 
   /*
     ╔═════════════════════════════════════════════╗
