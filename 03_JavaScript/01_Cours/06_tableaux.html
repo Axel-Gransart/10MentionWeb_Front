@@ -9,9 +9,119 @@
 </head>
 <body class="container">
   <header class="border border-danger rounded-3 p-3">
-
+    <h1>Les tableaux en JavaScript</h1>
   </header>
   <main>
+    <p>Les arrays sont extrêmement utilisés en langage de programmation, et sont très puissants</p>
+    <p>Comme une variable, ils servent à stocker n'importe quel type de données mais en quantité illimité</p>
+    <section>
+      <h2>Les Tableaux indéxés</h2>
+      <article>
+
+        <h4>Déclarer un tableau indéxé</h4>
+        <pre  class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">monTableau</span> = <span class="orange">[]</span>;  <span class="vertComm"> // 1ère façon de déclarer un tableau</span>
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">monTableau</span><span class="orange">)</span>;
+  
+  Visible dans la console :
+  <i>[]</i>
+        </pre>
+        <p>On crée une nouvelle variable appelée <span class="bleuClair">myArray</span> et on lui assigne une nouvelle instance de la classe <span class="vertClair">Array</span>.</p>
+        <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">myArray</span> = <span class="bleuFonce">new</span> <span class="vertClair">Array</span>; <span class="vertComm">// 2ème façon de déclarer un tableau</span>
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">myArray</span><span class="orange">)</span>;
+  
+  Visible dans la console :
+  <i>[]</i>
+        </pre>      
+        <p>En JavaScript, <span class="vertClair">Array</span> est une classe prédifinie qui représente une collection ordonnée d'éléments.<br>
+        Lorsque vous utilisez <span class="bleuFonce">new</span> <span class="vertClair">Array</span>, vous créez un nouvel objet de type tableau (array).<br>
+        <span class="bleuClair">monTableau</span> et <span class="bleuClair">myArray</span> sont des tableaux qui peuvent contenir plusieurs informations.</p>
+      </article>
+      <article>
+        <h4>Affecter des valeurs au tableau, plusieurs méthodes:</h4>
+        <br>
+        <h5>1ère façon de faire</h5>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">monTableau</span> = <span class="orange">[</span><span class="brique">"Paul"</span>, <span class="brique">"Pierre"</span>, <span class="brique">"Henri"</span><span class="orange">]</span>;  <span class="vertComm">// Chaque élément dans un tableau est séparé par une virgule</span> 
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">monTableau</span><span class="orange">)</span>;
+  Visible dans la console :
+  <i>(3) ['Paul', 'Pierre', 'Henri']</i>
+
+  <span class="bleuClair">console</span>.<span class="jaune">table</span><span class="orange">(</span><span class="bleuClair">monTableau</span><span class="orange">)</span>;
+  Visible dans la console :
+    (index)    Value
+      0	'Paul'
+      1	'Pierre'
+      2	'Henri'
+        </pre>
+        <p>La fonction .<span class="jaune">table</span><span class="orange">()</span> permet de visualiser dans la console les éléments du tableau en lien avec leurs index.</p>
+        <br>
+        <h5>2ème façon de faire</h5>
+        <p><span class="text-danger ">ATTENTION</span>: un tableau commence <span class="fw-bold ">TOUJOURS</span> à l'index 0 !!!!!!!</p>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">myArray</span><span class="orange">[</span><span class="vertClair">0</span><span class="orange">]</span> = <span class="brique">"Patrick"</span>;
+  <span class="bleuClair">myArray</span><span class="orange">[</span><span class="vertClair">1</span><span class="orange">]</span> = <span class="brique">"Jacques"</span>;
+  <span class="bleuClair">myArray</span><span class="orange">[</span><span class="vertClair">2</span><span class="orange">]</span> = <span class="brique">"Sylvie"</span>;
+  <span class="bleuClair">myArray</span><span class="orange">[</span><span class="vertClair">3</span><span class="orange">]</span> = <span class="brique">"Hélène"</span>;
+
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">myArray</span><span class="orange">)</span>;
+  Visible dans la console :
+  <i>(4) ['Patrick', 'Jacques', 'Sylvie', 'Hélène']</i>
+
+  <span class="bleuClair">console</span>.<span class="jaune">table</span><span class="orange">(</span><span class="bleuClair">myArray</span><span class="orange">)</span>;
+  Visible dans la console :
+  (index)   Value
+    0	    'Patrick'
+    1	    'Jacques'
+    2	    'Sylvie'
+    3	    'Hélène'
+        </pre>
+      </article>
+      <br>
+      <h5>Pour sélectionner un élément de notre tableau</h5>
+      <p> il suffit d'appeler :</p>
+      <pre>
+  nomDuTableau[indexDésiré]
+
+  Exemple :
+  console.log(myArray[2]);
+      </pre>
+
+     
+
+      // Pour sélectionner un élément de notre tableau, il suffit d'appeler: nomDuTableau[indexDésiré]
+      console.log(myArray[2]); // affichage de: Maureene
+
+      // REMARQUE
+      const PRENOM = "Axel";
+      console.log(PRENOM[2]);  // Une string est considéré comme un array, dans ce cas, le console.log affichera la lettre "e"
+
+    let myArray2 = ["Najjahi", "Manigat", "Monteiro", "Marolany"];
+    
+    document.write(myArray[0] + " " + myArray2[1] + "<br>" + myArray[1] + " " + myArray2[0] + "<br>" + myArray[2] + " " + myArray2[3] + "<br>" + myArray[3] + " " + myArray2[2] + "<br>");
+
+   
+    
+    </section>
+    <section>
+      <h2>Les Tableaux associatifs</h2>
+    </section>
+
+    <section>
+      <h2>Les Tableaux associatifs multidimensionnel</h2>
+    </section>
+    <section>
+      <h2>Les Tableaux avec 4 dimensions</h2>
+    </section>
+    <section>
+      <h2>Les propriétés et les méthodes des tableaux</h2>
+      <h4>Ajouter un ou plusieurs éléments en fin de tableau</h4>
+      <h4>Supprimer le dernier élément du tableau</h4>
+      <h4>Ajouter un ou plusieurs éléments au début du tableau</h4>
+      <h4>Ajouter, supprimer ou remplacer des éléments n'importe où dans le tableau</h4>
+    </section>
+
     
   </main>
   <footer>
@@ -22,6 +132,12 @@
   
 
   <script>
+
+    // let monTableau1 = document.querySelector("#monTableau1");
+    // let monTableau2 = document.querySelector("#monTableau2");
+    // let myArray1 = document.querySelector("#myArray1");
+
+
     /*
     ╔═════════════════════════════════════════════╗
     ║                Les Tableaux                 ║
@@ -46,20 +162,24 @@
 
     // Affecter des valeurs au tableau, plusieurs méthodes:
 
+   
+
       // A-
-      monTableau = ["Paul", "Adama", "Semir"];  // Chaque élément dans un tableau est séparé par une virgule 
+      monTableau = ["Paul", "Pierre", "Henri"];  // Chaque élément dans un tableau est séparé par une virgule 
       console.log(monTableau);
-      document.write(monTableau);
+      //document.write(monTableau);
+      // monTableau1.innerHTML = monTableau;
       console.table(monTableau);
+      // monTableau2.innerHTML = table(monTableau);
 
       document.write("<br> <br>")
 
       // B-
       // ATTENTION: un tableau commence TOUJOURS à l'index 0 !!!!!!!
-      myArray[0] = "Cleid";
-      myArray[1] = "Imane";
-      myArray[2] = "Maureene";
-      myArray[3] = "Gary";
+      myArray[0] = "Patrick";
+      myArray[1] = "Jacques";
+      myArray[2] = "Sylvie";
+      myArray[3] = "Hélène";
 
       console.log(myArray);
       console.table(myArray);
@@ -90,6 +210,8 @@
     document.write(groupe1[1][2] + " " + groupe1[0][3] + "<br>");
 
     document.write("<br> <br> <br>");
+
+
     // Créer un tableau multidimensionnel avec 2 dimensions qui permet d'afficher cette ligne:
       // nom: Gransart, prenom: Axel, téléphone: 01 23 45 67 89
 

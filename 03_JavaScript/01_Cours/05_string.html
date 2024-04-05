@@ -26,11 +26,13 @@
       <pre class="border border-info rounded">
   <span class="bleuFonce">const</span> <span class="bleuClair">ADRESSE</span> = <span class="brique">'J<span class="jaune">\'</span>habite à NewYork'</span>;
   <span class="vertComm">// On peut aussi noter "J'habite à NewYork"</span>
+  
   <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Je m'appelle "</span> + <span class="bleuClair">PRENOM</span> + <span class="brique">" "</span> + <span class="bleuClair">NOM</span> + <span class="brique">", "</span> + <span class="bleuClair">ADRESSE</span><span class="orange">)</span>;
       </pre>
       <p id="nom1"></p>
       <pre class="border border-info rounded">
   <span class="bleuFonce">const</span> <span class="bleuClair">PRENOM2</span> = <span class="brique">'Jane'</span>, <span class="bleuClair">NOM2</span> = <span class="brique">"Doe"</span>, <span class="bleuClair">LIEN</span> = <span class="brique">"sa femme"</span>; 
+  
   <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Je m'appelle "</span> + <span class="bleuClair">PRENOM2</span> + <span class="brique">" "</span> + <span class="bleuClair">NOM2</span> + <span class="brique">", je suis "</span> + <span class="bleuClair">LIEN</span><span class="orange">)</span>; 
       </pre>
       <p id="nom2"></p>
@@ -38,6 +40,7 @@
       <p>Les backquotes vous permettent d'inserer du JS dans une string</p>
       <pre class="border border-info rounded">
   <span class="bleuFonce">let</span> <span class="bleuClair">bienvenue</span> = <span class="brique">`Bonjour, vous êtes les bienvenue: <span class="bleuFonce">${</span><span class="bleuClair">PRENOM2</span><span class="bleuFonce">}</span> et <span class="bleuFonce">${</span><span class="bleuClair">PRENOM</span><span class="bleuFonce">}`</span>;
+  
   <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">bienvenue</span><span class="orange">)</span>; 
       </pre>
       <p id="nom1Nom2"></p>  
@@ -50,58 +53,92 @@
   <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">fruits</span><span class="orange">)</span>;
       </pre>
       <p id="fruits1"></p>
+      <p>La variable <span class="bleuClair">fruits</span> contient bien 'Pommes'</p>
       <pre class="border border-info rounded">
   <span class="bleuClair">fruits</span> += <span class="brique">"Fraises"</span>;
   <span class="bleuClair">fruits</span> += <span class="brique">"Mangues"</span>;
   <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">fruits</span><span class="orange">)</span>;
       </pre>
       <p id="fruits2"></p>
+      <p>Maintenant, la variable <span class="bleuClair">fruits</span> contient 'PommesFraisesMangues'</p>
     </article>
     <article>
       <h2> convertir une string vers number et inversement</h2>
       <p>
         Nous allons déclarer une variable avec une valeur en chaine de caractère "24"
       </p>
+      <p>Pour voir le type de la valeur d'une variable, on utilise </span><span class="bleuFonce">typeof</span><span class="violet">()</span></p>
       <pre class="border border-info rounded">
   <span class="bleuFonce">let</span> <span class="bleuClair">unNombre</span> = <span class="brique">"24"</span>;
   <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">unNombre</span><span class="violet">)</span><span class="orange">)</span>;
       </pre>
       <p id="nombre24"></p>
       <h4>Pour convertir le string "24" en nombre 24</h4>
+      <p>La variable <span class="bleuClair">unNombre</span> est de type string. Pour la convertir en type number, nous allons utiliser la fonction <span class="jaune">parseFloat</span><span class="orange">()</span></p>
       <pre class="border border-info rounded">
   <span class="bleuClair">unNombre</span> = <span class="jaune">parseFloat</span><span class="orange">(</span><span class="bleuClair">unNombre</span><span class="orange">)</span>;
   <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">unNombre</span><span class="violet">)</span><span class="orange">)</span>;
       </pre>
       <p id="parseFloat24"></p>
+      <p>Nous voyons que la variable <span class="bleuClair">unNombre</span> est maintenant de type number</p>
       <h4>Convertir un number en string</h4>
+      <p>Maintenant, nous voulons convertir la variable <span class="bleuClair">unNombre</span> en string. Pour cela, nous allons utiliser la fonction <span class="jaune">toString</span><span class="orange">()</span></p>
       <pre class="border border-info rounded">
   <span class="bleuClair">unNombre</span> = <span class="bleuClair">unNombre</span>.<span class="jaune">toString</span><span class="orange">()</span>;
   <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">typeof</span><span class="violet">(</span><span class="bleuClair">unNombre</span><span class="violet">)</span><span class="orange">)</span>;
       </pre>
       <p id="toString24"></p>
+      <p>Nous voyons que la variable <span class="bleuClair">unNombre</span> est maintenant de type string</p>
     </article>
-
-
-
-
-
     <article>
       <h2>Modification d'un type -> string en type -> number</h2>
+      <p>On va déclarer une variable <span class="bleuClair">chiffre</span> qui a comme valeur de type string "12.5"</p>
       <pre  class="border border-info rounded">
-  <span class="bleuFonce">let</span> <span class="bleuClair">chiffre</span> <span class="brique">= "12.5"</span>;
+  <span class="bleuFonce">let</span> <span class="bleuClair">chiffre</span> = <span class="brique">"12.5"</span>;
   <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span> <span class="bleuClair">chiffre</span><span class="orange">)</span>;
+
+  Visible dans la console :
+  <span id="logTypeOfChiffre"></span>
+
   <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">chiffre</span><span class="orange">)</span>;
+
+  Visible dans la console :
+  <span id="logChiffre"></span>
       </pre>
+      <p>Après contrôle avec un <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">()</span>, on voit bien qu'elle est de type string</p>
+      <h4>Convertir une string en number avec <span class="jaune">parseFloat</span><span class="orange">()</span></h4>
+      <p>Comme vu plus haut, on va utiliser la fonction <span class="jaune">parseFloat</span><span class="orange">()</span></p>
       <pre  class="border border-info rounded">
   <span class="bleuFonce">let</span> <span class="bleuClair">chiffreDecimal</span> = <span class="jaune">parseFloat</span><span class="orange">(</span><span class="bleuClair">chiffre</span><span class="orange">)</span>;
   <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span> <span class="bleuClair">chiffreDecimal</span><span class="orange">)</span>;
+
+  Visible dans la console :
+  <span id="logTypeOfChiffreDecimal"></span>
+
   <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">chiffreDecimal</span><span class="orange">)</span>;
+
+  Visible dans la console :
+  <span id="logChiffreDecimal"></span>
       </pre>
+      <p>Après contrôle avec des <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">()</span>, on bien que la variable <span class="bleuClair">chiffreDecimal</span> est de type number et a une valeur de 12.5</p>
+      <h4>Convertir une string en number avec <span class="jaune">parseInt</span><span class="orange">()</span></h4>
+      <p>Cette fois, on va utiliser une autre fonction appelée <span class="jaune">parseInt</span><span class="orange">()</span></p>
       <pre  class="border border-info rounded">
   <span class="bleuFonce">let</span> <span class="bleuClair">chiffreEntier</span> = <span class="jaune">parseInt</span><span class="orange">(</span><span class="bleuClair">chiffre</span><span class="orange">)</span>;
   <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuFonce">typeof</span> <span class="bleuClair">chiffreEntier</span><span class="orange">)</span>;
+
+  Visible dans la console :
+  <span id="logTypeOfChiffreEntier"></span>
+  
   <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">chiffreEntier</span><span class="orange">)</span>;
+
+  Visible dans la console :
+  <span id="logChiffreEntier"></span>
       </pre>
+      <p>Après contrôle avec des <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">()</span>, on voit que la variable <span class="bleuClair">chiffreEntier</span> est de type number et a une valeur de 12.</p>
+      <p>On voit donc que les fonctions <span class="jaune">parseFloat</span><span class="orange">()</span> & <span class="jaune">parseInt</span><span class="orange">()</span> servent toute les 2 à convertir un type string en type number mais ne donne pas le même résultat.</p>
+      <p><span class="jaune">parseFloat</span><span class="orange">()</span> permet un changement de string en number et prend tout les type de nombre (entier et décimaux).</p>
+      <p>Alors que <span class="jaune">parseInt</span><span class="orange">()</span> le fait seulement vers des chiffres entiers.</p>
     </article>
   </main>
   <footer>
@@ -120,9 +157,14 @@
   let nombre24 = document.querySelector("#nombre24");
   let parseFloat24 = document.querySelector("#parseFloat24");
   let toString24 = document.querySelector("#toString24");
+  let logTypeOfChiffre = document.querySelector("#logTypeOfChiffre");
+  let logChiffre = document.querySelector("#logChiffre");
+  let logTypeOfChiffreDecimal = document.querySelector("#logTypeOfChiffreDecimal");
+  let logChiffreDecimal = document.querySelector("#logChiffreDecimal");
+  let logTypeOfChiffreEntier = document.querySelector("#logTypeOfChiffreEntier");
+  let logChiffreEntier = document.querySelector("#logChiffreEntier");
 
-
-  
+   
   // Nous pouvons initialiser une chaine de caratère de plusieurs façon
 
   // Avec des guillemets simples (simple quotes):
@@ -190,14 +232,20 @@
     let chiffre = "12.5";
     console.log(typeof chiffre);
     console.log(chiffre);
+    logTypeOfChiffre.innerHTML = typeof(chiffre);
+    logChiffre.innerHTML = chiffre;
 
     let chiffreDecimal = parseFloat(chiffre);
     console.log(typeof chiffreDecimal);
     console.log(chiffreDecimal);
+    logTypeOfChiffreDecimal.innerHTML = typeof(chiffreDecimal);
+    logChiffreDecimal.innerHTML = chiffreDecimal;
 
     let chiffreEntier = parseInt(chiffre);
     console.log(typeof chiffreEntier);
     console.log(chiffreEntier);
+    logTypeOfChiffreEntier.innerHTML = typeof(chiffreEntier);
+    logChiffreEntier.innerHTML = chiffreEntier;
 
     // let a = "12.5";
         // console.log(typeof a);

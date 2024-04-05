@@ -14,9 +14,7 @@
       -> L'étendue de l'ombre est de 3 pixels, ce qui signifie que l'ombre s'étendra de 3 pixels dans toutes les directions à partir du bord de la boîte.
     */
 }
-:root {
-  /* font-size: 62.5%; */
-}
+
 
 main {
   margin-top: 7rem;
