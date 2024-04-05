@@ -1,5 +1,6 @@
 
 
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +16,12 @@
   --font-general : Arial, Helvetica, sans-serif;
 }
 
+body {
+  font-size: 1.4rem;
+}
 
-/* Barre de navigation desktop */
+/********************* Barre de navigation desktop *********************/
+
 .navbar-desktop {
   background-color: #fff;  
   font-weight: bold;
@@ -65,8 +70,7 @@
   background-color: #333 !important;
 }
 
-
-/* Corps de la page */
+/************************ Corps de la page ************************/
 
 .container-fluid {
   background-color: #cbe6ff;
@@ -79,12 +83,72 @@
 
 h1 {
   font-family: var(--font-lobster);
-  /* margin: 15rem 0 7rem; */
+}
+
+.bloc-btn {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bloc-btn i:not(.bi-check) {
+  font-size: 3.5rem;
 }
 
 
-/******************** Style pour le Dark Mode ********************/
+.btn-abonner {
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: #1e2337;
+  border: none;
+  color:#f1bf2a ;
+}
 
+/**************** footer *****************/
+
+
+footer {
+  background-color: #1E2337;
+  margin: 0 !important;
+  
+}
+footer li {
+  padding: 7px;
+}
+
+footer li a{
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+/**************** cookies *****************/
+
+.cookies {
+  background-color: gray;
+  padding: 3rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.cookies button {
+  color: white;
+  font-size: 1.3rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-success {
+  background-color: #1E2337;
+}
+
+.btn-deny {
+  background-color: blue;
+}
+
+/******************** Style pour le Dark Mode ********************/
 
 .nav-dark {
   background-color: #333;
@@ -118,24 +182,6 @@ h1 {
 
 .titre {
   color: #fff;
-}
-
-
-
-.bloc-btn {
-  width: 40%;
-  margin: 2rem auto;
-}
-
-.bloc-btn i {
-  font-size: 3.5rem !important;
-}
-
-.btn-abonner {
-  padding: 1rem;
-  background-color: #1e2337;
-  border: none;
-  color:#f1bf2a ;
 }
 
 .btn-click {

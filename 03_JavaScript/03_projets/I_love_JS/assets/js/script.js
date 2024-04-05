@@ -15,6 +15,7 @@ let navA  = document.querySelectorAll('.navbar-desktop a');
 let h1 = document.querySelector('h1');
 let btnChange = document.querySelector('.btn');
 let icon = document.querySelector('.switch i');
+let emoji = document.querySelector('.bloc-btn i');
 
 
 switchBox.addEventListener('click', changeMode);
@@ -46,28 +47,47 @@ function changeMode() {
   //   icon.classList.add("bi-sun-fill")
   // }
 
+  emoji.classList.toggle('white-font');
 };
 
-let emoji = document.querySelector('.bloc-btn i');
+ /*
+    ╔═════════════════════════════════════════════╗
+    ║                Partie vidéo                 ║
+    ╚═════════════════════════════════════════════╝ */
 
-emoji.addEventListener('click', modifEmoji);
+  
 
-function modifEmoji() {
-  if (emoji.classList.contains("bi-emoji-neutral")) {
-      emoji.classList.remove("bi-emoji-neutral")
-      emoji.classList.toggle("btn-click")
-      emoji.classList.add("bi-emoji-heart-eyes")
-    } else {
-      emoji.classList.remove("bi-emoji-heart-eyes")
-      emoji.classList.toggle("btn-click")
-      emoji.classList.add("bi-emoji-neutral")
-    }
-}
+emoji.addEventListener('click',()=> {
+  // if (emoji.classList.contains("bi-emoji-neutral")) {
+  //     emoji.classList.remove("bi-emoji-neutral")
+  //     emoji.classList.toggle("btn-click")
+  //     emoji.classList.add("bi-emoji-heart-eyes")
+  // }
+  // else {
+  //     emoji.classList.remove("bi-emoji-heart-eyes")
+  //     emoji.classList.toggle("btn-click")
+  //     emoji.classList.add("bi-emoji-neutral")
+  // }
+  emoji.classList.toggle("bi-emoji-wink-fill");
+});
 
 let bpAbo = document.querySelector('.btn-abonner');
 
 bpAbo.addEventListener('click', function() {
-  bpAbo.textContent = "Abonné !!!!";
+  if (bpAbo.innerText === "Abonnez-vous") {
+    bpAbo.innerHTML = 'Abonné !!!! <i class="bi bi-check"></i>';    
+  }
+  else {
+    bpAbo.innerText = "Abonnez-vous";
+  }
+});
+
+
+let bpCookies = document.querySelector(".btn-success");
+let divCookies = document.querySelector(".cookies");
+
+bpCookies.addEventListener('click', ()=> {
+  divCookies.style.bottom = "auto";
 })
 
 
