@@ -80,24 +80,36 @@
       </article>
       <br>
       <h5>Pour sélectionner un élément de notre tableau</h5>
-      <p> il suffit d'appeler :</p>
-      <pre>
-  nomDuTableau[indexDésiré]
+      <p> il suffit d'appeler :
+        <br>
+        nom-du-tableau-visé[indexDésiré]
+        <br><br>
+        Exemple :
+      </p>
+      <pre class="border border-info rounded">
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">myArray</span><span class="orange">[</span><span class="vertClair">2</span><span class="orange">]</span><span class="orange">)</span>;
 
-  Exemple :
-  console.log(myArray[2]);
+  Visible dans la console :
+  <span id="array2"></span>
       </pre>
+      <h4>REMARQUE</h4>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">const</span> <span class="bleuClair">PRENOM</span> = <span class="brique">"Georges"</span>;
+      </pre>
+      <p><span class="fw-bold ">A noter</span> : Une string est considéré comme un array</p>
+      <pre class="border border-info rounded">
+  <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">PRENOM</span><span class="orange">[</span><span class="vertClair">2</span><span class="orange">]</span><span class="orange">)</span>;  
+      </pre>
+      <p>Dans ce cas, le <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">()</span> affichera la lettre "<span id="prenom2"></span>"</p>
 
      
 
-      // Pour sélectionner un élément de notre tableau, il suffit d'appeler: nomDuTableau[indexDésiré]
-      console.log(myArray[2]); // affichage de: Maureene
+      Création d'un tableau avec 2 tableaux indéxés
+      let myArray2 = ["Najjahi", "Manigat", "Monteiro", "Marolany"];
+    let groupe1 = [myArray, myArray2];
+    document.write(groupe1);
 
-      // REMARQUE
-      const PRENOM = "Axel";
-      console.log(PRENOM[2]);  // Une string est considéré comme un array, dans ce cas, le console.log affichera la lettre "e"
-
-    let myArray2 = ["Najjahi", "Manigat", "Monteiro", "Marolany"];
+      
     
     document.write(myArray[0] + " " + myArray2[1] + "<br>" + myArray[1] + " " + myArray2[0] + "<br>" + myArray[2] + " " + myArray2[3] + "<br>" + myArray[3] + " " + myArray2[2] + "<br>");
 
@@ -135,7 +147,8 @@
 
     // let monTableau1 = document.querySelector("#monTableau1");
     // let monTableau2 = document.querySelector("#monTableau2");
-    // let myArray1 = document.querySelector("#myArray1");
+    let array2 = document.querySelector("#array2");
+    let prenom2 = document.querySelector("#prenom2");
 
 
     /*
@@ -186,10 +199,12 @@
 
       // Pour sélectionner un élément de notre tableau, il suffit d'appeler: nomDuTableau[indexDésiré]
       console.log(myArray[2]); // affichage de: Maureene
+      array2.innerHTML = myArray[2];
 
       // REMARQUE
-      const PRENOM = "Axel";
+      const PRENOM = "Georges";
       console.log(PRENOM[2]);  // Une string est considéré comme un array, dans ce cas, le console.log affichera la lettre "e"
+      prenom2.innerHTML = PRENOM[2];
 
     let myArray2 = ["Najjahi", "Manigat", "Monteiro", "Marolany"];
     

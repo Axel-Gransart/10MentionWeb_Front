@@ -16,7 +16,7 @@
       <h2>Histoire de JavaScript</h2>
       <article>
         <p>JavaScript a été créé en 1995 par Brendan Eich chez Netscape sous le nom de Mocha, puis renommé LiveScript, pour finalement devenir JavaScript.</p>
-        <p>Son adoption rapide en tant que langage de programmation côté client a été facilitée par sa prise en charge par Netscape Navigator. En 1997, JavaScript est standardisé sous le nom d'ECMAScript par Ecma International. ECMAScript est le langage de script sur lequel JavaScript est basé. Ecma International a pour tâche la standardisation d'ECMAScript
+        <p>Son adoption rapide en tant que langage de programmation côté client a été facilitée par sa prise en charge par Netscape Navigator. En 1997, JavaScript est standardisé sous le nom d'ECMAScript par Ecma International. ECMAScript est le langage de script sur lequel JavaScript est basé.
         </p>
         <p>
           <a href="https://ecma-international.org/publications-and-standards/standards/?order=last-change">https://ecma-international.org/publications-and-standards/standards/?order=last-change</a>
@@ -29,8 +29,8 @@
         </p>
         <p>Script directe dans le document html:</p>
         <ul>
-          <li>-> Dans la balise &lt;head>: pratique déconseillée;</li>
-          <li>-> Avant la fermeture de la balise &lt;body>: pratique recommandée, cela permet de charger le contenu HTML avant de commencer à exécuter les scripts donc permet d'optimiser la vitesse de chargement de la page et garantir un accès rapide aux éléments DOM.</li>
+          <li>-> Dans la balise &lt;head>: pratique déconseillée (Un document HTML étant lu comme un script, placer le fichier JS avant le contenu HTML risqueraient de créer des erreurs).</li>
+          <li>-> Avant la fermeture de la balise &lt;body>: pratique recommandée, cela permet de charger le contenu HTML avant de commencer à exécuter les scripts, donc d'optimiser la vitesse de chargement de la page et garantir un accès rapide aux éléments DOM.</li>
         </ul>
       </article>
     </section>
@@ -55,15 +55,16 @@
           On initialise une variable avec son nom (de votre choix)
           puis on lui attribue une valeur.
           Pour déclarer une variable en JS, on utilise un préfixe: const, let ou var.
-          ATTENTION: on utilise les préfixes seulement lors de l'initialisation.
+        </p>
+        <p>
+          <span class="text-danger">ATTENTION</span>: on utilise les préfixes seulement lors de l'initialisation.
         </p>
         <h3>La déclaration en const :</h3>
         <pre class="border border-info rounded">
-<span class="bleuFonce">const</span> <span class="bleuClair">TEST</span> = <span class="brique">"Hello World"</span>;
+  <span class="bleuFonce">const</span> <span class="bleuClair">TEST</span> = <span class="brique">"Hello World"</span>;
         </pre>
-        <p>La déclaration const permet de créer une constante accessible uniquement en lecture. Sa valeur ne pourra pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau. Dans la convention, on écrit les constantes en majuscules pour les reconnaître.
+        <p>La déclaration <span class="bleuFonce">const</span> permet de créer une constante accessible uniquement en lecture. Sa valeur ne pourra pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau. Dans la convention, on écrit les constantes en majuscules pour les reconnaître.
         </p>
-
         <pre class="border border-info rounded">
   <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">TEST</span><span class="orange">)</span>; 
 
@@ -72,7 +73,7 @@
 
   Hello World
         </pre>
-        <p>console.log permet d'afficher dans l'onglet console de l'inspecteur du navigateur web une information que je viens de saisir ou une erreur produite lors de la programmation</p>
+        <p><span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">()</span> permet d'afficher dans l'onglet console de l'inspecteur du navigateur web une information que je viens de saisir ou une erreur produite lors de la programmation</p>
         <pre class="border border-info rounded">
   <span class="bleuClair">TEST</span> = <span class="brique">"Hello Everybody"</span>;
   <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="orange">(</span><span class="bleuClair">TEST</span><span class="orange">)</span>;
@@ -103,9 +104,9 @@
 
   10
         </pre>
-        <p>var est globale, ce qui signifie qu'elle est accessible dans toute la fonction ou le script où elle est déclarée.          
+        <p><span class="bleuFonce">var</span> est globale, ce qui signifie qu'elle est accessible dans toute la fonction ou le script où elle est déclarée.          
         </p>
-        <p>Vous pouvez redéclarer une variable avec var dans le même contexte sans erreur. Cependant, cela peut conduire à des erreurs difficiles à détecter dans votre code en raison de la portée de var.          
+        <p>Vous pouvez redéclarer une variable avec <span class="bleuFonce">var</span> dans le même contexte sans erreur. Cependant, cela peut conduire à des erreurs difficiles à détecter dans votre code en raison de la portée de <span class="bleuFonce">var</span>.          
         </p>
       </article>
       <article>
@@ -126,9 +127,9 @@
 
   10MentionWeb
         </pre>
-        <p>let est locale au bloc dans lequel elle est déclarée, ce qui signifie qu'elle n'est accessible qu'à l'intérieur du bloc (par exemple, une boucle for ou un bloc if).
+        <p><span class="bleuFonce">let</span> est locale au bloc dans lequel elle est déclarée, ce qui signifie qu'elle n'est accessible qu'à l'intérieur du bloc (par exemple, une boucle for ou un bloc if).
         </p>
-        <p>Vous ne pouvez pas redéclarer une variable avec let dans le même contexte (fonction ou bloc). Vous obtiendrez une erreur  ReferenceError.
+        <p>Vous ne pouvez pas redéclarer une variable avec <span class="bleuFonce">let</span> dans le même contexte (fonction ou bloc). Vous obtiendrez une erreur  ReferenceError.
         </p>
       </article>
     </section>
