@@ -9,10 +9,85 @@
 </head>
 <body class="container">
   <header class="border border-danger rounded-3 p-3">
-
+    <h1>Les boucles en JavaScript</h1>
   </header>
   <main>
-    
+    <p>Les boucles nous permettent d'exécuter une ou plusieurs instructions un certain nombre de fois
+      <ul>
+        <li>- Une boucle respecte une condition</li>
+        <li>- Tant que cette condition est respectée, nous allons exécuter des instructions en boucle.</li>
+        <li>- La plupart du temps, nous utilisons les boucles pour parcourir chaque élément d'un tableau</li>
+        <li>- Il y a différents types de boucles, les plus utilisées sont la boucle "FOR" et la boucle "WHILE"</li>
+      </ul>
+    </p>
+    <section>
+      <h2>Les boucles FOR</h2>
+      <h3>SYNTAXE :</h3>
+      <pre class="border border-info rounded">    
+  for( 3 arguments : initialisation; condition de la continuité; ensuite l'incrémentation) {    
+    code à executer
+  }          
+      </pre>
+      <p>Exemple :</p>
+      <pre class="border border-info rounded">
+  <span class="violet">for</span> <span class="orange">(</span><span class="bleuFonce">let</span> <span class="bleuClair">i</span> = <span class="vertClair">0</span>; <span class="bleuClair">i</span> < <span class="vertClair">10</span>; <span class="bleuClair">i</span>++ <span class="orange">) {</span>
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">`i est égal à : <span class="bleuFonce">${</span><span class="bleuClair">i</span><span class="bleuFonce">}</span>`</span><span class="violet">)</span>;      
+  <span class="orange">}</span>
+      </pre>
+      <p>
+        - i = 0  j'initialise le départ de la boucle à 0 <br>
+        - i < 10 tant que la valeur de i est inférieure à 10 <br>
+        - i++    j'incrémente un tour de boucle <br><br>
+        En gros je donne l'instruction de faire un tour de boucle supplémentaire tant que la valeur de i n'est pas égale ou supérieure à 10
+      </p>
+      <p id="forI1"></p>
+      <h3>Je boucle 2 par 2</h3>
+      <pre class="border border-info rounded">
+  <span class="violet">for</span> <span class="orange">(</span><span class="bleuFonce">let</span> <span class="bleuClair">j</span> = <span class="vertClair">0</span>; <span class="bleuClair">j</span> < <span class="vertClair">10</span>; <span class="bleuClair">j</span> += <span class="vertClair">2</span><span class="orange">) {</span>
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">`j est égal à : <span class="bleuFonce">${</span><span class="bleuClair">j</span><span class="bleuFonce">}</span>`</span><span class="violet">)</span>;      
+  <span class="orange">}</span>
+      </pre>
+      <p id="forI2"></p>
+    </section>
+    <section>
+      <h2>Boucle WHILE (tant que)</h2>
+      <h3>SYNTAXE</h3>
+      <pre class="border border-info rounded">
+  initialisation de la variable
+
+  while(expression qui vaut True ou False) {        
+    code à executer tant que l'expression vaut True
+    Incrémentation de la variable
+  }
+      </pre>
+      <p>Exemple :</p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">k</span> = <span class="vertClair">0</span>; <span class="vertComm">// J'initialise une variable k égale à 0</span>
+  
+  <span class="violet">while</span> <span class="orange">(</span><span class="bleuClair">k</span> <= <span class="vertClair">5</span><span class="orange">) {</span> <span class="vertComm">// Tant que k est inférieur ou égale à 5</span>
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">`k est égale à</span> <span class="bleuFonce">${</span><span class="bleuClair">k</span><span class="bleuFonce">}</span> <span class="brique">/ `</span><span class="violet">)</span>; <span class="vertComm">//  J'exécute l'instruction</span>
+  <span class="bleuClair">k</span>++ <span class="vertComm">// A chaque tour de boucle, j'incrémente la variable</span>
+  <span class="orange">}</span>;
+      </pre>
+      <p id="forK1"></p>
+      <h3>Intégration d'une condition if - else dans une boucle WHILE</h3>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">l</span> = <span class="vertClair">0</span>;
+
+  <span class="violet">while</span> <span class="orange">(</span><span class="bleuClair">l</span> <= <span class="vertClair">5</span><span class="orange">) {</span>  
+    <span class="violet">if (</span><span class="bleuClair">l</span> == 5<span class="violet">) {</span>
+      <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="bleuFonce">(</span><span class="brique">`l est égale à </span><span class="bleuFonce">${</span><span class="bleuClair">l</span><span class="bleuFonce">}</span> <span class="brique"><- `</span><span class="bleuFonce">)</span>;
+    <span class="violet">}</span>
+    <span class="violet">else {</span>
+      <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="bleuFonce">(</span><span class="brique">`l est égale à </span><span class="bleuFonce">${</span><span class="bleuClair">l</span><span class="bleuFonce">}</span> <span class="brique">/ `</span><span class="bleuFonce">)</span>;
+    <span class="violet">}</span>
+    <span class="bleuClair">k</span>++  
+  <span class="orange">}</span>;
+      </pre>
+      <p id="forL1"></p>
+      <p>Au vu des conditions inscrites dans la boucle ci-dessus, Nous avons un '/' à la fin des 5 premiers tours et un '<-' à la fin du sixième tour.</p>
+    </section>
+
   </main>
   <footer>
     <button><a href="07_conditions.html">&lt;&lt; 7</a></button>
@@ -21,6 +96,14 @@
 
 
   <script>
+
+
+    let forI1 = document.querySelector("#forI1");
+    let forI2 = document.querySelector("#forI2");
+    let forK1 = document.querySelector("#forK1");
+    let forL1 = document.querySelector("#forL1");
+    
+
     // Les boucles nous permettent d'exécuter une ou plusieurs instructions un certain nombre de fois
         // Une boucle respecte une condition
         // Tant que cette condition est respectée, nous allons exécuter des instructions en boucle.
@@ -45,32 +128,36 @@
     // i++    j'incrémente un tour de boucle
     // En gros je donne l'instruction de faire un tour de boucle supplémentaire tant que la valeur de i n'est pas égale ou supérieure à 10
 
+    let sentence = 'i est égal à : ';
+
     for (let i = 0; i < 10; i++ ) {
-      document.write(`<p>Il est 14h5${i}</p>`);      
+      // document.write(`i est égal à : ${i} <br>`);
+      forI1.innerHTML  += forI1.innerHTML = `<span>${sentence} ${i} </span> <br>`;
     }
 
     // Je boucle 2 par 2
-    for (let i = 0; i < 10; i+=2 ) {
-      document.write(`<p>Il est 15h0${i}</p>`);      
+    for (let j = 0; j < 10; j+=2 ) {
+      //document.write(`<p>Il est 15h0${i}</p>`);
+      forI2.innerHTML  += forI2.innerHTML = `<span>j est égal à : ${j} </span> <br>`;
     }
 
-    document.write("<br> <br>");
+    //document.write("<br> <br>");
     // Je boucle sur un tableau
     let jours = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 
-    document.write(jours);
-    document.write("<br>");
+    // document.write(jours);
+    // document.write("<br>");
 
-    for (let i = 0; i < jours.length; i++ ) {
-      if (i == jours.length-1) {
-        document.write(` ${jours[i]}.`);
-      }
-      else {
-        document.write(` ${jours[i]},`);
-      }
-    };
+    // for (let i = 0; i < jours.length; i++ ) {
+    //   if (i == jours.length-1) {
+    //     document.write(` ${jours[i]}.`);
+    //   }
+    //   else {
+    //     document.write(` ${jours[i]},`);
+    //   }
+    // };
 
-    document.write("<br> <br>");
+    // document.write("<br> <br>");
      /*
     ╔═════════════════════════════════════════════╗
     ║         Boucle WHILE (tant que)             ║
@@ -84,26 +171,31 @@
         Incrémentation de la variable
       } */
 
-    let j = 0;  // J'initialise une variable j égale à 0
+    let k = 0;  // J'initialise une variable j égale à 0
 
-    while (j <= 5) {  // Tant que j est inférieur ou égale à 5
-      document.write(`j est égale à ${j} / `);   //  J'exécute l'instruction
-      j++   // A chaque tour de boucle, j'incrémente la variable
+    while (k <= 5) {  // Tant que j est inférieur ou égale à 5
+      // document.write(`j est égale à ${j} / `);   //  J'exécute l'instruction
+      forK1.innerHTML  += forK1.innerHTML = `<span>k est égale à ${k} / </span> <br>`;
+      k++   // A chaque tour de boucle, j'incrémente la variable
     };
+    
+    
 
     document.write("<br>");
     
 
-    let k = 0;
+    let l = 0;
 
-    while (k <= 5) { 
-      if (k == 5) {
-        document.write(`k est égale à ${k} <- `);
+    while (l <= 5) { 
+      if (l == 5) {
+        // document.write(`l est égale à ${l} <- `);
+        forL1.innerHTML += forL1.innerHTML = `<span>l est égale à ${l} <-  </span> <br>`;
       }
       else {
-        document.write(`k est égale à ${k} / `);
+        // document.write(`l est égale à ${l} / `);
+        forL1.innerHTML += forL1.innerHTML = `<span>l est égale à ${l} / </span> <br>`;
       }
-      k++   
+      l++   
     };
 
 

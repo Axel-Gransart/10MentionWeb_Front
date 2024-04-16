@@ -9,10 +9,273 @@
 </head>
 <body class="container">
   <header class="border border-danger rounded-3 p-3">
-
+    <h1>Les conditions en JavaScript</h1>
   </header>
   <main>
+    <br>
+    <section>
+      <h2>Les opérateurs de comparaisons pour les structures conditionnelles</h2>
+      <ul>
+        <li>- <span class="fs-3 text-success">></span> strictement supérieur</li>
+        <li>- <span class="fs-3 text-success"><</span> strictement inférieur</li>
+        <li>- <span class="fs-3 text-success">>=</span> supérieur ou égal</li>
+        <li>- <span class="fs-3 text-success"><=</span> inférieur ou égal</li>
+        <li>- <span class="fs-3 text-success">==</span> pour faire une comparaison de valeur -> il permet de vérifier que les valeurs de 2 variables sont identiques. Résultat boolean</li>
+        <li>- <span class="fs-3 text-success">===</span> pour faire une comparaison de valeur ET de type -> signifie "strictement égal à" (valeur ET type). Résultat boolean</li>
+        <li>- <span class="fs-3 text-success">!=</span> différent de (en valeur)</li>
+        <li>- <span class="fs-3 text-success">!==</span> STRICTEMENT différent de (en valeur et en type)</li>
+      </ul>
+      <p>Exemples :</p>
+      <p>On déclare les variables <span class="bleuClair">nbr1</span> & <span class="bleuClair">nbr2</span></p>
+      <p>On demande si la variable <span class="bleuClair">nbr1</span> est strictement supérieure à la variable <span class="bleuClair">nbr2</span></p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">nbr1</span> = <span class="vertClair">1</span>, <span class="bleuClair">nbr2</span> = <span class="vertClair">3</span>;
+
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">nbr1</span> > <span class="bleuClair">nbr2</span><span class="orange">)</span>;
+      </pre>
+      <p>Le résultat booléen est <span id="nbr1Strict"></span></p>
+      <br>
+      <p>On demande si la variable <span class="bleuClair">nbr1</span> est inférieure ou égale à la variable <span class="bleuClair">nbr2</span></p>
+      <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">nbr1</span> <= <span class="bleuClair">nbr2</span><span class="orange">)</span>;
+      </pre>
+      <p>Le résultat booléen est <span id="nbr1Equal"></span></p>
+      <br>
+      <p>On déclare les variables <span class="bleuClair">nbr3</span> & <span class="bleuClair">nbr4</span></p>
+      <p>On demande si la variable <span class="bleuClair">nbr3</span> est strictement supérieure à la variable <span class="bleuClair">nbr4</span></p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">nbr3</span> = <span class="vertClair">2</span>, <span class="bleuClair">nbr4</span> = <span class="brique">"2"</span>;
+
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">nbr3</span> > <span class="bleuClair">nbr4</span><span class="orange">)</span>;
+      </pre>
+      <p>Le résultat booléen est <span id="nbr3Strict"></span></p>
+      <p>On demande si la variable <span class="bleuClair">nbr3</span> est égale à la variable <span class="bleuClair">nbr4</span></p>
+      <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">nbr3</span> == <span class="bleuClair">nbr4</span><span class="orange">)</span>;
+      </pre>
+      <p>Le résultat booléen est <span id="nbr3Equal"></span></p>
+      <p>On demande si la variable <span class="bleuClair">nbr3</span> est strictement égale à la variable <span class="bleuClair">nbr4</span></p>
+      <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">nbr3</span> === <span class="bleuClair">nbr4</span><span class="orange">)</span>;
+      </pre>
+      <p>Le résultat booléen est <span id="nbr3StrictEqual"></span></p>
+    </section>
+    <br><br>
+    <section>
+      <h2>Les opérateurs logiques</h2>
+      <ul>
+        <li>- AND -> &&</li>
+        <li>- OR  -> || (altgr + 6)</li>
+        <li>- NOT -> !</li>
+      </ul>
+      <article>
+        <h3>Opérateur AND (&&)</h3>
+        <p>Opérateur AND: il évalue le résultat en True si les expressions sont toutes True. Si l'une des expressions testés est False, alors le résultat sera False</p>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">true</span> && <span class="bleuFonce">true</span><span class="orange">)</span>;
+        </pre>
+        <p id="trueAndTrue"></p>
+        <br>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">true</span> && <span class="bleuFonce">false</span><span class="orange">)</span>;
+        </pre>
+        <p id="trueAndFalse"></p>
+        <br>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">false</span> && <span class="bleuFonce">false</span><span class="orange">)</span>;
+        </pre>
+        <p id="falseAndFalse"></p>
+      </article>    
+      <article>
+        <h3>Opérateur OR (||)</h3>
+        <p>Opérateur OR : il évalue le résultat en True si une ou deux expressions sont True. Si les deux expressions sont False, alors le résultat sera False</p>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">true</span> || <span class="bleuFonce">true</span><span class="orange">)</span>;
+        </pre>
+        <p id="trueOrTrue"></p>
+        <br>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">true</span> || <span class="bleuFonce">false</span><span class="orange">)</span>;
+        </pre>
+        <p id="trueOrFalse"></p>
+        <br>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuFonce">false</span> || <span class="bleuFonce">false</span><span class="orange">)</span>;
+        </pre>
+        <p id="falseOrFalse"></p>        
+      </article>
+      <article>
+        <h3>Opérateur NOT (!)</h3>
+        <p>Opérateur NOT : il transforme ce qui est True en False et ce qui est False en True</p>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span>!<span class="bleuFonce">true</span><span class="orange">)</span>;
+        </pre>
+        <p id="notTrue"></p>
+        <br>
+        <pre class="border border-info rounded">
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span>!<span class="bleuFonce">false</span><span class="orange">)</span>;
+        </pre>
+        <p id="notFalse"></p>
+      </article>      
+    </section>
+    <section>
+      <h2>Structures conditionnelles if, else if, else</h2>
+      <article>
+        <h3>syntaxe</h3>
+        <h3>if</h3>
+        <pre class="border border-info rounded">
+  <span class="violet">if</span> <span class="orange">(</span><span class="bleuClair">condition</span><span class="orange">)</span><span class="orange">{</span>
+    <span class="vertComm">/* Le code si la condition est VRAIE */</span>
+  <span class="orange">}</span>
+        </pre>
+        <h3>if - else</h3>
+        <pre class="border border-info rounded">
+  <span class="violet">if</span> <span class="orange">(</span><span class="bleuClair">condition</span><span class="orange">)</span><span class="orange">{</span>
+    <span class="vertComm">/* Le code si la condition est VRAIE */</span>
+  <span class="orange">}</span>
+  <span class="violet">else</span><span class="orange">{</span>
+    <span class="vertComm">/* Le code si la condition est FAUSSE */</span>
+  <span class="orange">}</span>
+        </pre>
+        <h3>if - else if - else</h3>
+        <pre class="border border-info rounded">
+  <span class="violet">if</span> <span class="orange">(</span><span class="bleuClair">condition</span><span class="orange">)</span><span class="orange">{</span>
+    <span class="vertComm">/* Le code si la condition est VRAIE */</span>
+  <span class="orange">}</span>
+  <span class="violet">else if</span> <span class="orange">(</span><span class="bleuClair">condition</span><span class="orange">)</span><span class="orange">{</span>
+    <span class="vertComm">/* Le code si la condition est VRAIE */</span>
+  <span class="orange">}</span>
+  <span class="violet">else</span><span class="orange">{</span>
+    <span class="vertComm">/* Le code si toute les conditions sont FAUSSES */</span>
+  <span class="orange">}</span>
+        </pre>
+        <br><br><br>
+        <p>Exemple :</p>
+        <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">age</span> = <input type="text" id="inputAge" name="inputAge">;
+  
+  <span class="violet">if</span> <span class="orange">(</span><span class="bleuClair">age</span> >= <span class="vertClair">20</span><span class="orange">)</span><span class="orange">{</span>
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Vous êtes majeur et plus vieux"</span><span class="orange">)</span>;
+  <span class="orange">}</span>
+  <span class="violet">else if</span> <span class="orange">(</span><span class="bleuClair">age</span> > <span class="vertClair">18</span><span class="orange">)</span><span class="orange">{</span> 
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Vous êtes majeur"</span><span class="orange">)</span>;
+  <span class="orange">}</span>
+  <span class="violet">else if</span> <span class="orange">(</span><span class="bleuClair">age</span> < <span class="vertClair">18</span><span class="orange">)</span><span class="orange">{</span> 
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Vous êtes mineur"</span><span class="orange">)</span>;
+  <span class="orange">}</span>
+  <span class="violet">else</span> {
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Ce n'est pas un age !!"</span><span class="orange">)</span>;
+  <span class="orange">}</span>  
+        </pre>
+        <p id="exempleAge"></p>
+      </article>
+    </section>
+    <section>
+      <h2>La condition ternaire</h2>
+      <p>La condition ternaire nous permet de faire une vérification mais sur une seule ligne</p>
+      <br>
+      <p>Ecriture en structure conditionnelle if - else :</p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">meteo</span> = <select name="meteoTern" id="selectMeteo1">
+                                                                              <option value=""></option>
+                                                                              <option value="pluie">pluie</option>
+                                                                              <option value="soleil">soleil</option>
+                                                                            </select>;
+
+  <span class="violet">if</span> <span class="orange">(</span><span class="bleuClair">meteo</span> == <span class="brique">"pluie"</span><span class="orange">)</span><span class="orange">{</span>
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Tu vas être mouillé !"</span><span class="orange">)</span>;
+  <span class="orange">}</span>
+  <span class="violet">else</span><span class="orange">{</span>
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="brique">"Sors la moto !!"</span><span class="orange">)</span>;
+  <span class="orange">}</span>
+      </pre>
+      <p id="tern1Meteo"></p>
+      <br>
+      <p>La même structure conditionnelle en écriture ternaire :</p>
+      <pre class="border border-info rounded">
+  <span class="bleuClair">meteo</span> =  <select name="meteoTern" id="selectMeteo2">
+                                            <option value=""></option>
+                                            <option value="pluie">pluie</option>
+                                            <option value="soleil">soleil</option>
+                                          </select>;
+
+  <span class="bleuFonce">let</span> <span class="bleuClair">ternaire</span> = <span class="orange">(</span><span class="bleuClair">meteo</span> == <span class="brique">"pluie"</span><span class="orange">)</span> ? <span class="brique">"Tu vas être mouillé !"</span> : <span class="brique">"Sors la moto !!"</span>;
+      </pre>
+      <p id="tern2Meteo"></p>
+      <p>écriture ternaire : 
+        <ul>
+          <li>->  () = condition -> ici, est-ce que la variable meteo est égale à pluie </li>
+          <li>->  ?  = if -> si oui, affiche "Tu vas être mouillé !"</li>
+          <li>->  :  = else -> si non, affiche "Sors la moto !!"</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <h2>La condition Switch</h2>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">jour</span> = <span class="jaune">prompt</span><span class="orange">(</span><span class="brique">"Entrez un jour de la semaine"</span><span class="orange">)</span>.<span class="jaune">toLowerCase</span><span class="orange">()</span>;
+      </pre>
+      <p>.<span class="jaune">toLowerCase</span><span class="orange">()</span> permet de transformer l'insertion de l'utilisateur en minuscule -> Dans ce cas, le contrôle (dans notre code) doit être noté en minuscule</p>
+      <pre class="border border-info rounded">        
+  <span class="violet">switch</span> <span class="orange">(</span><span class="bleuClair">jour</span><span class="orange">)</span> <span class="orange">{</span>
+    <span class="violet">case</span> <span class="brique">'lundi'</span>:
+      <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">"Demain on est que mardi"</span><span class="violet">)</span>;
+      <span class="violet">break</span>;
+    <span class="violet">case</span> <span class="brique">"mardi"</span>:
+      <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">"Demain c'est mercrediiiiiiii"</span><span class="violet">)</span>; 
+      <span class="violet">break</span>;
+    <span class="violet">case</span> <span class="brique">"mercredi"</span>:
+      <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">"Demain c'est jeudi, on tient le bon bout"</span><span class="violet">)</span>;
+      <span class="violet">break</span>;
+    <span class="violet">case</span> <span class="brique">"jeudi"</span>:
+      <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">"Demain c'est vendredi, dernier jour de boulot"</span><span class="violet">)</span>;
+      <span class="violet">break</span>;
+    <span class="violet">case</span> <span class="brique">"vendredi"</span>:
+      <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">"Demain c'est le week-end !!!!!"</span><span class="violet">)</span>;
+      <span class="violet">break</span>;
+    <span class="violet">case</span> <span class="brique">"samedi"</span>:
+      <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">"Demain c'est dimanche, dernière chance pour se reposer"</span><span class="violet">)</span>;
+      <span class="violet">break</span>;
+    <span class="violet">default</span>:
+      <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">"Demain c'est lundi HAHAHAHA ! t'es encore plus fatigué que la semaine dernière !!"</span><span class="violet">)</span>;
+      <span class="violet">break</span>;
+  <span class="orange">}</span>
+        </pre>
+        <p id="promptJour"></p>
+        <br>
+        <h3>conversion en condition if / else if</h3>
+        <pre class="border border-info rounded">
+  <span class="vertComm">
+  //   if (jour == 'lundi') {
+  //     document.write("Demain on est que mardi");       
+  //   } 
+  //   else if (jour == "mardi") {
+  //     document.write("Demain c'est mercrediiiiiiii");       
+  //   } 
+  //   else if (jour == "mercredi") {
+  //     document.write("Demain c'est jeudi, on tient le bon bout");       
+  //   } 
+  //   else if (jour == "jeudi") {
+  //     document.write("Demain c'est vendredi, dernier jour de boulot");       
+  //   } 
+  //   else if (jour == "vendredi") {
+  //     document.write("Demain c'est le week-end !!!!!");       
+  //   }
+  //   else if (jour == "samedi") {
+  //     document.write("Demain c'est dimanche, dernière chance pour se reposer");       
+  //   }
+  //   else {
+  //     document.write("Demain c'est lundi HAHAHAHA ! t'es encore plus fatigué que la semaine dernière !!");
+  //   }</span>
+              </pre>
+        </section>
+        
+        
+
+
     
+
+         
   </main>
   <footer>
     <button><a href="06_tableaux.html">&lt;&lt; 6</a></button>
@@ -22,7 +285,34 @@
 
   <script>
 
-    document.write('<h2>Les opérateurs de comparaisons pour les structures conditionnelles</h2>');
+    let nbr1Strict = document.querySelector("#nbr1Strict");
+    let nbr1Equal = document.querySelector("#nbr1Equal");
+    let nbr3Strict = document.querySelector("#nbr3Strict");
+    let nbr3Equal = document.querySelector("#nbr3Equal");
+    let nbr3StrictEqual = document.querySelector("#nbr3StrictEqual");
+    let trueAndTrue = document.querySelector("#trueAndTrue");
+    let trueAndFalse = document.querySelector("#trueAndFalse");
+    let falseAndFalse = document.querySelector("#falseAndFalse");
+    let trueOrTrue = document.querySelector("#trueOrTrue");
+    let trueOrFalse = document.querySelector("#trueOrFalse");
+    let falseOrFalse = document.querySelector("#falseOrFalse");
+    let notTrue = document.querySelector("#notTrue");
+    let notFalse = document.querySelector("#notFalse");
+    let inputAge = document.querySelector("#inputAge");
+    let exempleAge = document.querySelector("#exempleAge");
+    let meteoTern1 = document.querySelector("#selectMeteo1");
+    let meteoTern2 = document.querySelector("#selectMeteo2");
+    let tern1Meteo = document.querySelector("#tern1Meteo");
+    let tern2Meteo = document.querySelector("#tern2Meteo");
+    let promptJour = document.querySelector("#promptJour");
+    
+    
+
+    
+
+    
+
+    //document.write('<h2>Les opérateurs de comparaisons pour les structures conditionnelles</h2>');
 
     
     // Les opérateurs de comparaisons pour les structures conditionnelles
@@ -41,22 +331,27 @@
     let nbr1 = 1, nbr2 = 3;
     let br = '<br>';
 
-    document.write(nbr1 > nbr2);
-    document.write(br);
-    document.write(nbr1 <= nbr2);
+    //document.write(nbr1 > nbr2);
+    nbr1Strict.textContent = nbr1 > nbr2;
+    //document.write(br);
+    //document.write(nbr1 <= nbr2);
+    nbr1Equal.textContent = nbr1 <= nbr2;
 
     document.write(br + br);    
     let nbr3 = 2, nbr4 = "2";
 
-    document.write(nbr3 > nbr4);
-    document.write(br);
-    document.write(nbr3 == nbr4);
-    document.write(br);
-    document.write(nbr3 === nbr4);
+    //document.write(nbr3 > nbr4);
+    nbr3Strict.textContent = nbr3 > nbr4;
+    //document.write(br);
+    //document.write(nbr3 == nbr4);
+    nbr3Equal.textContent = nbr3 == nbr4;
+    //document.write(br);
+    //document.write(nbr3 === nbr4);
+    nbr3StrictEqual.textContent = nbr3 === nbr4;
     
-    document.write(br + br);
+    //document.write(br + br);
 
-    document.write('<h2>Les opérateurs logiques</h2>');
+    //document.write('<h2>Les opérateurs logiques</h2>');
 
     // opérateurs logiques
     /*
@@ -64,35 +359,44 @@
       OR  -> || (altgr + 6)
       NOT -> !
     */
-    document.write('<h3>Opérateur AND</h3>');
+    // document.write('<h3>Opérateur AND</h3>');
 
     // Opérateur AND: il évalue le résultat en True si les expressions sont toutes True. Si l'une des expressions testés est False, alors le résultat sera False
+ 
+    // document.write(true && true);
+    trueAndTrue.textContent = true && true;
+    // document.write(br);
+    // document.write(true && false);
+    trueAndFalse.textContent = true && false;
+    // document.write(br);
+    // document.write(false && false);
+    falseAndFalse.textContent = false && false;
 
-    document.write(true && true);
-    document.write(br);
-    document.write(true && false);
-    document.write(br);
-    document.write(false && false);
-
-    document.write('<h3>Opérateur OR</h3>');
+    // document.write('<h3>Opérateur OR</h3>');
 
     // Opérateur OR : il évalue le résultat en True si une ou deux expressions sont True. Si les deux expressions sont False, alors le résultat sera False
 
-    document.write(true || true);
-    document.write(br);
-    document.write(true || false);
-    document.write(br);
-    document.write(false || false);
+    // document.write(true || true);
+    trueOrTrue.textContent = true || true;
+    // document.write(br);
+    // document.write(true || false);
+    trueOrFalse.textContent = true || false;
+    // document.write(br);
+    // document.write(false || false);
+    falseOrFalse.textContent = false || false;
 
-    document.write('<h3>Opérateur NOT</h3>');
+
+    // document.write('<h3>Opérateur NOT</h3>');
 
     // Opérateur NOT : il transforme ce qui est True en False et ce qui est False en True
 
-    document.write(!true);
-    document.write(br);
-    document.write(!false);
+    // document.write(!true);
+    notTrue.textContent = !true;
+    // document.write(br);
+    // document.write(!false);
+    notFalse.textContent = !false;
 
-    document.write('<h2>Structures conditionnelles if, else if, else</h2>');
+    // document.write('<h2>Structures conditionnelles if, else if, else</h2>');
 
      /*
     ╔═════════════════════════════════════════════╗
@@ -131,37 +435,62 @@
 
 
     // essai
+    
 
-    let age = "test";
+    inputAge.addEventListener("input", function() {
+      
+      let age = inputAge.value;
+      
+      console.log(age);
 
-    if (age > 18) {
-        // document.write("Vous êtes majeur <br>");
-    }
-    if (age >= 20) {
-        // document.write("Vous êtes majeur et plus vieux");
-    }
-    if (age < 18) { 
-        // document.write("Vous êtes mineur");
-    }
+      if (age >= 20 ) { 
+        exempleAge.textContent = "Vous êtes majeur et plus vieux";
+      } 
+      else if (age >= 18) { 
+        exempleAge.textContent = "Vous êtes majeur";
+      } 
+      else if (age < 18) { 
+        exempleAge.textContent = "Vous êtes mineur";
+      }
+      else {
+        exempleAge.textContent = "Ce n'est pas un age !!";
+      }
+    })
+
+
+
+    // if (age > 18) {
+    //     // document.write("Vous êtes majeur <br>");
+    // }
+    // if (age >= 20) {
+    //     // document.write("Vous êtes majeur et plus vieux");
+    // }
+    // if (age < 18) { 
+    //     // document.write("Vous êtes mineur");
+    // }
 
     //════════════════════════════════════════════
 
-    if (age >= 20 ) { 
+    // if (age >= 20 ) { 
 
-        document.write("Vous êtes majeur et plus vieux");
+    //     // document.write("Vous êtes majeur et plus vieux");
+    //     exempleAge.textContent = "Vous êtes majeur et plus vieux";
 
-    } else if (age > 18) { 
-        document.write("Vous êtes majeur <br>");
+    // } else if (age >= 18) { 
+    //     // document.write("Vous êtes majeur <br>");
+    //     exempleAge.textContent = "Vous êtes majeur";
 
-    } else if (age < 18) { 
-        document.write("Vous êtes mineur");
+    // } else if (age < 18) { 
+    //     // document.write("Vous êtes mineur");
+    //     exempleAge.textContent = "Vous êtes mineur";
 
-    }
-    else {
-        document.write("Vous êtes QUI ?");
-    }
+    // }
+    // else {
+    //     // document.write("Vous êtes QUI ?");
+    //     exempleAge.textContent = "Vous êtes QUI ?";
+    // }
 
-    document.write(br + br);
+    // document.write(br + br);
     //════════════════════════════════════════════
     
     let a = 10, b = 5, c = 2;
@@ -172,66 +501,66 @@
     // comparer a et be a>b a est bien supperieur à b sinon a < b 
 
     if (a > b) {
-      document.write("a est bien supérieur à b");
+      //document.write("a est bien supérieur à b");
     }
     else {
-      document.write("a est inférieur à b");
+      //document.write("a est inférieur à b");
     } 
 
 
-    document.write(br);
+    //document.write(br);
     // Exercice 2
     // si a > b et b > c -> ok pour les deux conditions sinon une de ces deux conditions est fausse 
 
     if (a > b && b > c) {
-      document.write("OK pour les deux conditions");
+      //document.write("OK pour les deux conditions");
     }
     else {
-      document.write("Une des deux conditions est fausses");
+     // document.write("Une des deux conditions est fausses");
     }
 
 
-    document.write(br);
+    //document.write(br);
     // Exercice 3
     // COMPARER a egale à 9 ou (a = 9 ou b < 9) ok pour l'une au moins de ces deux conditions
 
 
     if (a == 9 || b < 9) {
-      document.write("OK pour au moins une des deux conditions");
+      //document.write("OK pour au moins une des deux conditions");
     }
     else {
-      document.write("Les deux conditions sont fausses");
+      //document.write("Les deux conditions sont fausses");
     }
 
 
-    document.write(br);
+    //document.write(br);
     // Exercice 4
     
     if (a == 8) {
-      document.write("a est égale à 8");
+      //document.write("a est égale à 8");
     }
     else if (a != 10) {
-      document.write("a est différent de 10");
+     // document.write("a est différent de 10");
     }
     else {
-      document.write("toutes les conditions sont fausses");
+    //  document.write("toutes les conditions sont fausses");
     }
 
 
-    document.write(br);
+    //document.write(br);
     // Avec que des if, les conditions sont toutes éxécutés, et dès que l'une des conditions est vrai, le résultat est affiché
     
     if ( a == 10 ) { // true
-      document.write(" a est égale à 10, ");
+      //document.write(" a est égale à 10, ");
     }
     if ( a < b ) { // false
-      document.write(" a est inférieur à b, ");
+     // document.write(" a est inférieur à b, ");
     }
     if ( a > b ) { // true
-      document.write(" a est supérieur à b, ");
+      //document.write(" a est supérieur à b, ");
     }
 
-    document.write(br + br);
+   // document.write(br + br);
     /*
     ╔═════════════════════════════════════════════╗
     ║           La condition ternaire             ║
@@ -239,27 +568,37 @@
 
     // La condition ternaire nous permet de faire une vérification mais sur une seule ligne
 
-    let meteo = "pluie";
+    let meteo
 
-    if (meteo == "pluie") {
-      document.write("Tu vas être mouillé !");
-    }
-    else {
-      document.write("Sors la moto !!");
-    }
+    meteoTern1.addEventListener("input", function() {
 
-    document.write(br + br);
-    meteo = "soleil";
+      meteo = meteoTern1.value;
 
-    let ternaire = (meteo == "pluie") ? "prends un parapluie" : "Sors la moto !!";
-    document.write(ternaire);
+      if (meteo == "pluie") {
+        // document.write("Tu vas être mouillé !");
+        tern1Meteo.textContent = "Tu vas être mouillé !";
+      }
+      else {
+        // document.write("Sors la moto !!");
+        tern1Meteo.textContent = "Sors la moto !!";
+      }
+
+    })
+    meteoTern2.addEventListener("input", function() {
+      
+      meteo = meteoTern2.value;
+      console.log(meteoTern2);      
+      let ternaire = (meteo == "pluie") ? "Tu vas être mouillé !" : "Sors la moto !!";
+      tern2Meteo.textContent = ternaire;
+    })
+
     /* écriture ternaire: 
         ->  () = condition -> ici, est-ce que la variable meteo est égale à pluie 
         ->  ?  = if -> si oui, affiche "prends un parapluie"
         ->  :  = else -> si non, affiche "Sors la moto !!"
     */
 
-    document.write(br + br);
+    //document.write(br + br);
 
     // Exercice ternaire
     //monAge = prompt("Quel est votre âge ?");
@@ -268,93 +607,95 @@
    //document.write(monAgeTernaire);
 
 
-    document.write(br + br);
+   // document.write(br + br);
     /*
     ╔═════════════════════════════════════════════╗
     ║            La condition switch              ║
     ╚═════════════════════════════════════════════╝ */
 
-    let valeur = 5 + 10;
+    //let valeur = 5 + 10;
 
-    switch (valeur) {
-      case 5:
-        document.write("La valeur est égale à 5 ");
+    // switch (valeur) {
+    //   case 5:
+    //     //document.write("La valeur est égale à 5 ");
         
-        break;
-      case 10:
-        document.write("La valeur est égale à 10 ");
+    //     break;
+    //   case 10:
+    //     //document.write("La valeur est égale à 10 ");
         
-        break;
-      case 15:
-        document.write("La valeur est égale à 15 ");
+    //     break;
+    //   case 15:
+    //     //document.write("La valeur est égale à 15 ");
         
-        break;
-      default:
-        document.write("La valeur est indéterminée ");
-        break;
-    }
+    //     break;
+    //   default:
+    //     //document.write("La valeur est indéterminée ");
+    //     break;
+    // }
 
 
 
-    document.write(br + br);
+    //document.write(br + br);
 
     let jour = prompt("Entrez un jour de la semaine").toLowerCase(); // .toLowerCase() permet de transformer l'insertion de l'utilisateur en minuscule -> Dans ce cas, le contrôle (dans notre code) doit être noté en minuscule
 
     switch (jour) {
       case 'lundi':
-        document.write("Demain c'est mardi");
+         promptJour.textContent = "Demain on est que mardi"; 
         
         break;
       case "mardi":
-        document.write("Demain c'est mercredi");
+        promptJour.textContent = "Demain c'est mercrediiiiiiii";
         
         break;
       case "mercredi":
-        document.write("Demain c'est jeudi");
+        promptJour.textContent = "Demain c'est jeudi, on tient le bon bout";
         
         break;
       case "jeudi":
-        document.write("Demain c'est vendredi");
+        promptJour.textContent = "Demain c'est vendredi, dernier jour de boulot";
         
         break;
       case "vendredi":
-        document.write("Demain c'est samedi");
+        promptJour.textContent = "Demain c'est le week-end !!!!!";
                         
         break;
       case "samedi":
-        document.write("Demain c'est dimanche");
+        promptJour.textContent = "Demain c'est dimanche, dernière chance pour se reposer";
                         
         break;
       default:
-        document.write("demain c'est lundi");
+        promptJour.textContent = "Demain c'est lundi HAHAHAHA ! t'es encore plus fatigué que la semaine dernière !!";
         break;
     }
 
-    document.write(br);
-    // conversion en condition if / else if
+    
+
+    // document.write(br);
+    // // conversion en condition if / else if
 
     
-      if (jour == 'lundi') {
-        document.write("Demain on est que mardi");       
-      } 
-      else if (jour == "mardi") {
-        document.write("Demain c'est mercrediiiiiiii");       
-      } 
-      else if (jour == "mercredi") {
-        document.write("Demain c'est jeudi, on tient le bon bout");       
-      } 
-      else if (jour == "jeudi") {
-        document.write("Demain c'est vendredi, dernier jour de boulot");       
-      } 
-      else if (jour == "vendredi") {
-        document.write("Demain c'est le week-end !!!!!");       
-      }
-      else if (jour == "samedi") {
-        document.write("Demain c'est dimanche, dernière chance pour se reposer");       
-      }
-      else {
-        document.write("Demain c'est lundi HAHAHAHA ! t'es encore plus fatigué que la semaine dernière !!");
-      }      
+    //   if (jour == 'lundi') {
+    //     document.write("Demain on est que mardi");       
+    //   } 
+    //   else if (jour == "mardi") {
+    //     document.write("Demain c'est mercrediiiiiiii");       
+    //   } 
+    //   else if (jour == "mercredi") {
+    //     document.write("Demain c'est jeudi, on tient le bon bout");       
+    //   } 
+    //   else if (jour == "jeudi") {
+    //     document.write("Demain c'est vendredi, dernier jour de boulot");       
+    //   } 
+    //   else if (jour == "vendredi") {
+    //     document.write("Demain c'est le week-end !!!!!");       
+    //   }
+    //   else if (jour == "samedi") {
+    //     document.write("Demain c'est dimanche, dernière chance pour se reposer");       
+    //   }
+    //   else {
+    //     document.write("Demain c'est lundi HAHAHAHA ! t'es encore plus fatigué que la semaine dernière !!");
+    //   }      
 
 
   </script>

@@ -74,7 +74,6 @@ body {
 
 .container-fluid {
   background-color: #cbe6ff;
-  height: 100vh;
 }
 
 .banniere-titre {
@@ -102,6 +101,77 @@ h1 {
   border: none;
   color:#f1bf2a ;
 }
+
+/**************** carousel *****************/
+
+.outils > div {
+  background-color: #1e2337;
+  color: #fff;
+  padding: 2rem;
+}
+
+.slider {
+  background-image: url(../img/concrete_seamless.png);
+  width: 100%;
+  padding: 10rem;
+}
+
+.slider img {
+  margin-top: 5rem;
+  border: 20px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px 1px rgba(0, 0, 0, 0.75);
+  transform: rotate(-8deg);
+}
+
+/**************** loader *****************/
+
+#loader {
+  height: 100vh;
+  width: 100vw;
+  background-color: #cbe6ff;
+  position: fixed;
+  z-index: 100;
+}
+
+
+.icon-loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #61b3ff;
+  border-top: 10px solid #1e2337;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+  animation-name: loader;  /* Nom de la keyframe */
+  animation-duration: 1s; /* Durée de l'animation */
+  animation-iteration-count: infinite; /* Répétition de l'animation */
+  /* animation-timing-function: linear; /* La progression de l'animation pendant la durée de chaque cycle  */
+}
+
+.hide-loader {
+  display: none !important;
+}
+
+@keyframes loader {
+  /* 0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  } */
+
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/**************** keydown *****************/
+
+
+
 
 /**************** footer *****************/
 

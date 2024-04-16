@@ -9,10 +9,148 @@
 </head>
 <body class="container">
   <header class="border border-danger rounded-3 p-3">
-
+    <h1>Les fonctions en JavaScript</h1>
   </header>
   <main>
-    
+    <section>
+
+      <h2>Les fonctions (function)</h2>
+      <p>Un des grands principes en programmation est d'avoir un code DRY (Don't Repeat Yourself).<br>
+      Les fonctions sont des blocs de code réutilisables et modifiables, à volonté qui peuvent être appelés pour effectuer une tâche spécifique. Elles sont définies à l'aide du mot-clé function </p>
+      <h3>SYNTAXES</h3>
+      <br>
+      <h4>1 -</h4>
+      <p>Cette syntaxe définit une fonction nommée maFonction</p>
+      <pre class="border border-info rounded">
+  <span class="vertComm">// La fonction nommée va être appelée en utilisant ce nom</span>
+  
+  <span class="bleuFonce">function</span> <span class="jaune">maFonction</span> <span class="orange">() {</span>   
+    <span class="vertComm">// corps de la fonction</span>
+  <span class="orange">}</span>;
+      </pre>
+      <br>
+      <h4>2 -</h4>
+      <p>Cette syntaxe définit une fonction anonyme et l'assigne à une variable nommée maFonction1</p>
+      <pre class="border border-info rounded">
+  <span class="vertComm">// Fonction anonyme</span>
+  
+  <span class="bleuFonce">let</span> <span class="jaune">maFonction1</span> =  <span class="bleuFonce">function</span><span class="orange">() {</span>     
+    <span class="vertComm">// corps de la fonction</span>
+  <span class="orange">}</span>; 
+      </pre>
+      <br>
+      <h4>3 -</h4>
+      <p>Cette syntaxe est plus concise, elle est introduite dans ECMAScript 6 (ES6)</p>
+      <pre class="border border-info rounded">
+  <span class="vertComm">// Fonction fléchée</span>
+  
+  <span class="orange">()</span> <span class="bleuFonce">=></span> <span class="orange">{</span>
+    <span class="vertComm">// corps de la fonction</span>
+  <span class="orange">}</span>;
+      </pre>
+      <h3>INITIALISATION</h3>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">function</span> <span class="jaune">greetings</span> <span class="orange">() {</span>    <span class="vertComm">// Déclaration d'une fonction</span>
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">"Hello World"</span><span class="violet">)</span>;
+  <span class="orange">}</span>;
+
+  <span class="jaune">greetings</span> <span class="orange">()</span>;    
+  <span class="vertComm">// Appel de la fonction dans le script et déclencher ses instructions</span>
+      </pre>
+      <p id="visuGreetings"></p>
+    </section>
+    <br><br>
+    <section>
+      <h2>parametrage de la fonction</h2>
+      <p>Afin que notre fonction soit paramétrable, nous allons utiliser des paramètres. <br>
+      Les paramètres sont comme des variables / options, qui sont utilisées dans la fonction. <br>
+      Ces paramètres sont fournit en tant qu'arguments lors de l'appel de la fonction.
+      </p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">let</span> <span class="bleuClair">prenom</span> = <span class="jaune">prompt</span><span class="orange">(</span><span class="brique">"Entrez votre prénom"</span><span class="orange">)</span>;
+
+  <span class="bleuFonce">function</span> <span class="jaune">bonjour</span><span class="orange">(</span><span class="bleuClair">prenom</span><span class="orange">) {</span>
+  <span class="vertComm">// à la déclaration de la fonction, (prenom) est un paramètre</span>
+    document.write(`Bonjour ${prenom}`);
+    <span class="orange">}</span>;
+
+  bonjour(prenom);
+  <span class="vertComm">// à l'appel de la fonction, (prenom) est considéré comme un argument</span>
+      </pre>
+      <p id="visuPrenom"></p>
+      <br>
+      <pre class="border border-info rounded">
+  let profession = prompt("Entrez votre profession");
+
+  <span class="bleuFonce">function</span> bonjour1(prenom, profession) {
+    document.write(`Bonjour, je m'appelle ${prenom}, je travaille en tant que ${profession}`);
+  };
+
+  bonjour1(prenom, profession);
+      </pre>
+      <p id="visuProfession"></p>
+    </section>
+    <br><br>
+    <section>
+      <h2>Retourner une valeur</h2>
+      <p>Les fonctions peuvent retourner une valeur en utilisant le mot-clé return. <br>
+      Si aucune valeur n'est retournée, la fonction retourne undefined.
+      </p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">function</span> calculAge(annee, naissance) {
+    <span class="vertComm">
+      // Extraire le résultat pour le stocker dans une variable
+      // Pour ce faire, nous utilisons un return
+    </span>
+
+    return age = annee - naissance;
+
+    <span class="vertComm">
+      // Tout ce qui se trouve après un return ne s'exécute pas
+      // Un return arrête complètement l'exécution d'une fonction
+    </span>
+  };
+
+  calculAge(2024, 1989);
+
+  document.write(age);
+      </pre>
+      <p id="visuCalculAge"></p>
+    </section>
+    <section>
+      <h2>portee</h2>
+      <p>Les variables définies à l'intérieur d'une fonction sont locales à cette fonction</p>
+      <p>les variables déclarées à l'intérieur d'une fonction sans utiliser var, let ou const seront automatiquement considérées comme globales
+      </p>
+      <pre class="border border-info rounded">
+  <span class="bleuFonce">function</span> maFonction3() {
+    maVariable = 10;
+  };
+
+  maFonction3();
+  document.write(maVariable);
+  <span class="vertComm">//  Affichera 10 même si maVariable n'a pas été déclarée en dehors de la fonction</span>
+      </pre>
+      <p id="variable10"></p>
+      <br><br>
+      <p>Depuis ES6 (ECMAScript 6, en 2015), il existe une autre façon d'écrire nos fonctions</p>
+      <h4>FONCTION FLÉCHÉE (arrow functions)</h4>
+      <p>Les arrow functions ont une syntaxe plus concise pour définir des fonctions.</p>
+      <p>Elles sont devenues très populaires en raison de leur simplicité et de leur lisibilité</p>
+      <pre class="border border-info rounded">
+  let fonctionFlechee = (x,y) => {
+    console.log(x + y);
+  };
+      </pre>
+      <br>
+      <p>Si la fonction ne prend qu'un seul paramètre, vous pouvez même omettre les parenthèses autour du paramètre :</p>
+      <pre class="border border-info rounded">
+  param => {
+    <span class="vertComm">// Corps de la fonction</span>
+  };
+      </pre>
+    </section>
+
   </main>
   <footer>
     <button><a href="08_les_boucles.html">&lt;&lt; 8</a></button>
@@ -23,6 +161,17 @@
   
   
   <script>
+
+    let visuGreetings = document.querySelector("#visuGreetings");
+    let visuPrenom = document.querySelector("#visuPrenom");
+    let visuProfession = document.querySelector("#visuProfession");
+    let visuCalculAge = document.querySelector("#visuCalculAge");
+    let variable10 = document.querySelector("#variable10");
+
+    
+
+
+
     /*
     ╔═════════════════════════════════════════════╗
     ║          Les fonctions (function)           ║
@@ -70,7 +219,8 @@
 
     function greetings() {    // Déclaration d'une fonction
     
-      document.write("Hello World <br>");
+      //document.write("Hello World <br>");
+      visuGreetings.textContent = "Hello World";
 
     };
 
@@ -82,23 +232,25 @@
     //let prenom = prompt("Entrez votre prénom");
 
     function bonjour(prenom) {    // à la déclaration de la fonction, (prenom) est un paramètre
-      document.write(`Bonjour ${prenom} <br>`);
+      //document.write(`Bonjour ${prenom} <br>`);
+      visuPrenom.textContent = `Bonjour ${prenom}`;
     };
 
-    //bonjour(prenom);    // à l'appel de la fonction, (prenom) est considéré comme un argument
+    bonjour(prenom);    // à l'appel de la fonction, (prenom) est considéré comme un argument
     //    Vous pouvez mettre autant de paramètres que nécéssaire
-    document.write(`<br> <br>`);
+    //document.write(`<br> <br>`);
 
 
     //let profession = prompt("Entrez votre profession");
 
     function bonjour1(prenom, profession) {
-      document.write(`Bonjour, je suis ${prenom}, je travaille en tant que ${profession} <br>`);
+      //document.write(`Bonjour, je suis ${prenom}, je travaille en tant que ${profession} <br>`);
+      visuProfession.textContent = `Bonjour, je m'appelle ${prenom}, je travaille en tant que ${profession}`;
     };
 
-    //bonjour1(prenom, profession);
+    bonjour1(prenom, profession);
 
-    document.write(`<br> <br>`);
+    //document.write(`<br> <br>`);
 
 
      /*
@@ -119,7 +271,8 @@
 
         calculAge(2024, 1989);
 
-        document.write(age);
+        //document.write(age);
+        visuCalculAge.textContent = age;
 
 
      /*
@@ -136,7 +289,8 @@
     };
 
     maFonction3();
-    document.write(maVariable);   //  Affichera 10 même si maVariable n'a pas été déclarée en dehors de ma foncvction
+    //document.write(maVariable); 
+    variable10.textContent = maVariable;  //  Affichera 10 même si maVariable n'a pas été déclarée en dehors de ma foncvction
 
     //Depuis ES6 (ECMAScript 6, en 2015), il existe une autre façon d'écrire nos fonctions
 
@@ -167,13 +321,13 @@
     //let nbr1 = prompt("Donnez un nombre");
     //let nbr2 = prompt("Donnez un autre nombre");
     
-    function multiplicate(nbr1, nbr2) {
-      document.write(`${nbr1} multiplié par ${nbr2} donne le résultat = ${nbr1 * nbr2} <br>`);
-    };
+    // function multiplicate(nbr1, nbr2) {
+    //   document.write(`${nbr1} multiplié par ${nbr2} donne le résultat = ${nbr1 * nbr2} <br>`);
+    // };
 
-    //multiplicate(nbr1, nbr2);
+    // //multiplicate(nbr1, nbr2);
 
-    multiplicate(4, 3);
+    // multiplicate(4, 3);
 
 
     // Exercice 2
@@ -191,34 +345,34 @@
       Attention : Vérifier si l'utilisateur a bien saisi le prénom et le nom, que le prénom est bien une chaîne de caractères et l'âge est bien un nombre entier.
     */
 
-    function Hello() {
-      let firstName = prompt("Quel est votre prénom ? ");
+    // function Hello() {
+    //   //let firstName = prompt("Quel est votre prénom ? ");
 
-      if (isNaN(firstName)) {
+    //   if (isNaN(firstName)) {
 
-        let birth = prompt(`Bonjour ${firstName}, quel âge as-tu ?`);
+    //     //let birth = prompt(`Bonjour ${firstName}, quel âge as-tu ?`);
 
-        if (!isNaN(parseInt(birth)) ) {
+    //     if (!isNaN(parseInt(birth)) ) {
 
-          let date = new Date()   // Date() permet de créer une instance qui représente un moment précis dans le temps.
-          let anneeDeNaissance = date.getFullYear() - birth;     // getFullYear = retourne l'année entière (méthode js)
-          confirm(`Vous êtes né en ${anneeDeNaissance}`);
-          document.write(`Bonjour ${firstName}, tu as ${birth} ans et tu es né en ${anneeDeNaissance}`);
+    //       let date = new Date()   // Date() permet de créer une instance qui représente un moment précis dans le temps.
+    //       let anneeDeNaissance = date.getFullYear() - birth;     // getFullYear = retourne l'année entière (méthode js)
+    //       confirm(`Vous êtes né en ${anneeDeNaissance}`);
+    //       document.write(`Bonjour ${firstName}, tu as ${birth} ans et tu es né en ${anneeDeNaissance}`);
 
-        } else {
+    //     } else {
 
-          alert('Entrez votre âge SVP');
-          Hello();
-        }
-      } else {
+    //       alert('Entrez votre âge SVP');
+    //       Hello();
+    //     }
+    //   } else {
 
-        alert('Entrez votre prénom SVP');
-        Hello();
-      }
-    }
-    Hello();
+    //     alert('Entrez votre prénom SVP');
+    //     Hello();
+    //   }
+    // }
+    // Hello();
 
-    document.write(`<br> <br>`);
+    // document.write(`<br> <br>`);
 
     
 
