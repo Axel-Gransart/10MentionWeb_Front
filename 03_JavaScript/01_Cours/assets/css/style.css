@@ -18,6 +18,7 @@ h3 {
 pre {
   font-size: 1rem;
   padding: 0.5rem 0;
+  background-color: #D2F4EA !important;
 }
 
 article {
@@ -36,15 +37,15 @@ p, li {
 }
 
 .bleuClair {
-  color: #4FA3A8;
+  color: #3D8BFD;
 }
 
 .vertClair {
-  color: #8FCF3C;
+  color: #198754;
 }
 
 .vertComm {
-  color: #1D702D;
+  color: #0A3622;
 }
 
 .orange {
@@ -52,7 +53,7 @@ p, li {
 }
 
 .jaune {
-  color: #FFB418;
+  color: #CC9A06;
 }
 
 .violet {

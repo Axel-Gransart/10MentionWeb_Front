@@ -71,22 +71,22 @@
 
   <span class="bleuFonce">function</span> <span class="jaune">bonjour</span><span class="orange">(</span><span class="bleuClair">prenom</span><span class="orange">) {</span>
   <span class="vertComm">// à la déclaration de la fonction, (prenom) est un paramètre</span>
-    document.write(`Bonjour ${prenom}`);
-    <span class="orange">}</span>;
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">`Bonjour</span> <span class="bleuFonce">${</span><span class="bleuClair">prenom</span><span class="bleuFonce">}</span><span class="brique">`</span><span class="violet">)</span>;
+  <span class="orange">}</span>;
 
-  bonjour(prenom);
+  <span class="jaune">bonjour</span><span class="orange">(</span><span class="bleuClair">prenom</span><span class="orange">)</span>;
   <span class="vertComm">// à l'appel de la fonction, (prenom) est considéré comme un argument</span>
       </pre>
       <p id="visuPrenom"></p>
       <br>
       <pre class="border border-info rounded">
-  let profession = prompt("Entrez votre profession");
+  <span class="bleuFonce">let</span> <span class="bleuClair">profession</span> = <span class="jaune">prompt</span><span class="orange">(</span><span class="brique">"Entrez votre profession"</span><span class="orange">)</span>;
 
-  <span class="bleuFonce">function</span> bonjour1(prenom, profession) {
-    document.write(`Bonjour, je m'appelle ${prenom}, je travaille en tant que ${profession}`);
-  };
-
-  bonjour1(prenom, profession);
+  <span class="bleuFonce">function</span> <span class="jaune">bonjour1</span><span class="orange">(</span><span class="bleuClair">prenom</span>, <span class="bleuClair">profession</span><span class="orange">) {</span>
+    <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="violet">(</span><span class="brique">`Bonjour, je m'appelle</span> <span class="bleuFonce">${</span><span class="bleuClair">prenom</span><span class="bleuFonce">}</span>, <span class="brique">je travaille en tant que</span> <span class="bleuFonce">${</span><span class="bleuClair">profession</span><span class="bleuFonce">}</span><span class="brique">`</span><span class="violet">)</span>;
+  <span class="orange">}</span>;
+ 
+  <span class="jaune">bonjour1</span><span class="orange">(</span><span class="bleuClair">prenom</span>, <span class="bleuClair">profession</span><span class="orange">)</span>;
       </pre>
       <p id="visuProfession"></p>
     </section>
@@ -97,23 +97,24 @@
       Si aucune valeur n'est retournée, la fonction retourne undefined.
       </p>
       <pre class="border border-info rounded">
-  <span class="bleuFonce">function</span> calculAge(annee, naissance) {
+  
+  <span class="bleuFonce">function</span> <span class="jaune">calculAge</span><span class="orange">(</span><span class="bleuClair">annee</span>, <span class="bleuClair">naissance</span><span class="orange">) {</span>
     <span class="vertComm">
       // Extraire le résultat pour le stocker dans une variable
       // Pour ce faire, nous utilisons un return
     </span>
 
-    return age = annee - naissance;
+    <span class="violet">return</span> <span class="bleuClair">age</span> = <span class="bleuClair">annee</span> - <span class="bleuClair">naissance</span>;
 
     <span class="vertComm">
       // Tout ce qui se trouve après un return ne s'exécute pas
       // Un return arrête complètement l'exécution d'une fonction
     </span>
-  };
+  <span class="orange">}</span>;
 
-  calculAge(2024, 1989);
-
-  document.write(age);
+  <span class="jaune">calculAge</span><span class="orange">(</span><span class="vertClair">2024</span>, <span class="vertClair">1989</span><span class="orange">)</span>;
+  
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">age</span><span class="orange">)</span>; 
       </pre>
       <p id="visuCalculAge"></p>
     </section>
@@ -123,12 +124,13 @@
       <p>les variables déclarées à l'intérieur d'une fonction sans utiliser var, let ou const seront automatiquement considérées comme globales
       </p>
       <pre class="border border-info rounded">
-  <span class="bleuFonce">function</span> maFonction3() {
-    maVariable = 10;
-  };
+  <span class="bleuFonce">function</span> <span class="jaune">maFonction3</span><span class="orange">() {</span>   
+    <span class="bleuClair">maVariable</span> = <span class="vertClair">10</span>;
+  <span class="orange">}</span>;
+  
+  <span class="jaune">maFonction3</span><span class="orange">()</span>;
 
-  maFonction3();
-  document.write(maVariable);
+  <span class="bleuClair">document</span>.<span class="jaune">write</span><span class="orange">(</span><span class="bleuClair">maVariable</span><span class="orange">)</span>; 
   <span class="vertComm">//  Affichera 10 même si maVariable n'a pas été déclarée en dehors de la fonction</span>
       </pre>
       <p id="variable10"></p>
@@ -138,16 +140,16 @@
       <p>Les arrow functions ont une syntaxe plus concise pour définir des fonctions.</p>
       <p>Elles sont devenues très populaires en raison de leur simplicité et de leur lisibilité</p>
       <pre class="border border-info rounded">
-  let fonctionFlechee = (x,y) => {
-    console.log(x + y);
-  };
+  <span class="bleuFonce">let</span> <span class="jaune">fonctionFlechee</span> = <span class="orange">(</span><span class="bleuClair">x</span>,<span class="bleuClair">y</span><span class="orange">)</span> <span class="bleuFonce">=></span> <span class="orange">{</span>
+    <span class="bleuClair">console</span>.<span class="jaune">log</span><span class="violet">(</span><span class="bleuClair">x</span> + <span class="bleuClair">y</span><span class="violet">)</span>; 
+  <span class="orange">}</span>;
       </pre>
       <br>
       <p>Si la fonction ne prend qu'un seul paramètre, vous pouvez même omettre les parenthèses autour du paramètre :</p>
       <pre class="border border-info rounded">
-  param => {
+  <span class="bleuClair">param</span> <span class="bleuFonce">=></span> <span class="orange">{</span>
     <span class="vertComm">// Corps de la fonction</span>
-  };
+  <span class="orange">}</span>;
       </pre>
     </section>
 
@@ -155,7 +157,7 @@
   <footer>
     <button><a href="08_les_boucles.html">&lt;&lt; 8</a></button>
     <button><a href="01_variables.html">&lt;&lt;&lt;&lt; 1</a></button>
-    <button><a href="../02_DOM/01_introduction.html">Continuer le cours >> le DOM</a></button>
+    <!-- <button><a href="../02_DOM/01_introduction.html">Continuer le cours >> le DOM</a></button> -->
   </footer>
 
   
@@ -229,7 +231,7 @@
     //  Afin que notre fonction soit paramétrable, nous allons utiliser des paramètres.
     //  Les paramètres sont comme des variables / options, qui sont utilisées dans la fonction. Ces paramètres sont fournit en tant qu'arguments lors de l'appel de la fonction.
     
-    //let prenom = prompt("Entrez votre prénom");
+    let prenom = prompt("Entrez votre prénom");
 
     function bonjour(prenom) {    // à la déclaration de la fonction, (prenom) est un paramètre
       //document.write(`Bonjour ${prenom} <br>`);
@@ -241,7 +243,7 @@
     //document.write(`<br> <br>`);
 
 
-    //let profession = prompt("Entrez votre profession");
+    let profession = prompt("Entrez votre profession");
 
     function bonjour1(prenom, profession) {
       //document.write(`Bonjour, je suis ${prenom}, je travaille en tant que ${profession} <br>`);
