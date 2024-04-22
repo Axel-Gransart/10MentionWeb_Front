@@ -2,7 +2,10 @@
 // alert("La feuille de script est bien liée");
 
 
-// DARK MODE
+/*
+    ╔═════════════════════════════════════════════╗
+    ║                  DARK MODE                  ║
+    ╚═════════════════════════════════════════════╝ */
 
 let switchBox = document.querySelector('.switch');
 // Je stocke l'élément div.switch
@@ -81,6 +84,12 @@ bpAbo.addEventListener('click', function() {
     bpAbo.innerText = "Abonnez-vous";
   }
 });
+
+/*
+    ╔═════════════════════════════════════════════╗
+    ║                   Cookies                   ║
+    ╚═════════════════════════════════════════════╝ */
+
 
 
 let bpCookies = document.querySelector(".btn-success");

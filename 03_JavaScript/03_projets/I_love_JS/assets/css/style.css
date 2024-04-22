@@ -20,6 +20,14 @@ body {
   font-size: 1.4rem;
 }
 
+main > div {
+  min-height: 75vh;
+}
+
+.hidden {
+  display: none;
+}
+
 /********************* Barre de navigation desktop *********************/
 
 .navbar-desktop {
@@ -168,10 +176,91 @@ h1 {
   }
 }
 
-/**************** keydown *****************/
+/**************** keyboard *****************/
+
+.mario {
+  position: relative;
+}
+
+#mario {
+  position: absolute;
+  left: 30px;
+  top: 110px;
+}
+
+/**************** Formulaire *****************/
+
+.container {
+  width: 50%;
+}
+
+.header {
+  background-color: #1e2337;
+  border-bottom: 1px solid #fff;
+  padding: 2rem 4rem;
+}
+
+form {
+  padding: 3rem 4rem;
+}
+
+.form-control {
+  border: 2px solid #1E2337;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.form-control i:not(.fa-eye-slash, .fa-question, .fa-eye) {
+  position: absolute;
+  top: 45px;
+  right: 15px;
+  visibility: hidden;
+}
+
+.form-control label {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.form-control input {
+  border: 2px solid #cbe6ff;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 1rem;
+}
+
+.form-control .fa-question {
+  background-color: #61b3ff;
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+.mdp p {
+  border: 1px solid #CBE6FF;
+  width: 150px;
+  font-size: .8rem;
+  background-color: #CBE6FF;
+  padding: .4rem;
+  position: absolute;
+  bottom: 50px;
+  left: 105px;
+}
 
 
 
+button {
+  background-color: #61b3ff;
+  border: 2px solid #1E2337;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1.6rem;
+  width: 100%;
+}
 
 /**************** footer *****************/
 
