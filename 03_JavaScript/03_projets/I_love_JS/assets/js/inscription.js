@@ -43,16 +43,13 @@
       // } else {
       //   icon.classList.remove("bi-moon-fill")
       //   icon.classList.add("bi-sun-fill")
-      // }
-    
+      // }    
     };
     
-    /*
-        ╔═════════════════════════════════════════════╗
-        ║                   Cookies                   ║
-        ╚═════════════════════════════════════════════╝ */
-    
-    
+/*
+    ╔═════════════════════════════════════════════╗
+    ║                   Cookies                   ║
+    ╚═════════════════════════════════════════════╝ */    
     
     let bpCookies = document.querySelector(".btn-success");
     let divCookies = document.querySelector(".cookies");
@@ -61,10 +58,10 @@
       divCookies.style.bottom = "auto";
     })
     
-    /*
-        ╔═════════════════════════════════════════════╗
-        ║               Partie loader                 ║
-        ╚═════════════════════════════════════════════╝ */
+/*
+    ╔═════════════════════════════════════════════╗
+    ║               Partie loader                 ║
+    ╚═════════════════════════════════════════════╝ */
     
     let loader = document.querySelector("#loader");
     
@@ -72,20 +69,25 @@
       loader.classList.add("hide-loader");
     })
 
-    /*
-        ╔═════════════════════════════════════════════╗
-        ║                 Partie mdp                  ║
-        ╚═════════════════════════════════════════════╝ */
+/*
+    ╔═════════════════════════════════════════════╗
+    ║                 Partie mdp                  ║
+    ╚═════════════════════════════════════════════╝ */
 
     let interrogation = document.querySelector(".fa-question");
     let mdpText = document.querySelector(".mdp p");
 
-    interrogation.addEventListener('click', ()=> {
-      mdpText.classList.toggle('hidden');
-    })
+    // interrogation.addEventListener('click', ()=> {
+    //   mdpText.classList.toggle('hidden');
+    // })
 
-    
-    
+    document.addEventListener('click', (event)=> {
+      if (event.target === interrogation) {
+        mdpText.classList.toggle('hidden');
+      } else {
+        mdpText.classList.add('hidden');
+      }
+    })    
 
     let afficheMdp = document.querySelector(".fa-eye-slash");
     let password = document.querySelector("#password");
@@ -101,18 +103,20 @@
           afficheMdp.classList.replace("fa-eye", "fa-eye-slash"); 
           break;
       }
-    })
+    })    
 
 /*
-        ╔═════════════════════════════════════════════╗
-        ║           Validation du formulaire          ║
-        ╚═════════════════════════════════════════════╝ */  
+    ╔═════════════════════════════════════════════╗
+    ║           Validation du formulaire          ║
+    ╚═════════════════════════════════════════════╝ */  
 
     let form = document.querySelector("form");
     let username = document.querySelector("#username");
     let email = document.querySelector("#email");
     let password2 = document.querySelector("#password2");
+    let message = "";
 
+    let filtreMail = /.+@.+\..+/;
 
     form.addEventListener('submit', (e)=> {
       e.preventDefault(); // Une méthode utilisée dans les évènements JS pour empêcher le comportement par défaut associé à un évènement de se produire.
@@ -125,16 +129,32 @@
       let emailValue = email.value.trim();
       let passwordValue = password.value.trim();
       let password2Value = password2.value.trim();
-      // trim() en js est utilisée pour supprimer les espaces blanc au début et à la fin d'une chaîne de caractères. 
-
-
+      // trim() en js est utilisé pour supprimer les espaces blanc au début et à la fin d'une chaîne de caractères. 
 
       console.log(userValue);
       console.log(userValue.length);
       console.log(emailValue);
       console.log(passwordValue);
 
+      if (userValue == "") { // Je vérifie si le champs username est vide
+        message = "Le nom d'utilisateur ne peux pas être vide";
+        // Si c'est le cas, je définis un message d'erreur approprié
+      }
+
+      setError(username, message)
+
       if (userValue != "" && emailValue != "" && passwordValue != "" && password2Value == passwordValue) {
-        
+        form.submit();
+      }
+      else {
+        alert("Le formulaire n'est pas bien rempli");
       }
     }
+
+    function setError(element, infos) {
+      let formControl = element.parentElement; // Je stocke le parent de l'élément qui contient l'erreur (la div avec la classe form-control)
+
+      let small = formControl.querySelector("small");
+    }
+
+  
