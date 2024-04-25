@@ -28,6 +28,10 @@ main > div {
   display: none;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 /********************* Barre de navigation desktop *********************/
 
 .navbar-desktop {
@@ -249,6 +253,49 @@ form {
   bottom: 50px;
   left: 105px;
 }
+
+.form-control small {
+  visibility: hidden;
+}
+
+.form-control.error small {
+  color: red;
+  visibility: visible;
+}
+
+.form-control.ok small {
+  color: green;
+  visibility: visible;
+}
+
+.form-control.error .fa-exclamation {
+  color: red;
+  visibility: visible !important;
+}
+
+.form-control.ok .fa-circle-check {
+  color: green;
+  visibility: visible !important;
+}
+
+.form-control.error input {
+  border-color: red !important;
+  color: red;
+ }
+ 
+ .form-control.ok input {
+   border-color: green !important;
+   color: green;
+ }
+ 
+ .notGood ~ small {
+   color: red !important;
+ }
+ 
+ .good ~ small {
+   color: green !important;
+ }
+ 
 
 
 
