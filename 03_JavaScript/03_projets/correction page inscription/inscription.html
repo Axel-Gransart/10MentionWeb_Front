@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport"content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- Lien google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+        <!--  Lien vers icones bootstrap -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!--  lien vers la feuille de style perso -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <title>I Love JS</title>
+    </head>
+
+    <body>
+
+        <div id="loader" class="d-flex justify-content-center align-items-center ">
+            <div class="icon-loader"></div>
+        </div>
+        
+        <header>
+            <!-- place navbar here -->
+            <!-- Navbar pour desktop -->
+            <nav class="navbar-desktop d-flex justify-content-center align-items-center">
+                <a href="index.html">Accueil</a>
+                <a href="services.html">Services</a>
+                <a href="inscription.html">Inscription</a>
+                <div class="switch">
+                    <!-- Icone du soleil -->
+                    <i class="bi bi-sun-fill"></i>
+                    <div class="btn"></div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container-fluid d-flex flex-column align-items-center ">
+                <div class="container my-5">
+                    <div class="header">
+                        <h2 class="text-center fst-italic fs-1 text-white ">Créer un compte</h2>
+                    </div>
+
+                    <form action="index.html" method="post" autocomplete="off" class="bg-white" id="form">
+                        <div class="form-control">
+                            <label for="username">Nom d'utilisateur</label>
+                            <input type="text" name="username" id="username" placeholder="John">
+                            <i class="fa-solid fa-exclamation"></i>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <small>Message d'erreur</small>
+
+                        </div>
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="john@gmail.com">
+                            <i class="fa-solid fa-exclamation"></i>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <small>Message d'erreur</small>
+
+                        </div>
+                        <div class="form-control">
+                            <div class="d-flex justify-content-between align-items-center ">
+                                <div class="mdp">
+                                    <label for="password">Mot de passe </label>
+                                    <i class="fa-solid fa-question"></i>
+                                    <p>
+                                        Au moins un chiffre, un caractère spécial ( !@#$%^&* ),lettres minuscules et majuscules et  la longueur du mot de passe doit être comprise entre 8 et 12 caractères.
+                                    </p>
+                                </div>
+ 
+                                <!-- <i class="fa-solid fa-eye"></i> -->
+                                <i class="fa-solid fa-eye-slash"></i>
+                            </div>
+                            <input type="password" name="password" id="password">
+                            <i class="fa-solid fa-exclamation"></i>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <small>Message d'erreur</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="password2">Confirmation du mot de passe</label>
+                            <input type="password"  id="password2">
+                            <i class="fa-solid fa-exclamation"></i>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <small>Message d'erreur</small>
+                            
+                        </div>
+                        <button type="submit"><i class="fa-solid fa-user-plus"></i> S'inscrire</button>
+                    </form>
+
+                </div>
+                
+            </div>
+        </main>
+        <footer class="d-flex pt-5">
+            <!-- place footer here -->
+            <ul class="col-4 d-flex flex-column justify-content-center align-items-center">
+                <li>
+                    <a href="#">Lien</a>
+                </li>
+                <li>
+                    <a href="#">Lien</a>
+                </li>
+                <li>
+                    <a href="#">Lien</a>
+                </li>
+        </ul>
+        <ul class=" col-4 d-flex flex-column justify-content-center align-items-center">
+                <li>
+                    <a href="#">Lien</a>
+                </li>
+                <li>
+                    <a href="#">Lien</a>
+                </li>
+                <li>
+                    <a href="#">Lien</a>
+                </li>
+        </ul>
+        <ul class=" col-4 d-flex flex-column justify-content-center align-items-center">
+                <li>
+                    <a href="#">Lien</a>
+                </li>
+                <li>
+                    <a href="#">Lien</a>
+                </li>
+                <li>
+                    <a href="#">Lien</a>
+                </li>
+        </ul>
+        </footer>
+
+        <!-- <div class="cookies d-flex justify-content-between align-items-center">
+            <div class="cookies-texte">
+                <p>En poursuivant, vous acceptez l'utilisation des cookies par le site afin de vous proposer des contenus adaptés et réaliser des statistiques.</p>
+            </div>
+            <div class="cookies-btn">
+                <button class="btn-success">
+                    Acceptez les cookies
+                </button>
+                <button class="btn-deny">
+                    Paramètrer les cookies
+                </button>
+            </div>
+        </div> -->
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+       <!-- Script fontawesome -->
+        <script src="https://kit.fontawesome.com/0dd649265f.js" crossorigin="anonymous"></script>
+         <!-- le script perso -->
+        <script src="assets/js/inscription.js"></script>
+    </body>
+</html>

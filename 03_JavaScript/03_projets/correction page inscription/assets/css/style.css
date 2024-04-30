@@ -1,0 +1,446 @@
+
+/* Feuille de style perso */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+:root {
+
+    font-size: 62.5%;
+    --font-lobster : "Lobster", sans-serif;
+    --font-Shadows-Into : "Shadows Into Light", cursive;
+    --font-general : Arial, Helvetica, sans-serif;
+
+}
+body {
+    font-size: 1.4rem;
+}
+/*  Barre de navigation desktop */
+
+.navbar-desktop {
+    
+    background-color: 
+#fff;
+    font-weight: bolder;
+    height: 8rem;
+
+}
+
+.navbar-desktop a {
+    font-family: var(--font-Shadows-Into);
+    font-size: 2rem;
+    padding: 5rem;
+    color: 
+#61b3ff;
+
+}
+
+.switch {
+    width: 90px;
+    height: 30px;
+    background-color: 
+#61b3ff;
+    border-radius: 15px;
+    border: 1px solid 
+#61b3ff;
+    position: relative; /* l'élément parent en position relative : cela permet de positionner l'incône en absolute*/
+
+}
+.switch i {
+    color: 
+#FFd363;
+    font-size: 1.8rem;
+    position: absolute; /* position absolute par rapport à la div parent .switch*/
+    right: 20px;
+    
+}
+
+.btn {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: 
+#333;
+    border: 1px solid 
+#61b3ff;
+    position: absolute;
+    top: -1px ;
+    left: -1px ;
+}
+
+.btn:hover {
+    background-color: 
+#333 !important;
+}
+
+/* Le corps de la page  */
+
+.container-fluid {
+
+    background-color: 
+#CBE6FF;
+
+}
+
+.banniere-titre {
+    margin-bottom: 1rem;
+}
+
+h1 {
+
+    font-family: var(--font-lobster);
+    padding: 5rem 0 7rem;
+}
+
+
+
+/* **************  Style pour le dark mode ***************** */
+
+.nav-dark {
+
+     background-color: 
+#333;
+}
+.container-change {
+
+    background-color: 
+#2C3C54;
+}
+
+.lienDarkMode {
+    color: 
+#fff !important;
+}
+
+.btn-change {
+    right: -1px;
+    left: auto;
+}
+
+.icone-change {
+
+    left : 8px
+
+}
+
+.switch-change {
+
+    background-color: 
+#2C3C54;
+}
+.btn-dark{
+    background-color: 
+#fff;
+}
+.btn-dark:hover{
+    background-color: 
+#fff !important;
+}
+
+.titre{
+
+    color: 
+#fff;
+}
+
+/* ***************  Video youtube ****************** */
+
+.bloc-btn {
+    width: 100%;
+    margin: 0 auto;
+}
+.bloc-btn .bi:not(.bi-check)  {
+    font-size: 3.5rem;
+}
+.btn-abonner {
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: 
+#1E2337;
+    border: none;
+    color: 
+#f1bf2a;
+}
+
+
+/* ***************  cookies ****************** */
+
+    .cookies {
+        background-color: 
+grey;
+        padding: 3rem;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        opacity: 1;
+        transition: .5s;
+
+    }
+
+    .cookies button{
+        color: 
+white;
+        padding: 1rem;
+        margin: 1rem;
+        border: none;
+        border-radius: 10px;
+
+    }
+
+    .btn-success{
+        background-color: 
+#1E2337;
+    }
+    .btn-deny{
+        background-color: 
+blue;
+    }
+
+
+/**************** carousel *****************/
+
+.outils > div {
+
+    background-color: 
+#1E2337;
+    color:
+#fff;
+    padding: 2rem;
+}
+.slider {
+    background-image: url(../img/concrete_seamless.png);
+    width: 100%;
+    padding: 10rem;
+
+}
+
+.slider img  {
+    margin-top: 5rem;
+    border: 20px solid 
+#fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 16px 1px 
+rgba(0,0,0,0.75);
+    transform: rotate(-8deg);
+}
+
+/**************** loader *****************/
+
+#loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: 
+#CBE6FF;
+    position: fixed;
+    z-index: 1;
+}
+.icon-loader {
+    width: 100px;
+    height: 100px;
+    border: 10px solid 
+#61b3ff;
+    border-top: 10px solid 
+#1E2337;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 2px 
+rgba(0, 0, 0, 0.2);
+    animation-name: loader; /*Le nom de la keyframes*/
+    animation-duration: 1s; /*l'animation dure 1 seconde*/
+    animation-iteration-count: infinite; /*elle se répéte à l'infinie*/
+    animation-timing-function: linear;/*La progression de l'animation pendant la durée de chaqe cycle */
+
+
+}
+
+.hideLoader {
+    display: none !important;
+}
+
+@keyframes loader {
+    
+    /* Début de l'animation */
+    /* 0% {
+        transform: rotate(0deg);
+    } */
+    /* Fin de l'animation */
+    /* 100% {
+        transform: rotate(360deg);
+    } */
+
+
+    /* Début de l'animation */
+    from{
+        transform: rotate(0deg);
+    }
+    /* Fin de l'animation */
+    to {
+        transform: rotate(360deg);
+    }
+
+
+
+}
+
+/**************** Keyboard *****************/
+
+.mario {
+    position: relative;
+
+}
+
+#mario {
+    position: absolute;
+    left: 30px;
+    
+
+}
+
+
+/**************** Formulaire *****************/
+
+.container {
+    width: 50%;
+}
+
+.header {
+    background-color: 
+#1E2337;
+    border-bottom: 1px solid 
+#fff;
+    padding: 2rem 4rem;
+}
+
+form {
+    padding: 3rem 4rem;
+}
+
+.form-control {
+    border: 2px solid 
+#1E2337;
+    padding-bottom: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.form-control i:not(.fa-eye-slash, .fa-question, .fa-eye ) {
+    position: absolute;
+    top: 47px;
+    right: 15px;
+    visibility: hidden;
+}
+.form-control label {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.form-control input {
+
+    border: 2px solid 
+#CBE6FF;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    padding-left: 1rem;
+
+}
+
+.form-control .fa-question {
+    background-color: 
+#CBE6FF;
+    font-size: 1rem;
+    padding: .2rem;
+}
+
+.mdp p {
+    border: 1px solid 
+#CBE6FF;
+    width: 120px;
+    font-size: .8rem;
+    background-color: 
+#CBE6FF;
+    padding: .4rem;
+    position: absolute;
+    bottom: 50px;
+    left: 105px;
+    display: none;
+}
+
+.form-control small {
+
+    visibility: hidden;
+}
+
+
+.form-control.error small {
+    color: 
+red;
+    visibility: visible;
+}
+
+.form-control.error input {
+    border: 1px solid 
+red;
+}
+
+.form-control.error .fa-exclamation {
+    color: 
+red;
+    visibility: visible;
+}
+
+.form-control.success input {
+    border: 1px solid 
+green;
+}
+
+.form-control.success .fa-circle-check {
+    color:  
+green;
+    visibility: visible !important;
+
+}
+
+button {
+    background-color: 
+#61b3ff;
+    border: 2px solid 
+#1E2337;
+    color: 
+#fff;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+.apparition {
+    display: block !important;
+}
+
+
+/**************** footer *****************/
+
+
+footer {
+    background-color: 
+#1E2337;
+    margin: 0 !important;
+    
+}
+footer li {
+    padding: 7px;
+}
+
+footer li a{
+    color: 
+#fff;
+    font-size: 1.3rem;
+    
+}
