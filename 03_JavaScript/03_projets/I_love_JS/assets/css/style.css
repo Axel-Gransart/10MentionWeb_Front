@@ -1,6 +1,3 @@
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -11,16 +8,16 @@
 
 :root {
   font-size: 62.5%;
-  --font-lobster : "Lobster", sans-serif;
-  --font-shadows-into : "Shadows Into Light", cursive;
-  --font-general : Arial, Helvetica, sans-serif;
+  --font-lobster: "Lobster", sans-serif;
+  --font-shadows-into: "Shadows Into Light", cursive;
+  --font-general: Arial, Helvetica, sans-serif;
 }
 
 body {
   font-size: 1.4rem;
 }
 
-main > div {
+main>div {
   min-height: 75vh;
 }
 
@@ -35,7 +32,7 @@ main > div {
 /********************* Barre de navigation desktop *********************/
 
 .navbar-desktop {
-  background-color: #fff;  
+  background-color: #fff;
   font-weight: bold;
   height: 8rem;
 }
@@ -111,12 +108,13 @@ h1 {
   font-size: 2rem;
   background-color: #1e2337;
   border: none;
-  color:#f1bf2a ;
+  color: #f1bf2a;
+  width: 20rem;
 }
 
 /**************** carousel *****************/
 
-.outils > div {
+.outils>div {
   background-color: #1e2337;
   color: #fff;
   padding: 2rem;
@@ -154,9 +152,12 @@ h1 {
   border-top: 10px solid #1e2337;
   border-radius: 50%;
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
-  animation-name: loader;  /* Nom de la keyframe */
-  animation-duration: 1s; /* Durée de l'animation */
-  animation-iteration-count: infinite; /* Répétition de l'animation */
+  animation-name: loader;
+  /* Nom de la keyframe */
+  animation-duration: 1s;
+  /* Durée de l'animation */
+  animation-iteration-count: infinite;
+  /* Répétition de l'animation */
   /* animation-timing-function: linear; /* La progression de l'animation pendant la durée de chaque cycle  */
 }
 
@@ -175,6 +176,7 @@ h1 {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -264,8 +266,8 @@ form {
 }
 
 .form-control.ok small {
-  color: green;
-  visibility: visible;
+  color: green !important;
+  /* visibility: visible !important; */
 }
 
 .form-control.error .fa-exclamation {
@@ -274,29 +276,19 @@ form {
 }
 
 .form-control.ok .fa-circle-check {
-  color: green;
+  color: green !important;
   visibility: visible !important;
 }
 
 .form-control.error input {
   border-color: red !important;
   color: red;
- }
- 
- .form-control.ok input {
-   border-color: green !important;
-   color: green;
- }
- 
- .notGood ~ small {
-   color: red !important;
- }
- 
- .good ~ small {
-   color: green !important;
- }
- 
+}
 
+.form-control.ok input {
+  border-color: green !important;
+  color: green !important;
+}
 
 
 button {
@@ -315,13 +307,14 @@ button {
 footer {
   background-color: #1E2337;
   margin: 0 !important;
-  
+
 }
+
 footer li {
   padding: 7px;
 }
 
-footer li a{
+footer li a {
   color: #fff;
   font-size: 1.3rem;
 }
@@ -359,7 +352,7 @@ footer li a{
 .nav-dark {
   background-color: #333;
 }
- 
+
 .white-font {
   color: #fff !important;
 }
@@ -391,5 +384,5 @@ footer li a{
 }
 
 .btn-click {
-  color:#f1bf2a;
+  color: #f1bf2a;
 }
