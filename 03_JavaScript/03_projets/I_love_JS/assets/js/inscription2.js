@@ -120,6 +120,8 @@ let password2 = document.querySelector('#password2');
 let message = "";
 let myAlert = document.querySelector('#alert');
 let allFormControl = document.querySelectorAll('.form-control');
+let allMessage = form.querySelectorAll('small');
+let inputs = document.querySelectorAll('input');
 
 function setError(element, infos) {
   let formControl = element.parentElement; // je stock le parent de l'élement qui contienr l'erreur (la div avec la classe form-control)
@@ -152,81 +154,89 @@ form.addEventListener('submit', (event) => {
 
   let donnees = [usernameValue, emailValue, passwordValue, password2Value];
 
+  let regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,6}$/;
+
+  let regexPassWord = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,12}$/;
 
   // Username verify
 
   if (donnees.includes("")) {
+
     myAlert.innerHTML = '<p class="alert alert-danger" role="alert">Veuillez renseigner tout les champs</p>';
 
-    for (let form of allFormControl) {
-      form.className = "form-control error";
+    for (let input of inputs) {
+      setValidation(input, message);
     }
-
-  }
+  }  
+  
   else {
     myAlert.innerHTML = '';  
     
     if (!usernameValue.match(/^[a-zA-Z]+$/)) {
       message = 'Username ne\'est pas valide, username doit contenir que des lettres ';
-      setValidation(username, message);
-      
+      setValidation(username, message);      
     }
     else {
       let lengthUsername = usernameValue.length;
-      // console.log(lengthUsername);
       
       if (lengthUsername < 3) {
         message = "Username doit avoir au moins 3 caractéres";
-        setValidation(username, message);
-        
+        setValidation(username, message);        
       }
       else {
-        setValidation(username);
-        
+        setValidation(username);        
       }
     }
     
-    // email verify
-    
-    let regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,6}$/;
-    
+    // email verify    
     if (!regexEmail.test(emailValue)) {
       message = 'Email n\est pas valide';
-      setValidation(email, message);
-      
+      setValidation(email, message);      
     }
     else {
       setValidation(email);
     }
     
-    // password verify
-    
-    let regexPassWord = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,12}$/;
-    
+    // password verify    
     if (!regexPassWord.test(passwordValue)) {
       message = 'Le mot de passe n\'est pas valide';
       setValidation(password, message);
     }
     else {
-    setValidation(password);
+      setValidation(password);
     }
+
     // password2 verify
     if (password2Value != passwordValue) {
       message = 'La confirmation du mot de passe ne correspondent pas  ';
-      setValidation(password2, message);
-      
+      setValidation(password2, message);      
     }
     else {
-      setValidation(password2);
-      
+      setValidation(password2);      
     }
   }
+  if (myAlert.innerHTML == "" && message == "") {
+    
+    myAlert.innerHTML = '<p class="alert alert-success" role="alert">Votre compte à bien été crée <a href="#"> Connectez vous ici </a></p>';
+    
+  }
 });
+// else if (usernameValue.match(/^[a-zA-Z]+$/) && regexEmail.test(emailValue) && regexPassWord.test(passwordValue) && password2Value == passwordValue) {
+
+//   myAlert.innerHTML = '<p class="alert alert-success" role="alert">Votre compte à bien été crée</p>';
+
+//   for (let form of allFormControl) {
+//     form.className = "form-control ok";
+//   }
+//   for (let small of allMessage) {
+//     small.innerText = 'Ce champs est bien renseigné';
+//   }
+// }
 
 function setValidation(elem, message) {
   let formControl = elem.parentElement;
   let small = formControl.querySelector('small');
-
+  
   if (message != null) {
     small.innerText = message;
     formControl.className = "form-control error";
