@@ -70,6 +70,15 @@ header nav a:hover {
     transform: scale(1.2);
 }
 
+.mt-3 {
+    margin: 1rem;
+}
+
+.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
 
 /************************************ FOOTER ************************************** */
 footer {
