@@ -111,10 +111,18 @@ footer {
   align-items: center;
 }
 
+
 main a {
   color: var(--orange);
 }
 
 main a:hover {
   color: var(--hover-btn);
+}
+
+.team img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -10;
 }
