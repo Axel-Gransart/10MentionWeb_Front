@@ -4,6 +4,7 @@
 /* lien vers goggle fotnts pour la typographie */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
+
 :root {
     font-size: 62.5%;
     /* les variables css utilisés dans mon site */
@@ -28,10 +29,10 @@ h2 {
 /************************************ HEADER ********************************* */
 header {
     /* Dans le header j'applique le display avec la valeur flex afin de gérer l'emplacement de mes éléments sur l'axe principale (axe horizontale) et l'axe  secondaire (axe verticale)  */
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #101010;
+    background-color: #101010; */
     border-bottom: .1rem solid rgba(255, 255, 255, .1);
     box-shadow: 0 .4rem .8rem rgba(0, 0, 0, .5);
     padding: 1rem 2rem;
@@ -40,20 +41,20 @@ header img {
     width: 60px;
 }
 header nav {
-    display: flex;
+    /* display: flex; */
 }
 header > a { /* j'applique le flex  afin de centrer l'image dans l'élément a*/
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 
 header nav a {
 
     font-size: 1.6rem ;
-    color: gray;
-    font-weight: bolder;
-    text-transform: uppercase;
+    /* color: gray;
+    font-weight: bolder; */
+    /* text-transform: uppercase; */
     margin-left: 4rem;
       /* 
     https://www.w3schools.com/css/css3_transitions.asp
@@ -66,27 +67,27 @@ header nav a {
 }
 
 header nav a:hover {
-    color: var(--color_white);
+    color: var(--color_white) !important;
     transform: scale(1.2);
 }
 
-.mt-3 {
+/* .mt-3 {
     margin: 1rem;
-}
+} */
 
-.active {
+/* .active {
     color: #fff;
     border-bottom: 2px solid #fff;
-}
+} */
 
 
 /************************************ FOOTER ************************************** */
 footer {
-    display: flex;
-    justify-content: space-around;
+    /* display: flex; */
+    /* justify-content: space-around; */
     font-size: 1.6rem;
     padding: 40px;
-    background-color: #101010;
+    /* background-color: #101010; */
     border-top: .1rem solid rgba(255, 255, 255, .1);
     box-shadow: 0 .4rem .8rem rgba(0, 0, 0, .5);
     
@@ -96,12 +97,12 @@ footer a {
     color: var(--color_white);
 }
 footer ul {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
     height: 100px ;
-    width: 33.33%;
+    /* width: 33.33%; */
  
 }
 

@@ -18,35 +18,35 @@
 </head>
 <body>
 <!--  L'en-tête de la page avec un logo et une barre de navigation -->
-    <header>
-        <a href="index.html">
-            <img src="assets/img/s1b1.jpeg" alt="Logo du site">
-        </a>
-        <nav>
-            <a class="active" href="index.html">Accueil</a>
-            <a class="" href="a_propos.html">À propos</a>
-            <a class="" href="contact.html">Contact</a>
-        </nav>
-    </header>
+<header class="d-flex justify-content-between align-items-center bg-black ">
+    <a class="d-flex " href="index.html">
+        <img src="assets/img/s1b1.jpeg" alt="Logo du site">
+    </a>
+    <nav class="d-flex align-items-center nav ">
+        <a class="fw-bold text-uppercase text-white active " href="index.html">Accueil</a>
+        <a class="fw-bold text-uppercase text-secondary" href="a_propos.html">À propos</a>
+        <a class="fw-bold text-uppercase text-secondary" href="contact.html">Contact</a>
+    </nav>
+</header>
     <!-- le corps de la page accueil -->
     <main>
         <!--  permier élément dans le main -->
-        <div>
-            <div class="col-lg-3">
-                <a href="index.html">Accueil</a>
+        <div class="d-flex flex-wrap col-12 justify-content-lg-around ">
+            <div class="col-lg-3 col-11 mx-auto  d-flex justify-content-center rounded-3 ">
+                <a class="fw-bold text-white text-uppercase " href="index.html">Accueil</a>
             </div>
-            <div class="col-lg-3">
-                <a href="a_propos.html">À propos</a>
+            <div class="col-lg-3 col-11 mx-auto  d-flex justify-content-center rounded-3 ">
+                <a class="fw-bold text-white text-uppercase " href="a_propos.html">À propos</a>
             </div>
-            <div class="col-lg-3">
-                <a href="contact.html">Contact</a>
+            <div class="col-lg-3 col-11 mx-auto  d-flex justify-content-center rounded-3 ">
+                <a class="fw-bold text-white text-uppercase " href="contact.html">Contact</a>
             </div>
         </div>
         <!-- Deuxième élément de la page -->
-        <section>
-           <div class="col-lg-6">
+        <section class="d-flex flex-wrap col-12 justify-content-lg-between ">
+           <div class="d-flex flex-column justify-content-around align-items-center  col-lg-6 col-12">
                 <h2>Titre</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam, voluptatum ullam voluptatem fugiat eligendi veritatis placeat maiores? Error voluptate voluptatibus repellendus amet incidunt totam vero accusantium veniam placeat temporibus.</p>
+                <p class="text-center ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam, voluptatum ullam voluptatem fugiat eligendi veritatis placeat maiores? Error voluptate voluptatibus repellendus amet incidunt totam vero accusantium veniam placeat temporibus.</p>
                 <!-- 
                     La balise <audio> est une balise HTML utilisée pour incorporer des fichiers audio dans une page web 
                 * controls : un attribut qui ajoute des contrôles de lecture à l'élément audio, tels que les boutons de lecture, de pause, de volume, etc.     
@@ -60,47 +60,46 @@
                     
                 </audio>
            </div>
-           <div class="col-lg-5 ">
-                <img src="assets/img/s2b2.jpeg" alt="Boule d'énergie">
+           <div class="col-lg-5 col-11 mx-auto  ">
+                <img class="w-100 " src="assets/img/s2b2.jpeg" alt="Boule d'énergie">
            </div>
 
         </section>
         <!-- Troisième élément de la page -->
-        <div>
+        <div class=" d-lg-flex align-items-lg-center bg-black ">
             <div class="col-lg-4">
                 <!-- 
                     <video> est une balise HTML utilisée pour incorporer des fichiers vidéo dans une page web.
                          * autoplay : indique au navigateur de démarrer automatiquement la lecture de la vidéo dès que la page est chargée. 
                          * muted : indique que la vidéo doit être lue sans son.  Souvent utilisé pour les vidéos d'arrière-plan ou lorsque le son n'est pas essentiel à l'expérience utilisateur
                 -->
-                <video autoplay controls muted > 
+                <video class="w-100 " autoplay controls muted > 
                     <source src="assets/video/test.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="col-lg-8">
-                <img src="assets/img/s3b2.jpeg" alt="carte mère">
+                <img class="w-100 " src="assets/img/s3b2.jpeg" alt="carte mère">
             </div>
         </div>
 
     </main>
     <!-- Pied de la page  -->
-    <footer>
-        <ul>
+    <footer class="d-flex justify-content-around bg-black ">
+        <ul class="d-flex flex-column justify-content-around align-items-center col-4 ">
             <li><a href="#">Lien</a></li>
             <li><a href="#">Lien</a></li>
             <li><a href="#">Lien</a></li>
         </ul>
-        <ul>
+        <ul class="d-flex flex-column justify-content-around align-items-center col-4 ">
             <li><a href="#">Lien</a></li>
             <li><a href="#">Lien</a></li>
             <li><a href="#">Lien</a></li>
         </ul>
-        <ul>
+        <ul class="d-flex flex-column justify-content-around align-items-center col-4 ">
             <li><a href="#">Lien</a></li>
             <li><a href="#">Lien</a></li>
             <li><a href="#">Lien</a></li>
         </ul>
-
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

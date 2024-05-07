@@ -27,75 +27,82 @@ form.addEventListener('submit', (event) => {
   console.log(messageValue);
   console.log(regexMessage.test(messageValue));
 
+  for (let span of allSpan) {
+    span.innerText = "";
+  }
+
 
   if (donnees.includes("")) {
-    myAlert.innerHTML = '<p class="red mt-3">Veuillez renseigner tout les champs</p>';
+    myAlert.innerHTML = '<p class="red py-3">Veuillez renseigner tout les champs</p>';
+    if (emailValue == "") {
+      message = "Vous devez renseigner votre adresse mail";
+      error(mail, message) 
+    }
+    if (subjectValue == "") {
+      message = "Veuillez renseigner le sujet de votre message";
+      error(subject, message) 
+    }
+    if (messageValue == "") {
+      message = "Si vous voulez nous laisser un message, FAITES LE !!!! ";
+      error(messageText, message) 
+    }
   }
   else {
     myAlert.innerHTML = '';
 
     
-    if (regexEmail.test(emailValue)) {
-      success(mail);
-    }
-    else {
-      if (emailValue != "") {
-        message = "Vous devez renseigner votre adresse mail";
-        error(mail, message) 
-      }
-      else {
+    if (!regexEmail.test(emailValue)) {
       message = "Votre adresse mail n'est pas conforme";
       error(mail, message)      
-      }
-    }
-    
-    if (regexSubject.test(subjectValue)) {
-      success(subject);
     }
     else {
-      if (subjectValue == "") {
-        message = "Veuillez renseigner le sujet de votre message";
-        error(subject, message) 
-      }
-      else {
-        message = "Votre sujet n'est pas pris en compte";
-        error(subject, message)      
-      }
+      success(mail);
     }
+  
     
-    if (regexMessage.test(messageValue)) {
+    if (!regexSubject.test(subjectValue)) {
+      message = "Votre sujet n'est pas pris en compte";
+      error(subject, message)      
+    }    
+    else {
+      success(subject);
+    }    
+    
+    if (!regexMessage.test(messageValue)) {
+      message = "Votre message n'est pas compréhensible";
+      error(messageText, message)      
+    }
+    else {
       success(messageText);
     }
-    else {
-      if (messageValue = "") {
-        message = "Si vous voulez nous laisser un message, FAITES LE !!!! ";
-        error(messageText, message) 
-      }
-      else {
-        message = "Votre message n'est pas compréhensible";
-        error(messageText, message)      
-      }
-    }
   }
-  if (myAlert.innerHTML == "") {    
+  if (regexEmail.test(emailValue) && regexSubject.test(subjectValue) && regexMessage.test(messageValue)) {
+
     myAlert.innerHTML = '<p class="green mt-3">Votre compte à bien été crée <a href="#"> Connectez vous ici </a></p>';    
   }
 });
 
 function success(element) {
   let formControl = element.parentElement;
-  formControl.className = "form-control ok";
+  formControl.classList.add('ok');
+  formControl.classList.remove('error');
+
   let span = formControl.querySelector('span');
+
   span.innerText = "Le champs est bien pris en compte";
-  
+  span.classList.add('green');
+  span.classList.remove('red');  
 }
 
 function error(element, infos) {
   let formControl = element.parentElement; 
   let span = formControl.querySelector('span');
   span.innerText = infos;
+  span.classList.add('red');  
+  span.classList.remove('green');  
 
-  formControl.className = "form-control error";
+  formControl.classList.add('error');
+  formControl.classList.remove('ok');
 }
 
 form.addEventListener('reset', (event) => {
@@ -105,12 +112,5 @@ form.addEventListener('reset', (event) => {
     span.innerText = "";
   }
 });
-
-let nav = document.querySelector('nav');
-let link = nav.querySelectorAll('a');
-
-
-
- 
 
  
