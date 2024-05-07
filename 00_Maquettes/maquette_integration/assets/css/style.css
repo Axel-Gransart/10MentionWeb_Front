@@ -7,9 +7,9 @@ main > div, main section {
     /* width: 100%; */
 }
 
-main > div div, main > section div {
-    /* width: 100%; */
-}
+/* main > div div, main > section div {
+    width: 100%;
+} */
 
 /* Première div dans main */
 main > div:first-child > div:nth-child(1)  {
@@ -50,14 +50,13 @@ main > div:first-child  div a {
 main section {
     padding: 3rem;
 }
-main  section div:first-child {
-    /* display: flex;
+/* main  section div:first-child {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center; */
-  
+    align-items: center;
+} */
 
-}
 main section h2 {
     font-size: 5rem;
     margin-bottom: 20px;
@@ -74,20 +73,20 @@ main  section div:nth-child(2) img {
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-img, video {
-    /* width: 100% */
-}
+/* img, video {
+    width: 100%
+} */
 
 /* troisième élément dans main */
 
-main > div:last-child {
-    /* background-color: #000; */
-}
+/* main > div:last-child {
+    background-color: #000;
+} */
 @media  screen and (min-width: 991.99px)  {
     
-    main > div:first-child  {
-        /* justify-content: space-around; */
-    }
+    /* main > div:first-child  {
+        justify-content: space-around;
+    } */
 
     /* ************* Deuxième façon de faire*************** */
     /*  Avec cette façon de faire (flex-wrap: nowarp) il faut changer la classe col-lg-3 dans le HTML par la classe col-lg-4 */
@@ -95,13 +94,14 @@ main > div:last-child {
         flex-wrap: nowrap;
     } */
 
-    main section {
-        /* justify-content: space-between; */
-    }
-    main div:nth-child(3) div {
-        /* display: flex;
-        align-items: center; */
-    }
+    /* main section {
+        justify-content: space-between; 
+    } */
+
+    /* main div:nth-child(3) div {
+        display: flex;
+        align-items: center; 
+    } */
 
 }
 

@@ -40,13 +40,15 @@ header {
 header img {
     width: 60px;
 }
-header nav {
-    /* display: flex; */
-}
-header > a { /* j'applique le flex  afin de centrer l'image dans l'élément a*/
-    /* display: flex;
-    align-items: center; */
-}
+
+/* header nav {
+    display: flex;
+} */
+
+/* header > a { /* j'applique le flex  afin de centrer l'image dans l'élément 
+    display: flex;
+    align-items: center;
+} */
 
 
 header nav a {
