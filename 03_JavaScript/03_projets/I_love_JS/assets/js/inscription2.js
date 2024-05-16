@@ -55,9 +55,9 @@ function changeMode() {
 };
 
 /*
-    ╔═════════════════════════════════════════════╗
-    ║                   Cookies                   ║
-    ╚═════════════════════════════════════════════╝ */
+  ╔═════════════════════════════════════════════╗
+  ║                   Cookies                   ║
+  ╚═════════════════════════════════════════════╝ */
 
 // let bpCookies = document.querySelector(".btn-success");
 // let divCookies = document.querySelector(".cookies");
@@ -67,9 +67,9 @@ function changeMode() {
 // })
 
 /*
-    ╔═════════════════════════════════════════════╗
-    ║               Partie loader                 ║
-    ╚═════════════════════════════════════════════╝ */
+  ╔═════════════════════════════════════════════╗
+  ║               Partie loader                 ║
+  ╚═════════════════════════════════════════════╝ */
 
 let loader = document.querySelector("#loader");
 
@@ -78,9 +78,9 @@ window.addEventListener('load', () => {
 })
 
 /*
-    ╔═════════════════════════════════════════════╗
-    ║                 Partie mdp                  ║
-    ╚═════════════════════════════════════════════╝ */
+  ╔═════════════════════════════════════════════╗
+  ║                 Partie mdp                  ║
+  ╚═════════════════════════════════════════════╝ */
 
 let interrogation = document.querySelector(".fa-question");
 let mdpText = document.querySelector(".mdp p");
