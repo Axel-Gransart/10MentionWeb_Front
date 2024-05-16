@@ -1,121 +1,152 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
+    box-sizing: border-box;
+    text-decoration: none;
+    /* box-shadow:  red inset 0 0 0 3px; */
+       /* permet de créer une ombre autour de la boîte d'un élément HTM
+    - inset : l'ombre sera une ombre interne, ce qui signifie qu'elle apparaîtra à l'intérieur de la boîte plutôt qu'à l'extérieur.
+    - 0 0 0 3px : les valeurs qui définissent le décalage horizontal, le décalage vertical, le flou et l'étendue de l'ombre
+        -> Le décalage horizontal est de 0, ce qui signifie que l'ombre est directement sous la boîte.
+        -> Le décalage vertical est également de 0, donc l'ombre ne sera pas déplacée verticalement.
+        -> Le flou est de 0, donc l'ombre sera nette.
+        -> L'étendue de l'ombre est de 3 pixels, ce qui signifie que l'ombre s'étendra de 3 pixels dans toutes les directions à partir du bord de la boîte.
+    - red: C'est la couleur de l'ombre, dans cet exemple elle est rouge.
+    */
 
-:root {
-  font-size: 62.5%;
-  --font-title: "Roboto Slab", serif !important;
-  --orange: #e74c3c;
-  --white: #fff;
-  --hover-btn: #b83e30;
-  --hover-btn-white: rgb(144,144,144);
-  --bg-icon: rgb(71,71,71);
 }
 
 .row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-}
-
-h1, h3, h4 {
-  font-family: var(--font-title);
-}
-
-h1 {
-  font-size: 4.5rem;
-}
-
-h3 {
-  font-size: 2.2rem;
-  color: var(--orange);
+:root {
+    font-size: 62.5%;
+    --font : "Roboto Slab", serif;
+    --orange : #e74c3c;
+    --white : #fff;
+    --hover-btn: #b83e30;
+    --btn-white-hover: rgb(144,144,144);
+    --bg-icon : rgb(71,71,71);
 }
 
 nav {
-  padding: 1rem 8rem !important;
+    padding: 1rem 8rem !important;
 }
 
-#entete {
-  background-image: url(../images/hero-image.jpg);
-  background-position: top;
-  background-size: cover;
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+#enTete {
+    background-image: url(../img/hero-image.jpg);
+    background-position: top;
+    background-size: cover;
+}
+h1 {
+    font-size: 4.5rem;
+    font-family: var(--font);
 }
 
 p {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
-
 .btn {
-  background-color: var(--orange);
-  color: var(--white);
-  font-size: 1.5rem;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.btn:hover {
+    background-color: var(--hover-btn);   
 }
 
-.btn:hover {
-  background-color: var(--hover-btn);
+/* MAIN */
+h3 {
+    font-size: 2.2rem;
+    color: var(--orange);
+    font-family: var(--font) !important;
 }
 
 hr {
-  width: 11rem !important;
-  color: var(--orange);
-  margin: 0 auto 2.5rem;
-  height: .15rem;
+    width: 11rem !important;
+    margin: 0  auto  2.5rem;
+    color: var(--orange);
+    height: .15rem;
 }
 
 span {
-  color: var(--orange);
+    color: var(--orange);
+}
+
+
+.btn-outline-secondary {
+    color: var(--orange);
+    font-size: 1.1rem;
+}
+.btn-outline-secondary:hover {
+    color: var(--white);
+    background-color: var(--bg-icon) !important;
 }
 
 i {
-  background-color: var(--bg-icon);
-  width: 3rem;
-  height: 3rem;
+    background-color: var(--bg-icon);
+    color: var(--white);
+    font-size: 3rem;padding: 1.7rem;
 }
-
 h4 {
-  color: var(--orange);
-  margin: 4rem 0 1rem 0;
-  font-size: 1.8rem;
-}
-
-.btn-outline-secondary {
-  color: var(--orange);
-  background-color: var(--white);
-}
-
-.btn-outline-secondary:hover {
-  background-color: var(--bg-icon);
-  color: var(--white);
+    color: var(--orange);
+    font-family: var(--font);
+    margin: 4rem 0 1rem 0;
+    font-size: 1.8rem;
 }
 
 footer {
-  background-color: var(--orange);
-  padding: 15rem 5rem 2rem;
+    background-color: var(--orange);
+    padding: 15rem 5rem 2rem;
 }
 
-.team {
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
+
+.team{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
 }
 
 main a {
-  color: var(--orange);
+    color: var(--orange);
 }
 
 main a:hover {
-  color: var(--hover-btn);
+    color: var(--hover-btn);
 }
+
+#team1{
+    background-image: url(../img/team1.jpg);
+}
+#team2{
+    background-image: url(../img/team2.jpg);
+}
+#team3{
+    background-image: url(../img/team3.jpg);
+}
+#team4{
+    background-image: url(../img/team4.jpg);
+}
+/* .personGaston{
+    background-image: url(../img/team1.jpg);
+}
+.personJoanne{
+    background-image: url(../img/team2.jpg);
+}
+.personManuel{
+    background-image: url(../img/team3.jpg);
+}
+.personTracy{
+    background-image: url(../img/team4.jpg);
+} */
+

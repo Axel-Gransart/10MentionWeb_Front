@@ -379,41 +379,33 @@ form {
 
 
 .form-control.error small {
-    color: 
-red;
+    color: red;
     visibility: visible;
 }
 
 .form-control.error input {
-    border: 1px solid 
-red;
+    border: 1px solid red;
 }
 
 .form-control.error .fa-exclamation {
-    color: 
-red;
+    color: red;
     visibility: visible;
 }
 
 .form-control.success input {
-    border: 1px solid 
-green;
+    border: 1px solid green;
 }
 
 .form-control.success .fa-circle-check {
-    color:  
-green;
+    color:green;
     visibility: visible !important;
 
 }
 
 button {
-    background-color: 
-#61b3ff;
-    border: 2px solid 
-#1E2337;
-    color: 
-#fff;
+    background-color: #61b3ff;
+    border: 2px solid #1E2337;
+    color: #fff;
     border-radius: 4px;
     padding: 10px;
     font-size: 1.6rem;
@@ -429,8 +421,7 @@ button {
 
 
 footer {
-    background-color: 
-#1E2337;
+    background-color:#1E2337;
     margin: 0 !important;
     
 }
@@ -439,8 +430,7 @@ footer li {
 }
 
 footer li a{
-    color: 
-#fff;
+    color: #fff;
     font-size: 1.3rem;
     
 }

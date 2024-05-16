@@ -8,8 +8,8 @@
   Les Évènement MOUSE (Souris):
 
     ->  click : au click sur un élément
-    ->  mouseenter : la souris passe au dessus de le zone d'un élément
-    ->  mouseleave : la souris sort de la zone d'un élément*
+    ->  mouseover : la souris passe au dessus de le zone d'un élément
+    ->  mouseout : la souris sort de la zone d'un élément*
 
     
   Les Évènements KEYBOARD (Clavier):
