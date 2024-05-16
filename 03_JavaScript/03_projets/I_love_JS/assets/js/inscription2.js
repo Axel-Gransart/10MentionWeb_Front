@@ -16,6 +16,7 @@ let h2 = document.querySelector('h2');
 let btnChange = document.querySelector('.btn');
 let icon = document.querySelector('.switch i');
 
+let formControl = document.querySelectorAll('.form-control');
 
 switchBox.addEventListener('click', changeMode);
 // Je déclare l'écouteur d'évènement click sur la div.switch
@@ -23,6 +24,12 @@ switchBox.addEventListener('click', changeMode);
 function changeMode() {
   container.classList.toggle("container-change");
   // La variable container change de couleur de fond
+
+  form.classList.toggle("container-change");
+
+  for (let div of formControl) {
+    div.classList.toggle("container-change");
+  }
 
   nav.classList.toggle("nav-dark");
   // La variable nav change de couleur de fond

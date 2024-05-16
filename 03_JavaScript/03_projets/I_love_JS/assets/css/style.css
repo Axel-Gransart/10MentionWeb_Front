@@ -64,7 +64,7 @@ main>div {
   /* L'élément en position : absolute par rapport à l'élément parent en position : relative OU par rapport au body (si aucun élément est déclaré en position : relative) */
 }
 
-.btn {
+ nav .btn {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -290,7 +290,7 @@ form {
 }
 
 
-button {
+form button {
   background-color: #61b3ff;
   border: 2px solid #1E2337;
   color: #fff;
@@ -357,13 +357,13 @@ footer li a {
 }
 
 .container-change {
-  background-color: #2c3c54;
+  background-color: #2c3c54 !important;
 }
 
 .btn-change {
   right: -1px;
-  left: auto;
-  background-color: #fff;
+  left: auto !important;
+  background-color: #fff !important;
 }
 
 .btn-change:hover {
